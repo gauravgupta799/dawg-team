@@ -1,0 +1,272 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+.form{
+    &__group{
+        margin-bottom: rem(16);
+        position: relative;
+    }
+    &__control{
+        width: 100%;
+        background: $clr-white;
+        border:none;
+        outline:1px solid $clr-primary;
+        padding: em(10) em(16);
+        color:$clr-primary;
+        font-size: rem(16);
+        font-weight: 600;
+        line-height: 2;
+        font-family: $ff-regular;
+        caret-color: $clr-secondary;
+        @include border-radius(8px);
+
+        &:focus, &:hover{
+            outline-color: $clr-secondary;  
+        }
+    }
+}
+
+
+
+.footer-form{
+    .form__group{
+        display: flex;
+        align-items: center;
+        background: $clr-bg-1;
+        padding: 6px;
+        @include border-radius(37px);
+        position: relative;
+    }
+    .footer-form-control{
+        background:$clr-bg-1;
+        outline: 0;
+        color:$clr-white;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 2.25;
+        @include border-radius(37px);
+        padding-left: 1.5em;
+        padding-block:0;
+        transition:all 0.3s ease;
+    }
+    &__label{
+        color:$clr-white;
+        font-size: rem(16);
+        font-weight: 300;
+        line-height: 2.25;
+        position: absolute;
+        top: 20px;
+        left: 32px;
+        cursor: text;
+        transition:all 0.3s ease;
+    }
+
+    .form-btn{
+        border: 0;
+        outline: 0;
+        width: 63px;
+        height: 63px;
+        background-color: $clr-secondary;
+        @include flex-center;
+        @include border-radius(50%);
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+        transition:transform 0.35s ease;
+        span{
+            transition:transform 0.35s ease;
+            &:first-child{
+                transform: translate(0,3px);
+            }
+            &:last-child{
+                transform: translate(-165%,150%);
+                position: absolute;
+            }
+        }
+        
+        &:hover{
+            cursor: pointer;
+            transform:scale(1.022);
+            span{
+                &:first-child{
+                    transform: translate(165%,-150%);
+                }
+                &:last-child{
+                    transform: translate(0, 3px);
+                    position: absolute;
+                }
+            }
+        }
+
+        // transform: translate(120%,-100%);
+    }
+}
+
+
+.footer-form-control:focus + label,
+.footer-form-control:valid + label{
+    top: -1px;
+    font-size: rem(14);
+}
+
+.footer-form-control:focus + label{
+    color:$clr-secondary;
+}
+
+
+.border-after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    bottom: -1px;
+    z-index: 1;
+    background-color: $clr-secondary;
+    transition: width 0.5s ease-out;
+}
+
+.cta-form{
+    .form__group{
+        position: relative;
+        border-bottom: 1px solid $clr-primary;
+        &::after{
+          @extend .border-after;
+        }
+
+        &:focus-within{
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+    .form__label{
+        font-size: rem(22);
+        font-weight: 500;
+        line-height: 1.43;
+        font-family: $ff-secondary;
+        color: $clr-primary;
+        @include breakpoint-lg{
+            font-size: rem(24);
+        }
+        @include breakpoint-xl{
+            font-size: rem(28);
+        }
+    }
+    .form__control{
+        border:0;
+        outline:0;
+        border-radius:0;
+        padding-left: 0;
+        font-weight: 400;
+        font-family: $ff-secondary;
+        transition:all 0.5s ease-out;
+
+        &:focus{
+            border-color: $clr-secondary;
+        }
+    }
+}
+
+#select-group{
+    border:none;
+}
+
+
+// ========== Custom Select ==============
+.select-box{
+    .selected{
+        position: relative;
+        margin-bottom: 8px;
+        font-size: rem(16);
+        font-family: $ff-secondary;
+        color:$grey;
+        border-bottom: 1px solid $clr-primary;
+    
+        &::before{
+            content:url("../assets/icons/arrow-down.svg");
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            transform:rotate(0deg) translateY(0);
+            transition:transform 0.35s ease;
+            transform-origin: center;
+        }
+
+        // &::after{
+        //     @extend .border-after;
+        // }
+
+        // &:focus{
+        //     &::after{
+        //         width: 100%;
+        //     }
+        // }
+    }
+
+    .options-container{
+        max-height: 0;
+        opacity: 0;
+        width: 100%;
+        @include border-radius(8px);
+        background: $clr-white;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+        transition:max-height 0.35s ease, opacity 0.35s ease;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+        &::-webkit-scrollbar{
+            width: 8px;
+            background: $clr-secondary;
+            border-radius:0 8px 8px 0;
+        }
+        &::-webkit-scrollbar-thumb{
+            background: $clr-primary;
+            border-radius:0 8px 8px 0;
+        }
+    }
+    
+    .option, .selected{
+        padding:12px 24px;
+        cursor: pointer;
+    }
+
+    .option{
+        transition:all 0.2s ease;
+        .radio{
+            display: none;
+        }
+        label{
+            color:$clr-primary;
+            cursor: pointer;
+        }
+        &:hover{
+            background: $clr-primary;
+            @include border-radius(8px);
+            label{
+                color:$clr-white;
+            }
+        }
+    }
+}
+
+
+.select-box.active{
+    .options-container{
+        max-height: rem(214);
+        opacity: 1;
+    }
+    .selected{
+        &::before{
+            transform:rotate(180deg) translateY(8px);
+        }
+    }
+}
+
+.selected.active{
+    color:$clr-primary;
+}

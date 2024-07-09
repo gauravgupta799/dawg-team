@@ -1,0 +1,73 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+// ===== Accordion ======
+.accordion{
+    &__container{
+        padding-block: em(32);
+        @include breakpoint-sm{
+            padding-block: em(35);
+        }
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    &__title{
+        position: relative;
+        text-transform: capitalize;
+        display: flex;
+        justify-content: space-between;
+        gap:rem(16);
+        @include transition(color, 0.25s, ease);
+        @include breakpoint-sm{
+            gap:rem(32);
+        }
+        &::after{
+            content: "+";
+            @include dimensions(rem(48), rem(48));
+            background: $clr-secondary;
+            @include border-radius(50%);
+            @include flex-center;
+            color:$clr-primary;
+            flex-shrink: 0;
+            @include breakpoint-md{
+                @include dimensions(rem(54), rem(54));
+            }
+            @include breakpoint-xl{
+                @include dimensions(rem(60), rem(60));
+            }
+        }
+    }
+    &__title-wrapper{
+        position: relative;
+        overflow: hidden;
+        &:hover{
+            cursor: pointer;
+            .accordion__title{
+                color: $clr-secondary;
+            }
+
+        }
+        &.active{
+            .accordion__title{
+                color: $clr-secondary;
+                &::after{
+                    content: "-";
+                    color:$clr-primary;
+                    
+                }
+            }
+        }
+    }
+    &__content{
+        padding-right: em(20);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        max-width: min(100%, 62ch);
+    }
+}

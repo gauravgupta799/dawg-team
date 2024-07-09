@@ -1,0 +1,77 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.header{
+    position: fixed; 
+    z-index: 9;
+    top:0;
+    left: 0;
+    width: 100%;
+    transform:translateY(0);
+    // transition: top 0.25s ease, background-color 0.35s ease;
+    transition: background-color 0.3s ease transform 0.3s ease;
+    &__logo{
+        position: relative;
+        .logo-1{
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+
+.header-desktop{
+    transition:all 0.25s ease;
+}
+
+.header{
+    &__inner-desktop{
+        position: relative;
+        @include flex-center-vertical;
+        justify-content: space-between;
+        display: none;
+        @include breakpoint-lg{
+            display: flex;
+        }
+    }
+
+    &__inner-mobile{
+        @include flex-space-between;
+        background: $clr-primary;
+        @include border-radius(12px);
+        margin: rem(16);
+        margin-top: rem(32); margin-top: rem(32);
+        padding: em(16);
+        transition:all 0.35s ease;
+
+        @include breakpoint-lg{
+            display: none;
+        }
+    }
+}
+
+
+.header-desktop.sticky{
+    background:$clr-primary;
+    box-shadow: 0 2px 5px rgba(224, 236, 232, 0.2);
+    @include border-radius-blr(12px, 12px);
+    .logo-1{
+        z-index: -1;
+    }
+    .header__inner-mobile{
+        margin-top:0;
+        padding-inline: 0;
+    }
+
+}
+
+
+// ========== hamburger =============
+.hamburger-wrapper{
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,140 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+.btn{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    outline:none;
+    border:none;
+    text-transform: capitalize;
+    font-size:rem(16);
+    line-height: 1.33;
+    padding:em(20) em(48);
+    color:$clr-white;
+    font-family: $ff-tertiary;
+    @include border-radius(7px);
+    @include transition(all, 0.35s, ease-out);
+ 
+    @include breakpoint-md{
+        font-size: rem(18);
+    }
+    @include breakpoint-xl{
+        font-size: rem(20);
+    }
+    @include breakpoint-xxl{
+        font-size: rem(24);
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.btn--primary{
+    background: $clr-secondary;
+    @include flex-center;
+}
+
+
+// .btn--secondary{
+//     position: relative;
+//     background:$clr-secondary;
+//     color:$clr-primary;
+//     display: inline-flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap:10px;
+//     font-family: $ff-secondary;
+//     font-weight: 500;
+//     text-transform: uppercase;
+//     span{
+//         display: flex;
+//         &:last-child{
+//             margin: 0;
+//             transition:transform 0.3s ease;
+//         }
+//     }
+// }
+
+
+// .btn--tertiary{
+//     background:$clr-white;
+//     color:$clr-secondary;
+// }
+
+
+.btn--outline{
+    border: 2px solid $clr-grey-1;
+    background-color: $clr-white;
+}
+
+// .btn--transparent{
+//     color:$clr-primary;
+//     background:transparent;
+//     display: inline-flex;
+//     align-items: center;
+//     gap:rem(16);
+//     padding: 0;
+//     span{
+//         color:$clr-secondary;
+//         transition:color 0.35s ease;
+//     }
+//     &:hover{
+//         span{
+//             color:$clr-primary;
+//         }
+//         .btn-icon-wrapper{
+//             background:$clr-primary;
+//             svg{
+//                 path{
+//                     fill:$clr-white;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+
+// .chevron-btn-wrapper{
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-end;
+//     gap: 1rem;
+
+//     button{
+//         outline: none;
+//         border:none;
+//         background: transparent;
+//         &:first-child{
+//             transform: rotate(-180deg);
+//         }
+//         &:hover{
+//             cursor: pointer;
+//         }
+//     }
+// }
+
+// .swiper-btn-next,
+// .swiper-btn-prev{
+//    svg{
+//     transition:all 0.35s ease;
+//    }
+//     &:hover{
+//         svg{
+//             circle{
+//                 fill:$clr-primary;
+//             }
+//             path{
+//                 fill:$clr-secondary;
+//             }
+//         }
+//     }
+// }
