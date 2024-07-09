@@ -96,7 +96,12 @@
     height: 1px;
     width: 100%;
     background:$clr-white;
+
+    &--white{
+        background:$clr-white;
+    }
 }
+
 
 // ====== Dividers End ========
 .brdr-none{

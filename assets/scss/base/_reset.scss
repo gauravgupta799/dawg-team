@@ -53,6 +53,7 @@ html{
 ::placeholder{
   font-size: rem(16) !important;
   font-family:$ff-secondary !important;
+  color:$clr-primary;
 }
 
 ::selection{

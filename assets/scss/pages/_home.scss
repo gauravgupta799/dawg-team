@@ -5,10 +5,75 @@
 @use "../abstract/mixins" as *;
 
 
+.section-title{
+    text-transform: uppercase;
+}
+
+
+// ======================================
 .hero{
+    &--home{
+        background: $clr-primary;
+    }
+    &__title{
+        color:$clr-white;
+    }
+    &__subTitle{
+        color:$clr-white;
+    }
 
 }
 
-.home{
-    
+// ================================
+.feedback{
+    background: $clr-light-blue;
+    &__right-container{
+        display: flex;
+        align-items: center;
+    }
+    &__footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__footer-inner{
+        display: flex;
+        align-items: center;
+        gap:rem(28);
+    }
+}
+
+
+
+
+
+
+// ================================
+.testimonial{
+    &__title{
+        text-transform: uppercase;
+        margin-top: 8px;
+    }
+    &__card{
+        width: 482px;
+        padding: 42px 48px 60px 46px;
+        @include border-radius(15px);
+        background-color: $clr-light-blue;
+    }
+}
+
+
+// ================================
+.follow-us{
+    &__title{
+        span{
+            color:$clr-secondary;
+        }
+    }
+}
+
+.post-wrapper{
+    display: flex;
+    align-items: center;
 }

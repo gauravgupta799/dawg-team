@@ -13,8 +13,7 @@
     border:none;
     text-transform: capitalize;
     font-size:rem(16);
-    line-height: 1.33;
-    padding:em(20) em(48);
+    padding:em(16) em(32);
     color:$clr-white;
     font-family: $ff-tertiary;
     @include border-radius(7px);
@@ -29,16 +28,26 @@
     @include breakpoint-xxl{
         font-size: rem(24);
     }
+    span{
+        color:$clr-white;
+    }
     &:hover{
         cursor: pointer;
     }
 }
 
-.btn--primary{
-    background: $clr-secondary;
-    @include flex-center;
+.btn-wrapper{
+    display: flex;
 }
 
+
+.btn--primary{
+    background: $clr-secondary;
+    // @include flex-center;
+    @include flex-center-horizontal;
+    gap:16px;
+ 
+}
 
 // .btn--secondary{
 //     position: relative;
@@ -70,35 +79,47 @@
 .btn--outline{
     border: 2px solid $clr-grey-1;
     background-color: $clr-white;
+    span{
+        color:$clr-black;
+    }
 }
 
-// .btn--transparent{
-//     color:$clr-primary;
-//     background:transparent;
-//     display: inline-flex;
-//     align-items: center;
-//     gap:rem(16);
-//     padding: 0;
-//     span{
-//         color:$clr-secondary;
-//         transition:color 0.35s ease;
-//     }
-//     &:hover{
-//         span{
-//             color:$clr-primary;
-//         }
-//         .btn-icon-wrapper{
-//             background:$clr-primary;
-//             svg{
-//                 path{
-//                     fill:$clr-white;
-//                 }
-//             }
-//         }
-//     }
-// }
+
+.btn--transparent{
+    background:transparent;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap:rem(8);
+    padding: 0;
+    span{
+        color:$clr-secondary;
+        transition:color 0.35s ease;
+    }
+    svg{
+        path{
+            transition:color 0.35s ease;
+        }
+    }
 
 
+    &:hover{
+        span{
+            color:$clr-primary;
+        }
+        svg{
+            path{
+                fill:$clr-white;
+            }
+        }
+    }
+}
+
+.btn-transprnt{
+    span{
+        font-family: $ff-primary;
+    }
+}
 
 
 

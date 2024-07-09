@@ -36,19 +36,19 @@ $p-font-sizes: (
 
 
 $h1-font-sizes: (
-  null: (rem(60), rem(84)),   
-  sm: (rem(60), rem(84)),
-  md: (rem(80), rem(112)),
-  lg: (rem(80), rem(112)),
-  xl: (rem(100), rem(140)),
-  xxl: (rem(120), rem(168)),
+  null: (rem(52), rem(58)),   
+  sm: (rem(52), rem(58)),
+  md: (rem(76), rem(85)),
+  lg: (rem(76), rem(85)),
+  xl: (rem(96), rem(107)),
+  xxl: (rem(120), rem(132)),
 );
 
 $h2-font-sizes:(
-  null:(rem(40), rem(31)), 
-  sm:(rem(40), rem(31)),
-  md:(rem(48), rem(34)),
-  lg:(rem(48), rem(34)),
+  null:(rem(40), rem(30,5)), 
+  sm:(rem(40), rem(30.5)),
+  md:(rem(48), rem(36.5)),
+  lg:(rem(48), rem(36.5)),
   xl:(rem(56), rem(43)),
   xxl:(rem(68), rem(52)),
 );
@@ -63,12 +63,12 @@ $h3-font-sizes: (
 );
 
 $h4-font-sizes: (
-  null:(rem(32), rem(37)), 
+  null:(rem(28), rem(32)), 
   sm :(rem(32), rem(37)),
-  md :(rem(36), rem(42)),
+  md :(rem(32), rem(37)),
   lg :(rem(36), rem(42)),
-  xl :(rem(40), rem(46)),
-  xxl :(rem(48), rem(55)),
+  xl :(rem(36), rem(42)),
+  xxl :(rem(40), rem(46)),
 );
 
 $h5-font-sizes: (
@@ -144,6 +144,7 @@ h6{
 
 h1, h2, h3, h4, h5, h6{
     @include font-heading;
+    letter-spacing: 0.8px;
 }
 
 p, ul, ol, body{

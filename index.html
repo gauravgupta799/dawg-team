@@ -22,14 +22,14 @@
     <header class="header">
         <!-- Desktop Menu Start -->
         <div class="header-desktop">
-            <div class="page-container--ml">
+            <div class="page-container">
                 <div class="header__inner-desktop">
                     <div class="header-logo-wrapper">
                         <a href="./index.html" class="header__logo d-flex">
                             <img src="./assets/logos/dawgteam-logo-1.svg" alt="greentek's logo" class="img-fluid  ">                                                                             
                         </a>
                     </div>  
-    
+                    
                     <!-- Navbar Start -->
                     <nav class="nav">
                         <ul class="nav__menu list-none" role="navigation">
@@ -43,18 +43,19 @@
                                     <span>About</span>
                                 </a>
                             </li>
-
-                            <li class="nav__list subMenu ">
+                            <li class="nav__list subMenu">
                                 <a href="./services.html" class="nav__link nav__link--submenu">
                                     <span>Services</span>   
+                                    <span class="dropdown-iconn mt-0">
+                                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                                            <path d="M14 20l10 10 10-10z"></path>
+                                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                                        </svg> 
+                                    </span>
                                 </a>
-                                <span class="dropdown-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 30 30">
-                                        <path d="M 24.990234 8.9863281 A 1.0001 1.0001 0 0 0 24.292969 9.2929688 L 15 18.585938 L 5.7070312 9.2929688 A 1.0001 1.0001 0 0 0 4.9902344 8.9902344 A 1.0001 1.0001 0 0 0 4.2929688 10.707031 L 14.292969 20.707031 A 1.0001 1.0001 0 0 0 15.707031 20.707031 L 25.707031 10.707031 A 1.0001 1.0001 0 0 0 24.990234 8.9863281 z" fill="#fff"></path> 
-                                    </svg>  
-                                </span>
+             
                                 <!-- Services Submenu -->
-                                <ul class="subMenu__list list-none" id="submenu--S1">
+                                <ul class="subMenu__list list-none d-none" id="submenu--S1">
                                     <li class="">
                                         <a href="./services/atts.html" class="subMenu__link">ATTS</a>
                                     </li>
@@ -74,17 +75,46 @@
                         </ul>
                     </nav>
                       <!-- Navbar End -->
-                </div>
-            </div>
 
-            <!-- Header-Mobile Start-->
-            <div class="header__inner-mobile">
-                <div class="header-logo-wrapper">
-                    <a href="./index.html" class="header-logo d-flex">
-                        <img src="./assets/logos/logo-icon.svg" alt="" class="img-fluid d-lg-none">                                        
-                    </a>
+                    <!-- Right-side start-->
+                     <div class="header__right">
+                        <div class="action-btns-wrapper">
+                            <div class="action-btn">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="22" height="22">
+                                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" fill="#000"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="action-btn">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag" width="22" height="22"> 
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" ></path>
+                                        <line x1="3" y1="6" x2="21" y2="6" ></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0" ></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="action-btn">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user" width="22" height="22">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="btn-wrapper">
+                            <a href="./contact.html" class="btn btn--outline">
+                                <span class="">Contact</span>
+                            </a>
+                        </div>
+                     </div>
+                    <!-- Right-side end-->
                 </div>
-                <div class="hamburger-wrapper" id="hamburger-btn">
+
+                <!-- Hamburger -->
+                <div class="hamburger-wrapper d-none" id="hamburger-btn">
                     <div class="hamburger-btn">
                         <span class="d-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" width="39" height="18" viewBox="0 0 39 18">
@@ -98,7 +128,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Header-Mobile End-->
         </div>
         <!-- Desktop Menu End -->
 
@@ -219,112 +248,332 @@
     <main class="main">
 
         <!-- Hero Section Start -->
-        <section class="hero hero--home pt--10 pt--sm--12 pt--xl--18">
+        <section class="hero hero--home pt--8 pt--sm--12 pt--lg--18">
             <div class="page-container">
-                <div class="row hero--home-row gy-0 gy-md-0 gx-md-0">
-                    <div class="col-lg-6 col-xl-6">
-                        <h1 class="hero__title h-title-reveal">Sustainable Cold Chain Solutions</h1>
+                <div class="row">
+                    <div class="col-xl-12 mx-auto text-center">
+                        <figure class="d-flex justify-content-center">
+                            <img src="./assets/images/google-rating.svg" alt="" class="img-fluid">
+                        </figure>
+                        <h1 class="hero__title section-title">Spoil Your Fur Baby!</h1>
                     </div>
-                    <div class="col-lg-6 col-xl-5 offset-xl-1">
+                    <div class="col-lg-8 mx-auto text-center">
                         <div class="overflow-wrapper">
-                            <p class="hero__subTitle mt--1 reveal-p">
-                                Reduce Fuel Usage and Carbon Footprint with BioPCM® Technology –
-                                Experience Up to 70% Fuel Savings and Enhanced Temperature Control for
-                                Your Refrigerated Fleet.
+                            <p class="hero__subTitle reveal-p">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                             </p>
                         </div>
-                        <div class="btn-wrapper mt--2 d-none d-lg-block">
-                            <div class="h-reveal-btn">
-                                <a href="./contact.html" class="btn btn--secondary">
-                                    <span class="mask">
-                                      <div class="link-container">
-                                        <span class="link-title1 title">Discover How</span>
-                                        <span class="link-title2 title mt--0">Discover How</span>
-                                      </div>
+                        <div class="btn-wrapper mt--2 justify-content-center">
+                            <a href="#" class="btn btn--primary ">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30.129 26.363">
+                                        <path id="Icon_awesome-paw" data-name="Icon awesome-paw" d="M15.064,13.548c-4.673,0-11.3,7.224-11.3,11.784,0,2.054,1.578,3.281,4.222,3.281,2.874,0,4.772-1.476,7.077-1.476,2.325,0,4.228,1.476,7.077,1.476,2.644,0,4.222-1.227,4.222-3.281C26.363,20.772,19.737,13.548,15.064,13.548ZM6.4,12.806c-.612-2.039-2.5-3.359-4.211-2.95S-.42,12.251.192,14.29s2.5,3.359,4.211,2.95S7.01,14.845,6.4,12.806Zm4.985-1.223C13.2,11.1,14.115,8.645,13.418,6.09S10.68,1.852,8.86,2.331,6.128,5.27,6.825,7.825,9.563,12.063,11.383,11.583ZM27.941,9.857c-1.714-.41-3.6.911-4.211,2.95s.281,4.024,1.994,4.433,3.6-.911,4.211-2.95S29.655,10.266,27.941,9.857Zm-9.2,1.727c1.821.479,3.861-1.2,4.558-3.758s-.214-5.014-2.035-5.494-3.861,1.2-4.558,3.758.214,5.015,2.035,5.494Z" transform="translate(0.001 -2.25)" fill="#fff"/>
+                                    </svg>
+                                </span>
+                                <span class="">Shop Now</span>
+                            </a>
+                        </div>
+                        <figure class="mt--2">
+                            <img src="./assets/images/dawgs-1-2x.png" alt="banner-image" class="img-fluid">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- marquee Container start -->
+        <div class="marquee-container">
+            <div class="marquee-wrapper">
+                <div class="marquee-banner">
+                    <div class="marquee-banner__track">
+                        <div class="marquee-text-wrapper">
+                            <figure class="marquee-icon">
+                            <img src="./assets/icons/paw.svg" alt="" class="star-icon">
+                            </figure> 
+                            <h5 class="marquee-text">Fast shipping</h5>  
+                        </div>
+                        <div class="marquee-text-wrapper">
+                            <figure class="marquee-icon">
+                            <img src="./assets/icons/paw.svg" alt="" class="star-icon">
+                            </figure> 
+                            <h5 class="marquee-text">Fast shipping</h5>  
+                        </div>
+                        <div class="marquee-text-wrapper">
+                            <figure class="marquee-icon">
+                            <img src="./assets/icons/paw.svg" alt="" class="star-icon">
+                            </figure> 
+                            <h5 class="marquee-text">Fast shipping</h5>  
+                        </div>
+                        <div class="marquee-text-wrapper">
+                            <figure class="marquee-icon">
+                            <img src="./assets/icons/paw.svg" alt="" class="star-icon">
+                            </figure> 
+                            <h5 class="marquee-text">Fast shipping</h5>  
+                        </div>
+                        <div class="marquee-text-wrapper">
+                            <figure class="marquee-icon">
+                            <img src="./assets/icons/paw.svg" alt="" class="star-icon">
+                            </figure> 
+                            <h5 class="marquee-text">Fast shipping</h5>  
+                        </div>
+                        <div class="marquee-text-wrapper">
+                            <figure class="marquee-icon">
+                            <img src="./assets/icons/paw.svg" alt="" class="star-icon">
+                            </figure> 
+                            <h5 class="marquee-text">Fast shipping</h5>  
+                        </div>
+                        <div class="marquee-text-wrapper">
+                            <figure class="marquee-icon">
+                            <img src="./assets/icons/paw.svg" alt="" class="star-icon">
+                            </figure> 
+                            <h5 class="marquee-text">Fast shipping</h5>  
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+         </div>
+       <!-- marquee-banner ends-->
+            <!-- marqueee Container end -->
+        </section>
+        <!-- Hero Section End -->
+
+        <!-- Testimonial Section start -->
+        <!-- Testimonial Section start -->
+
+        <!-- feedback Section start -->
+         <section class="feedback mt--15">
+            <div class="page-container page-container--mr">
+                <div class="row">
+                    <div class="col-lg-6 gx-lg-0">
+                        <video poster ="./assets/images/home/Dawg-Team-onwner.webp" src="">
+                            <source src="./assets/images/home/Dawg-Team-onwner.webp" type=""/>                      
+                        </video>
+                    </div>
+                    <div class="col-lg-6 feedback__right-container pr--md--3 pr--lg--5 pl--md--4 pl--lg--6 pl--xxl--9">
+                        <div class="feedback__right-wrapper">
+                            <h2 class="section-title">
+                                Your Pet's Shine Time
+                            </h2>
+                            <div class="overflow-wrapper">
+                                <p class="mt--1 ">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                </p>
+                            </div>
+                            <div class="btn-wrapper mt--2 mt--lg--4">
+                                <a href="#" class="btn btn--primary ">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30.129 26.363">
+                                            <path id="Icon_awesome-paw" data-name="Icon awesome-paw" d="M15.064,13.548c-4.673,0-11.3,7.224-11.3,11.784,0,2.054,1.578,3.281,4.222,3.281,2.874,0,4.772-1.476,7.077-1.476,2.325,0,4.228,1.476,7.077,1.476,2.644,0,4.222-1.227,4.222-3.281C26.363,20.772,19.737,13.548,15.064,13.548ZM6.4,12.806c-.612-2.039-2.5-3.359-4.211-2.95S-.42,12.251.192,14.29s2.5,3.359,4.211,2.95S7.01,14.845,6.4,12.806Zm4.985-1.223C13.2,11.1,14.115,8.645,13.418,6.09S10.68,1.852,8.86,2.331,6.128,5.27,6.825,7.825,9.563,12.063,11.383,11.583ZM27.941,9.857c-1.714-.41-3.6.911-4.211,2.95s.281,4.024,1.994,4.433,3.6-.911,4.211-2.95S29.655,10.266,27.941,9.857Zm-9.2,1.727c1.821.479,3.861-1.2,4.558-3.758s-.214-5.014-2.035-5.494-3.861,1.2-4.558,3.758.214,5.015,2.035,5.494Z" transform="translate(0.001 -2.25)" fill="#fff"/>
+                                        </svg>
                                     </span>
-                                     <div class="link-icon">
-                                        <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-                                            <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-                                        </svg>
-                                        <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-                                            <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-                                        </svg>
-                                    </div>
+                                    <span class="">Learn More</span>
                                 </a>
                             </div>
+                            <div class="feedback__footer mt--2 mt--md--4 mt--xl--6">
+                                <div class="feedback__footer-inner">
+                                    <figure class="">
+                                        <img src="./assets/images/home/dawg-1.webp" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="btn-wrapper">
+                                        <a href="#" class="btn btn--transparent btn-transprnt">
+                                            <span>Pet Boarding</span>
+                                            <span class="mt-0">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 11.115 18">
+                                                    <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#ca2027"/>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feedback__footer-inner">
+                                    <figure class="">
+                                        <img src="./assets/images/home/dawg-2.webp" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="btn-wrapper">
+                                        <a href="#" class="btn btn--transparent btn-transprnt">
+                                            <span>self serve dog wash</span>
+                                            <span class="mt-0">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 11.115 18">
+                                                    <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#ca2027"/>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+         </section>
+        <!-- feedback Section start -->
+
+
+        <!-- Testimonial Section start -->
+         <section class="testimonial mt--6 mt--md--8 mt--lg--10">
+            <div class="page-container">
+                <div class="row">
+                    <div class="col-lg-4 mx-auto text-center">
+                        <figure class="d-flex justify-content-center">
+                            <img src="./assets/icons/smiling-star.svg" alt="smiling-star-image" class="img-fluid">
+                        </figure>
+                        <h2 class="testimonial__title">
+                            Pets and Parents Approve
+                        </h2>
+                        <div class="overflow-wrapper">
+                            <p class="">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper testimonial-swiper mt--6 mt--md--8 mt--lg--10">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonial-slide">
+                            <div class="testimonial__card">
+                                <figure class="">
+                                     <img src="./assets/icons/5-stars-rating.svg" alt="rating-stars-icon" class="img-fluid"/>
+                                </figure>
+                                <div class="overflow-wrapper">
+                                     <p class="mt--1 testimonial__content">
+                                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                     </p>
+                                </div>
+                                <div class="overflow-wrapper mt--1">
+                                    <h6 class="testimonial__tesimoner-name">- John Doe</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-slide">
+                            <div class="testimonial__card">
+                                <figure class="">
+                                     <img src="./assets/icons/5-stars-rating.svg" alt="rating-stars-icon" class="img-fluid"/>
+                                </figure>
+                                <div class="overflow-wrapper">
+                                     <p class="mt--1 testimonial__content">
+                                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                     </p>
+                                </div>
+                                <div class="overflow-wrapper mt--1">
+                                    <h6 class="testimonial__tesimoner-name">- John Doe</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-slide">
+                            <div class="testimonial__card">
+                                <figure class="">
+                                     <img src="./assets/icons/5-stars-rating.svg" alt="rating-stars-icon" class="img-fluid"/>
+                                </figure>
+                                <div class="overflow-wrapper">
+                                     <p class="mt--1 testimonial__content">
+                                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                     </p>
+                                </div>
+                                <div class="overflow-wrapper mt--1">
+                                    <h6 class="testimonial__tesimoner-name">- John Doe</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <!-- Testimonial Section start -->
+
+
+        <!-- Follow-us Section start -->
+         <section class="follow-us mt--15">
+            <div class="page-container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="follow-us__title">
+                            Follow us <span Class="mt-0">@THEDAWGTEAM</span>
+                        </h2>
+                    </div>
+                    <div class="col-lg-4 offset-lg-4">
+                        <div class="btn-wrapper mt--2 d-flex justify-content-end">
+                            <a href="#" class="btn btn--primary ">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30.129 26.363">
+                                        <path id="Icon_awesome-paw" data-name="Icon awesome-paw" d="M15.064,13.548c-4.673,0-11.3,7.224-11.3,11.784,0,2.054,1.578,3.281,4.222,3.281,2.874,0,4.772-1.476,7.077-1.476,2.325,0,4.228,1.476,7.077,1.476,2.644,0,4.222-1.227,4.222-3.281C26.363,20.772,19.737,13.548,15.064,13.548ZM6.4,12.806c-.612-2.039-2.5-3.359-4.211-2.95S-.42,12.251.192,14.29s2.5,3.359,4.211,2.95S7.01,14.845,6.4,12.806Zm4.985-1.223C13.2,11.1,14.115,8.645,13.418,6.09S10.68,1.852,8.86,2.331,6.128,5.27,6.825,7.825,9.563,12.063,11.383,11.583ZM27.941,9.857c-1.714-.41-3.6.911-4.211,2.95s.281,4.024,1.994,4.433,3.6-.911,4.211-2.95S29.655,10.266,27.941,9.857Zm-9.2,1.727c1.821.479,3.861-1.2,4.558-3.758s-.214-5.014-2.035-5.494-3.861,1.2-4.558,3.758.214,5.015,2.035,5.494Z" transform="translate(0.001 -2.25)" fill="#fff"/>
+                                    </svg>
+                                </span>
+                                <span class="">View Gallery</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="hero-banner__wrapper mt--3 mt--md--4 mt--lg--6 mt--xl--8 mt--xxl--10">
-                <figure class="overflow-wrapper">
-                    <img 
-                        srcset=" ./assets/images/home/home-banner-2x.webp 480w,
-                        ./assets/images/home/home-banner-2x.webp  800w "
-                        sizes="(max-width:768px) 480px, 800px"
-                        src="./assets/images/home/home-banner-2x.webp" 
-                        alt="banner-image"
-                        class="img-fluid-full" 
-                        loading="lazy"
-                    >
-                </figure>
-                <div class="hero-banner__card counter-section mr--lg--5 mt--3 mt-lg-0">
-                    <div class="banner-card-row py--2 py--md--3">
-                        <div class="banner-card-left">
-                          <figure class="fade-in"> 
-                            <img src="./assets/images/gallon.svg" alt="icon-1" class="">
-                        </figure>
-                            <div class="banner-card-heading fade-in">
-                                <span class="counter-number" data-target="84">0</span>
-                                <span class="mt--0">%</span>
-                            </div>
-                        </div>
-                        <div class="banner-card-rght overflow-wrapper">
-                            <p class="fade-in-up"> 
-                                Potential Maximum Fuel Savings                            
+            <div class="posts-container mt--3 mt--md--4 mt--xl--6">
+                <div class="post-wrapper">
+                    <figure class="post-figure">
+                        <img src="./assets/images/follow-us-img-1.webp" alt="" class="img-fluid">
+                    </figure>
+                    <figure class="post-figure">
+                        <img src="./assets/images/follow-us-img-2.webp" alt="" class="img-fluid">
+                    </figure>
+                    <figure class="post-figure">
+                        <img src="./assets/images/follow-us-img-3.webp" alt="" class="img-fluid">
+                    </figure>
+                    <figure class="post-figure">
+                        <img src="./assets/images/follow-us-img-4.webp" alt="" class="img-fluid">
+                    </figure>
+                    <figure class="post-figure">
+                        <img src="./assets/images/follow-us-img-5.webp" alt="" class="img-fluid">
+                    </figure>
+                </div>
+            </div>
+         </section>
+        <!-- Follow-us Section end -->
+
+
+        <!-- CTA-section Start -->
+         <section class="cta bg--primary py--3 py--md--4 py--lg--6">
+            <div class="page-container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-5">
+                        <h2 class="cta-title txt-white uppercase">
+                            Have any Questions?
+                        </h2>
+                        <div class="overflow-wrapper">
+                            <p class="txt-white">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                             </p>
+                        </div>
+                        <div class="btn-wrapper mt-4">
+                            <a href="./contact.html" class="btn btn--primary ">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30.129 26.363">
+                                        <path id="Icon_awesome-paw" data-name="Icon awesome-paw" d="M15.064,13.548c-4.673,0-11.3,7.224-11.3,11.784,0,2.054,1.578,3.281,4.222,3.281,2.874,0,4.772-1.476,7.077-1.476,2.325,0,4.228,1.476,7.077,1.476,2.644,0,4.222-1.227,4.222-3.281C26.363,20.772,19.737,13.548,15.064,13.548ZM6.4,12.806c-.612-2.039-2.5-3.359-4.211-2.95S-.42,12.251.192,14.29s2.5,3.359,4.211,2.95S7.01,14.845,6.4,12.806Zm4.985-1.223C13.2,11.1,14.115,8.645,13.418,6.09S10.68,1.852,8.86,2.331,6.128,5.27,6.825,7.825,9.563,12.063,11.383,11.583ZM27.941,9.857c-1.714-.41-3.6.911-4.211,2.95s.281,4.024,1.994,4.433,3.6-.911,4.211-2.95S29.655,10.266,27.941,9.857Zm-9.2,1.727c1.821.479,3.861-1.2,4.558-3.758s-.214-5.014-2.035-5.494-3.861,1.2-4.558,3.758.214,5.015,2.035,5.494Z" transform="translate(0.001 -2.25)" fill="#fff"/>
+                                    </svg>
+                                </span>
+                                <span class="">Contact Us</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="divider"></div>
-                    <div class="banner-card-row py--2 py--md--3">
-                        <div class="banner-card-left">
-                           <figure class="fade-in">
-                                 <img src="./assets/images/transaction.svg" alt="icon-2" class="">
-                           </figure>
-                           <div class="banner-card-heading fade-in d-flex align-items-center">
-                                <span class="counter-number" data-target="12">0</span>
-                                <span class="mt-0"> - </span>
-                                <span class="counter-number mt--0" data-target="14">0</span>
-                            </div>                          
-                        </div>
-                        <div class="banner-card-rght overflow-wrapper">
-                            <p class="fade-in-up">
-                                Months ROI with ATTS Solution              
-                            </p>
-                        </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="banner-card-row py--2 py--md--3">
-                        <div class="banner-card-left">
-                            <figure class="fade-in">
-                                <img src="./assets/images/plant.svg" alt="icon-3" class="">
-                            </figure>
-                            <div class="banner-card-heading fade-in">
-                                <span class="counter-number" data-target="100">0</span>
-                                <span class="counter-suffix mt--0">%</span>
-                            </div>                          
-                        </div>
-                        <div class="banner-card-rght overflow-wrapper">
-                            <p class="fade-in-up">
-                                Plant Based and USDA Certified Bio-Preferred Materials                          
-                            </p>
+                    <div class="col-lg-5 offset-lg-2">
+                        <div class="form-container">
+                            <p class="form-lable txt-white">Sign up</p>
+                            <form action="" class="form-wrapper mt--1">
+                                <div class="form__group form-group-wrapper mb-0">
+                                    <input type="text" placeholder="Type Your Email Address" class="form__control">
+                                    <button class="btn btn--primary" id="sign-up-btn">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
+                                                <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#fff"/>
+                                            </svg>                                        
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Hero Section End -->
+         </section>
+        <!-- CTA-section End -->
 
     </main>
     <!-- Main End -->
@@ -333,124 +582,87 @@
     <!-- Footer Start -->
     <footer class="footer">
         <div class="footer-desktop bg--primary">
-            <div class="footer__top pt--md--6 pt--lg--10 pt--xxl--14 pb--3 pb--xl--6">
+            <div class="divider divider--white"></div>
+
+            <div class="footer__top pt--2 pt--md--3 pt--lg--5 pt--xl--6 pb--2 pb--md--3 pb--lg--4">
                 <div class="page-container">
                     <div class="row">
-                        <div class="col-sm-8 col-lg-5 col-xxl-4 pt--4 pt--md--0">
-                            <div class="footer__form-container">
-                                <h2 class="capitalize headings-reveal-2">Subscribe to our newsletter</h2>
-                                <form  class="footer-form mt-4 fade-in-up" id="footer-form">
-                                    <div class="form__group mb--0 fade-in-up">
-                                        <input type="email" class="form__control footer-form-control" id="email" placeholder="" required>
-                                        <label for="email" class="footer-form__label">Enter Your Email Address</label>
-                                        <button type="submit" class="form-btn">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="23.136" height="23.137" viewBox="0 0 23.136 23.137"><path data-name="Icon metro-arrow-up-right" d="m9.718 28.356 15.989-15.989v6.913a1.928 1.928 0 0 0 3.856 0V7.712a1.925 1.925 0 0 0-1.928-1.927H16.067a1.928 1.928 0 1 0 0 3.856h6.913L6.992 25.629a1.928 1.928 0 0 0 2.727 2.727z" transform="translate(-6.427 -5.784)" fill="#033735"/>
-                                                </svg>     
-                                            </span>
-                                            <span class="mt--0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="23.136" height="23.137" viewBox="0 0 23.136 23.137"><path data-name="Icon metro-arrow-up-right" d="m9.718 28.356 15.989-15.989v6.913a1.928 1.928 0 0 0 3.856 0V7.712a1.925 1.925 0 0 0-1.928-1.927H16.067a1.928 1.928 0 1 0 0 3.856h6.913L6.992 25.629a1.928 1.928 0 0 0 2.727 2.727z" transform="translate(-6.427 -5.784)" fill="#033735"/>
-                                                </svg>     
-                                            </span>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="footer-social-wrapper d-none d-lg-block">
-                                <ul class="social-list list-none mt--2 mt--md--4 mt--xl--7 overflow-wrapper">
-                                    <li class="social-item fade-in-up">
-                                        <a href="https://www.facebook.com/greentek" class="social-link" target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="22" height="22">
-                                                <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" fill="#01e193"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-item fade-in-up">
-                                        <a href="https://www.instagram.com/greentek" class="social-link" target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="22" height="22">
-                                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="#01e193" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-item fade-in-up">
-                                        <a href="https://www.linkedin.com/greentek" class="social-link" target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 18.415 18.414">
-                                                <path data-name="Icon awesome-linkedin-in" d="M4.122 18.415H.3V6.121h3.822zM2.211 4.444a2.221 2.221 0 1 1 2.211-2.232 2.23 2.23 0 0 1-2.211 2.232zm16.2 13.971H14.6V12.43c0-1.426-.029-3.255-1.985-3.255-1.985 0-2.289 1.55-2.289 3.153v6.087H6.513V6.121h3.662V7.8h.053a4.012 4.012 0 0 1 3.612-1.985c3.864 0 4.574 2.544 4.574 5.849v6.753z" transform="translate(0 -.001)" fill="#01e193"/>
-                                            </svg>
-                                            
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="mt--1 fade-in-up">
-                                    <small class="txt-white">
-                                        <span>&copy;2024 greentek, All Rights Reserved. Site by Your Hustler</span>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 offset-lg-1 offset-xxl-2 mt--4 mt--lg--0">
+                        <div class="col-12">
                             <div class="grid-container">
                                 <div class="grid-item">
-                                    <p class="footer__link-title mb-3 fade-in">Company</p>
+                                    <h6 class="footer__link-title mb-3 fade-in">Shop</h6>
                                     <ul class="footer__list list-none overflow-wrapper">
                                         <li class="fade-in-up">
-                                            <a href="./about.html" class="footer__link " data-attr="About">
-                                                <span>About</span>
-                                            </a>
+                                            <a href="./about.html" class="footer__link ">Apparel</a>
                                         </li>
                                         <li class="fade-in-up">
-                                            <a href="./case-studies.html" class="footer__link ">Case Studies</a>
+                                            <a href="./case-studies.html" class="footer__link ">Dog Food</a>
                                         </li>
                                         <li class="fade-in-up">
-                                            <a href="./contact.html" class="footer__link ">Contact</a>
+                                            <a href="./contact.html" class="footer__link ">Dog Leashes</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="grid-item">
                                     <a href="./services.html" class="">
-                                        <p class="footer__link-title mb-3 fade-in"> Services</p>
+                                        <h6 class="footer__link-title mb-3 fade-in">Company</h6>
                                     </a>
                                     <ul class="footer__list list-none overflow-wrapper">
                                         <li class="fade-in-up">
-                                            <a href="./services/atts.html" class="footer__link">ATTS</a>
+                                            <a href="./services/atts.html" class="footer__link">Story</a>
                                         </li>
                                         <li class="fade-in-up">
-                                            <a href="./services/enrg-blanket.html" class="footer__link"> Enrg Blanket</a>
+                                            <a href="./services/enrg-blanket.html" class="footer__link">About</a>
                                         </li>
                                         <li class="fade-in-up">
-                                            <a href="./services/enrg-panel.html" class="footer__link">Enrg Panel</a>
+                                            <a href="./services/enrg-panel.html" class="footer__link">Join Us</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="grid-item">
-                                    <a href="./resources.html" class="">
-                                        <p class="footer__link-title mb-3 fade-in">Resources</p>
+                                    <a href="./services.html" class="">
+                                        <h6 class="footer__link-title mb-3 fade-in">Services</h6>
                                     </a>
                                     <ul class="footer__list list-none">
                                         <li class="fade-in-up">
-                                            <a href="./resources/technology.html" class="footer__link">Technology</a>
+                                            <a href="./resources/technology.html" class="footer__link">Grooming</a>
                                         </li>
                                         <li class="fade-in-up">
-                                            <a href="./resources/blog.html" class="footer__link ">Blog</a>
+                                            <a href="./resources/blog.html" class="footer__link ">Pet Boarding</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="./resources/blog.html" class="footer__link ">Sell Serve Dog Wash</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="grid-item">
-                                    <p class="footer__link-title mb-3 fade-in">Links</p>
+                                    <h6 class="footer__link-title mb-3 fade-in">Other Links</h6>
                                     <ul class="footer__list list-none overflow-wrapper">
-                                        <li class="fade-in-up"><a href="#" class="footer__link">Sitemap</a></li>
-                                        <li class="fade-in-up"><a href="#" class="footer__link">Privacy</a></li>                             
+                                        <li class="fade-in-up">
+                                            <a href="#" class="footer__link">Refund Policy</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="#" class="footer__link">Privacy Policy</a>
+                                        </li>                             
+                                        <li class="fade-in-up">
+                                            <a href="#" class="footer__link">Terms Of Services</a>
+                                        </li>                             
                                     </ul>
                                 </div>
                                 <div class="grid-item">
-                                    <p class="footer__link-title mb-3 fade-in">Connect</p>
+                                    <h6 class="footer__link-title mb-3 fade-in">Contact</h6>
                                     <ul class="footer__list list-none overflow-wrapper">
-                                        <li class="fade-in-up"><a href="mailto:contact@greentekccs.com" class="footer__link" target="_blank">contact@greentekccs.com</a></li>
-                                        <li class="fade-in-up"><a href="tel:224 200 1893" class="footer__link" target="_blank">224 200 1893</a></li>
+                                        <li class="fade-in-up">
+                                            <a href="tel: (901) 310-4773" class="footer__link" target="_blank"> (901) 310-4773</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="mailto: dawgteam@gmail.com" class="footer__link" target="_blank">dawgteam@gmail.com </a>
+                                        </li>                            
                                         <li class="fade-in-up">
                                             <a href="https://maps.app.goo.gl/vUQLXMdHwnoLpkZ8A" class="footer__link" target="_blank">
                                                 <address>
-                                                    A74 Beechmont Court, Schaumburg, Illinois 60193
+                                                    420 N Cleveland St,  Memphis, <br>
+                                                    TN, US, 38104
                                                 </address>
                                             </a>
                                         </li>
@@ -459,51 +671,88 @@
                             </div>
                         </div>  
 
-                        <div class="col-10 col-sm-8 mt--3 mt--md--5 d-lg-none">
-                            <div class="footer-social-wrapper ">
-                                <ul class="social-list list-none overflow-wrapper">
-                                    <li class="social-item fade-in-up">
-                                        <a href="https://www.facebook.com/greentek" class="social-link" target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="22" height="22">
-                                                <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" fill="#01e193"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-item fade-in-up">
-                                        <a href="https://www.instagram.com/greentek" class="social-link" target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="22" height="22">
-                                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="#01e193" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-item fade-in-up">
-                                        <a href="https://www.linkedin.com/greentek" class="social-link" target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 18.415 18.414">
-                                                <path data-name="Icon awesome-linkedin-in" d="M4.122 18.415H.3V6.121h3.822zM2.211 4.444a2.221 2.221 0 1 1 2.211-2.232 2.23 2.23 0 0 1-2.211 2.232zm16.2 13.971H14.6V12.43c0-1.426-.029-3.255-1.985-3.255-1.985 0-2.289 1.55-2.289 3.153v6.087H6.513V6.121h3.662V7.8h.053a4.012 4.012 0 0 1 3.612-1.985c3.864 0 4.574 2.544 4.574 5.849v6.753z" transform="translate(0 -.001)" fill="#01e193"/>
-                                            </svg>                                         
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="mt--1">
-                                    <small class="txt-white">
-                                        <span>&copy;2024 greentek, All Rights Reserved. Site by Your Hustler</span>
-                                    </small>
-                                </div>
-                            </div>
+                        <div class="col-10 col-lg-8">
+                            <small class="txt-white">NCAA JERSERY / MLB Jerseys / NBA Jerseys / NFL Jerseys / NHL Jerseys / Food / Dog Harnesses / Dog Leashes / Dog Collars / Raincoats / Jackets / Vest / Dog Sweaters / Dog Overalls / Dog Dresses / Dog Polo Shirts / Dog T-Shirts</small>
                         </div>                     
                     </div> 
                 </div>
             </div>
-            <div class="divider-secondary"></div>
-            <div class="footer__bottom py--2 py--md--3 py-xl--4">
+
+            <div class="divider divider--white"></div>
+
+            <div class="footer__bottom py--2 py--lg--3">
                 <div class="page-container">
                     <div class="row">
-                        <div class="col-12 mx-auto text-center">
+                        <div class="col-lg-6 d-flex align-items-center flex-wrap">
                             <a href="./index.html" class="fade-in d-inline-flex">
                                 <figure class="">
-                                    <img src="./assets/logos/logo-for-footer.svg" alt="greentek's logo" class="img-fluid ">
+                                    <img src="./assets/logos/dawgteam-logo-2.svg" alt="greentek's logo" class="img-fluid ">
                                 </figure>
                             </a>
+                            <h4 class="txt-white uppercase ml--lg--2">
+                                Your Premier Pet Superstore
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 d-flex flex-column align-items-end">
+                            <small class="txt-white">Designed by Your Hustler</small>
+                            <div class="footer__bottom-right-wrapper">
+                                <ul class="footer__socials-list list-none">
+                                    <li class="socails-item ">
+                                        <a href="https://www.facebook.com/dawgteam" class="socials-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="18" height="18">
+                                                <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" fill="#fff"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socails-item ">
+                                        <a href="https://www.instagram.com/dawgteam" class="socials-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" height="18">
+                                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="#ffffff" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socails-item ">
+                                        <a href="https://www.youtube.com/dawgteam" class="socials-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="18" height="18">
+                                                <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" fill="#fff"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socails-item ">
+                                        <a href="https://www.linkedin.com/dawgteam" class="socials-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18.415 18.414">
+                                                <path data-name="Icon awesome-linkedin-in" d="M4.122 18.415H.3V6.121h3.822zM2.211 4.444a2.221 2.221 0 1 1 2.211-2.232 2.23 2.23 0 0 1-2.211 2.232zm16.2 13.971H14.6V12.43c0-1.426-.029-3.255-1.985-3.255-1.985 0-2.289 1.55-2.289 3.153v6.087H6.513V6.121h3.662V7.8h.053a4.012 4.012 0 0 1 3.612-1.985c3.864 0 4.574 2.544 4.574 5.849v6.753z" transform="translate(0 -.001)" fill="#fff"/>
+                                            </svg>
+                                            
+                                        </a>
+                                    </li>
+                                </ul>
+                                <small class="">
+                                    &copy; 2024 Dawg Team Apparel, USA.  All Rights Reserved.
+                                </small>
+                            </div>
+                            <ul class="payment-brands-list mt--2">
+                                <li class="">
+                                    <figure class="">
+                                        <img src="./assets/images/prod-1.webp" alt="" class="img-fluid">
+                                    </figure>
+                                </li>
+                                <li class="">
+                                    <figure class="">
+                                        <img src="./assets/images/prod-2.webp" alt="" class="img-fluid">
+                                    </figure>
+                                </li>
+                                <li class="">
+                                    <figure class="">
+                                        <img src="./assets/images/prod-3.webp" alt="" class="img-fluid">
+                                    </figure>
+                                </li>
+                                <li class="">
+                                    <figure class="">
+                                        <img src="./assets/images/prod-4.webp" alt="" class="img-fluid">
+                                    </figure>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
