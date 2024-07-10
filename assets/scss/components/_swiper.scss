@@ -1,0 +1,82 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+
+.swiper-testmonials {
+    width: 80%;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    padding-top:em(48);
+
+    .swiper-slide {
+        position: relative;
+        transform: scale(0.9) !important;
+        background-color: $clr-light-blue;
+        padding: em(45) em(60);
+        @include border-radius(15px);
+
+        .quote-figure{
+            position: absolute;
+            top: -24px;
+            left: 0;
+        }
+    }
+}
+
+.swiper-testmonials .swiper-slide-active {
+    transform: scale(1) !important;
+    background-color: $clr-primary;
+    .testimonial__content,
+    .testimonial__name{
+        color:$clr-white;
+    }
+
+    .quote-figure{
+        svg {
+            path{
+                fill:$clr-tertiary;
+            }
+        }
+    }
+}
+
+
+.swiper-button-testmonials-next,
+.swiper-button-testmonials-prev {
+    cursor: pointer;
+}
+
+
+.navigation-testmonials {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content:flex-end;
+    gap: 10px;
+
+    button{
+        width: 48px;
+        height: 48px;
+        border:1px solid $clr-black;
+        @include border-radius(50%);
+
+        @include breakpoint-xl{
+            border:none;
+        }
+        &:hover{
+          svg{
+            // circle{
+            //     stroke:$clr-secondary;
+            // }
+            path{
+                fill:$clr-primary;
+            }
+          }
+        }
+    }
+}

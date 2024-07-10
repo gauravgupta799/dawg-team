@@ -1,7 +1,7 @@
 // const html = document.getElementsByTagName("html");
 const body = document.querySelector(".body");
 const header = document.querySelector(".header-desktop");
-const hamburgerBtn = document.getElementById("hamburger-btn");
+// const hamburgerBtn = document.getElementById("hamburger-btn");
 const scrollingHeader = document.querySelector(".header");
 
 
@@ -31,16 +31,16 @@ ScrollTrigger.defaults({ scroller: document.body })
 
 
 // Toggle the header on scroll
-let prevScrollPos = lenis.scroll;
-function toggleHeader() {
-    let currentScrollPos = lenis.scroll;
-    if(prevScrollPos > currentScrollPos){
-        scrollingHeader.style.transform = "translateY(0)";
-    }else{
-        scrollingHeader.style.transform = "translateY(-180px)";
-    }
-    prevScrollPos = currentScrollPos;
-}
+// let prevScrollPos = lenis.scroll;
+// function toggleHeader() {
+//     let currentScrollPos = lenis.scroll;
+//     if(prevScrollPos > currentScrollPos){
+//         scrollingHeader.style.transform = "translateY(0)";
+//     }else{
+//         scrollingHeader.style.transform = "translateY(-180px)";
+//     }
+//     prevScrollPos = currentScrollPos;
+// }
 
 //====== Sticky Header start ==========
 function stickyHeader() {
@@ -53,7 +53,7 @@ function stickyHeader() {
 
 
 lenis.on('scroll', (e) => {
-    toggleHeader();
+    // toggleHeader();
     stickyHeader();
 });
 
@@ -74,7 +74,7 @@ function stopLenisScroll(){
 
 // ----=== Loader Start ----=========
 window.onload = function(){
-    const revealText = new SplitType(".reveal-p");
+    // const revealText = new SplitType(".reveal-p");
     const tl = gsap.timeline();
 
     const loader = document.querySelector(".loader-container");
@@ -116,176 +116,188 @@ window.onload = function(){
         delay:-0.92,
         ease:"power3.out",
     })
-    revealText.lines.forEach(line => {
-        tl.from(line,{
-            opacity:0,
-            y: 100,
-            rotation: 10,
-            duration: 1.25,
-            stagger: 0.1,
-            delay:-0.95,
-            ease: "expo.out",
-        });
-    })
-    tl.from(".hero-banner__wrapper img", {
-        opacity:0,
-        y:60,
-        duration:1.5,
-        delay:-2.5,
-        ease: "power3.inOut"
-    })
+    // revealText.lines.forEach(line => {
+    //     tl.from(line,{
+    //         opacity:0,
+    //         y: 100,
+    //         rotation: 10,
+    //         duration: 1.25,
+    //         stagger: 0.1,
+    //         delay:-0.95,
+    //         ease: "expo.out",
+    //     });
+    // })
+    // tl.from(".hero-banner__wrapper img", {
+    //     opacity:0,
+    //     y:60,
+    //     duration:1.5,
+    //     delay:-2.5,
+    //     ease: "power3.inOut"
+    // })
 }
 // ----=== Loader End ----=========
 
 
 //====== Active Page Link Start ======
-const windowPathname = window.location.pathname;
-const navLinks = document.querySelectorAll(".nav__link");
-const mobileNavLinks = document.querySelectorAll(".mobile-menu__link");
+// const windowPathname = window.location.pathname;
+// const navLinks = document.querySelectorAll(".nav__link");
+// const mobileNavLinks = document.querySelectorAll(".mobile-menu__link");
 
-function activeLink(link) {
-    const linkPathname = new URL(link.href).pathname;
-    if((windowPathname === linkPathname) || (windowPathname === "./index.html" && linkPathname === "/")){
-        link.classList.add("active");
-    }
-}
+// function activeLink(link) {
+//     const linkPathname = new URL(link.href).pathname;
+//     if((windowPathname === linkPathname) || (windowPathname === "./index.html" && linkPathname === "/")){
+//         link.classList.add("active");
+//     }
+// }
 
-navLinks && navLinks.forEach((navLink) => {
-    activeLink(navLink);
-});
+// navLinks && navLinks.forEach((navLink) => {
+//     activeLink(navLink);
+// });
 
-mobileNavLinks && mobileNavLinks.forEach((navLink) => {
-    activeLink(navLink);
-});
+// mobileNavLinks && mobileNavLinks.forEach((navLink) => {
+//     activeLink(navLink);
+// });
 
 
 //====== Active Page Link End ======
 
 
 //====== Toggle Mobile Menu Start ==========
-function toggleMobileMenu(){
-    const mobileMenu = document.querySelector(".mobile-menu");
-    mobileMenu.classList.toggle("is-open");
-    body.classList.toggle("disable-scroll");
-    stopLenisScroll();
-}
+// function toggleMobileMenu(){
+//     const mobileMenu = document.querySelector(".mobile-menu");
+//     mobileMenu.classList.toggle("is-open");
+//     body.classList.toggle("disable-scroll");
+//     stopLenisScroll();
+// }
 
-if(hamburgerBtn){
-    hamburgerBtn.onclick = toggleMobileMenu;
-    const closeMenuBtn = document.getElementById("close-menu-btn");
-    closeMenuBtn.onclick = toggleMobileMenu;
-}
+// if(hamburgerBtn){
+//     hamburgerBtn.onclick = toggleMobileMenu;
+//     const closeMenuBtn = document.getElementById("close-menu-btn");
+//     closeMenuBtn.onclick = toggleMobileMenu;
+// }
 //====== Toggle Mobile Menu End ==========
 
 
 // ============ Swipers Start =================
-const mySwiper = document.querySelector("#mySwiper");
-if(mySwiper){
-    const swiper1 = new Swiper(mySwiper, {
-        slidePerView:1,
-        navigation:{
-            nextEl: ".swiper-btn-next",
-            prevEl: ".swiper-btn-prev ",
-        }
-    })
-}
+const swiperTestmonials = new Swiper('.swiper-testmonials', {
+    loop: true,
+    slidesPerView: 1.2,
+    grabCursor: true,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-testmonials-next',
+        prevEl: '.swiper-button-testmonials-prev',
+    },
+    breakpoints: {
+        500: {
+            slidesPerView: 1.4,
+        },
+        780: {
+            slidesPerView: 2,
+        },
+        1400: {
+            slidesPerView: 3,
+        },
+    }
+});
+
 
 // ============ Swipers End =================
 
 
 // ======== Accordian Toggle Start ========
-const accordions = document.querySelectorAll(".accordion__title-wrapper");
-accordions && accordions.forEach((accordion)=>{
-    accordion.addEventListener("click", function(){
-        this.classList.toggle("active");
-        let content = this.nextElementSibling;
-        if (content) {
-            content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
-        }
+// const accordions = document.querySelectorAll(".accordion__title-wrapper");
+// accordions && accordions.forEach((accordion)=>{
+//     accordion.addEventListener("click", function(){
+//         this.classList.toggle("active");
+//         let content = this.nextElementSibling;
+//         if (content) {
+//             content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+//         }
 
-        accordions.forEach((acdnItem)=>{
-            if(acdnItem !== accordion){
-                acdnItem.classList.remove("active");
-                acdnItem.nextElementSibling.style.maxHeight = null;
-            }
-        })
-    });
+//         accordions.forEach((acdnItem)=>{
+//             if(acdnItem !== accordion){
+//                 acdnItem.classList.remove("active");
+//                 acdnItem.nextElementSibling.style.maxHeight = null;
+//             }
+//         })
+//     });
 
-})
+// })
 
-const mobileSubmenu = document.querySelectorAll(".mobile-submenu");
-mobileSubmenu && mobileSubmenu.forEach((submenu)=>{
-    submenu.addEventListener("click", function(){
-        const menu = submenu.querySelector(".subMenu__list--mobile");
-        submenu.classList.toggle("active");
-        let content = menu;
-        if (content) {
-            content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
-        }
+// const mobileSubmenu = document.querySelectorAll(".mobile-submenu");
+// mobileSubmenu && mobileSubmenu.forEach((submenu)=>{
+//     submenu.addEventListener("click", function(){
+//         const menu = submenu.querySelector(".subMenu__list--mobile");
+//         submenu.classList.toggle("active");
+//         let content = menu;
+//         if (content) {
+//             content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+//         }
 
-        mobileSubmenu.forEach((acdnItem)=>{
-            if(acdnItem !== submenu){
-                acdnItem.classList.remove("active");
-                acdnItem.querySelector(".subMenu__list--mobile").style.maxHeight = null;
-            }
-        })
-    })
-})
+//         mobileSubmenu.forEach((acdnItem)=>{
+//             if(acdnItem !== submenu){
+//                 acdnItem.classList.remove("active");
+//                 acdnItem.querySelector(".subMenu__list--mobile").style.maxHeight = null;
+//             }
+//         })
+//     })
+// })
 // ======== Accordian Toggle End ========
 
 
 // ============ Custom select box start ============
-const selectBox = document.querySelector(".select-box");
-const selected = document .querySelector(".selected");
-const optionList = document.querySelectorAll(".option");
+// const selectBox = document.querySelector(".select-box");
+// const selected = document .querySelector(".selected");
+// const optionList = document.querySelectorAll(".option");
 
-selected && selected.addEventListener("click", ()=>{
-    selectBox.classList.toggle("active");
-});
+// selected && selected.addEventListener("click", ()=>{
+//     selectBox.classList.toggle("active");
+// });
 
-optionList && optionList.forEach((option)=>{
-    option.addEventListener("click", ()=>{
-        selected.innerHTML = option.querySelector("label")?.innerHTML;
-        selectBox.classList.remove("active");
-        selected.classList.add("active");
-    });
-});
+// optionList && optionList.forEach((option)=>{
+//     option.addEventListener("click", ()=>{
+//         selected.innerHTML = option.querySelector("label")?.innerHTML;
+//         selectBox.classList.remove("active");
+//         selected.classList.add("active");
+//     });
+// });
 
 // ============ Custom select box end ============
 
 
 // ========== Counter script start ============
-const counterSections = document.querySelectorAll(".counter-section");
-counterSections && counterSections.forEach((counterSection)=>{
-    const counters = counterSection.querySelectorAll(".counter-number");
-    if(counters.length > 0) {
-        let CounterObserver = new IntersectionObserver(
-            (entries, observer)=>{
-                let [entry] = entries;
-                if(!entry.isIntersecting) return;
+// const counterSections = document.querySelectorAll(".counter-section");
+// counterSections && counterSections.forEach((counterSection)=>{
+//     const counters = counterSection.querySelectorAll(".counter-number");
+//     if(counters.length > 0) {
+//         let CounterObserver = new IntersectionObserver(
+//             (entries, observer)=>{
+//                 let [entry] = entries;
+//                 if(!entry.isIntersecting) return;
         
-                let speed = 200;
-                counters.forEach((counter, index) => {
-                    const updateCounter = () =>{
-                        let targetNumber = +counter.dataset.target;
-                        let initialNumber = +counter.innerText;
-                        let incPerCount = targetNumber / speed;
-                        if(initialNumber  < targetNumber ){
-                            counter.innerText = Math.ceil(initialNumber + incPerCount);
-                            setTimeout(updateCounter, 40);
-                        }
-                    }
-                    updateCounter();
-                })
-                observer.unobserve(counterSection);
-            },{
-                root:null,
-                threshold:0.4,
-            }
-        );
-        CounterObserver.observe(counterSection);
-    }
-})
+//                 let speed = 200;
+//                 counters.forEach((counter, index) => {
+//                     const updateCounter = () =>{
+//                         let targetNumber = +counter.dataset.target;
+//                         let initialNumber = +counter.innerText;
+//                         let incPerCount = targetNumber / speed;
+//                         if(initialNumber  < targetNumber ){
+//                             counter.innerText = Math.ceil(initialNumber + incPerCount);
+//                             setTimeout(updateCounter, 40);
+//                         }
+//                     }
+//                     updateCounter();
+//                 })
+//                 observer.unobserve(counterSection);
+//             },{
+//                 root:null,
+//                 threshold:0.4,
+//             }
+//         );
+//         CounterObserver.observe(counterSection);
+//     }
+// })
 // ============ Counter script end ============
 
 
@@ -313,51 +325,19 @@ const textContainers = gsap.utils.toArray(".fade-in-up");
 textContainers.forEach((item, i) => {
     const anim = gsap.fromTo(item,
         { opacity: 0, y: 60},
-        { opacity: 1, y: 0, duration: 1.15, ease: "power4.out"  }
+        { opacity: 1, y: 0, duration: 1.25, ease: "power3.out"  }
     );
     ScrollTrigger.create({
         trigger: item,
         animation: anim,
         toggleActions: "play",
         once: true,
-        duration: 1.15,
+        duration: 1.25,
         stagger:0.75,
-        ease: "power4.out"
+        ease: "power3.out"
     });
 });
 
-
-// Heading Animation 
-function animateHeadings(selector){
-    const headings = document.querySelectorAll(selector);
-    headings.forEach((heading) => {
-        const anim = gsap.fromTo(heading,
-            {
-                backgroundPositionX:"100%",
-            },
-            {
-                backgroundPositionX:"0%",
-                duration:1,
-                ease:"power3.inOut"
-             }
-        );
-        ScrollTrigger.create({
-            trigger:heading,
-            animation:anim,
-            toggleActions:"play",
-            start:"top 98%",
-            end:"bottom 40%",
-            duration:1,
-            scrub:true,
-            ease:"power3.inOut"
-        })
-    })
-}
-
-// Aimate the different headings
-animateHeadings(".headings-reveal");
-animateHeadings(".headings-reveal-2");
-animateHeadings(".headings-reveal-3");
 
 
 // ANimate Dividers
@@ -380,12 +360,8 @@ function animateDividers(selector) {
     });
 }
 
-
 // Animate the different dividers
 animateDividers(".divider");
-animateDividers(".divider-grey") 
-animateDividers(".divider-secondary"); 
-
 
 
 // Navbar Items Animations

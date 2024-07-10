@@ -22,7 +22,7 @@
         display: inline-flex;
         align-items: center;
         font-size: rem(18);
-        line-height: 1.85;
+        line-height: 1;
         font-family: $ff-tertiary;
         @include breakpoint-xl{
             font-size: rem(20);

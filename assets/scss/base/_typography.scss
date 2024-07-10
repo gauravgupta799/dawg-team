@@ -36,12 +36,12 @@ $p-font-sizes: (
 
 
 $h1-font-sizes: (
-  null: (rem(52), rem(58)),   
-  sm: (rem(52), rem(58)),
-  md: (rem(76), rem(85)),
-  lg: (rem(76), rem(85)),
-  xl: (rem(96), rem(107)),
-  xxl: (rem(120), rem(132)),
+  null: (rem(52), rem(44)),   
+  sm: (rem(52), rem(44)),
+  md: (rem(76), rem(64)),
+  lg: (rem(76), rem(64)),
+  xl: (rem(96), rem(81)),
+  xxl: (rem(120), rem(100)),
 );
 
 $h2-font-sizes:(

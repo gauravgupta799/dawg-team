@@ -7,6 +7,10 @@
 
 .section-title{
     text-transform: uppercase;
+
+    &--white{
+        color:$clr-white;
+    }
 }
 
 
@@ -23,6 +27,93 @@
     }
 
 }
+
+// ================================
+.product{
+    &__card-image{
+        padding: 65px 170px;
+        @include border-radius(12px);
+        border: solid 1px #000;
+        background: $clr-quaternary;
+        height: 370px;
+        img{
+            mix-blend-mode: darken;
+        }
+    }
+    &__card-footer{
+        text-align: center;
+    }
+    &__rating{
+        position: relative;
+        overflow: hidden;
+        margin-top: 8px;
+        img{
+            margin:0 auto;
+            text-align: center;
+        }
+    }
+    &__price{
+        margin-top: 12px;
+    }
+}
+
+
+
+.dog-pregnancy{
+    position: relative;
+    &__title{
+        position: relative;
+        color:$clr-white;
+        text-transform: uppercase;
+        &::after{
+            content: url("/assets/icons/heart.svg");
+            margin-left: 10px;
+        }
+    }
+    &__top-section{
+        background-image: url("/assets/images/home/dog-pregnancy-banner-img.webp");
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
+
+    &__bottom-section{
+        position: relative;
+        background: $clr-primary;
+        height: 965px;
+
+        .dog-pregnancy__title{
+            color:$clr-white;
+            line-height: 0.88;
+            position: relative;
+
+            &::before{
+                content: url("/assets/icons/stars.svg");
+                position: absolute;
+                left: -20px;
+                top: -32px;
+            }
+            &::after{
+                content: url("/assets/icons/paws.svg");
+                position: absolute;
+                top: -80px;
+                margin-left: -80px;
+            }
+        }
+
+        .dog-pregnancy__subTitle{
+            color:$clr-white;
+            max-width: 60ch;
+            margin-inline:auto;
+        }
+    }
+
+    .team-container{
+        position: relative;
+        margin-top: -320px;
+    }
+}
+
 
 // ================================
 .feedback{
@@ -45,21 +136,11 @@
 }
 
 
-
-
-
-
 // ================================
 .testimonial{
     &__title{
         text-transform: uppercase;
-        margin-top: 8px;
-    }
-    &__card{
-        width: 482px;
-        padding: 42px 48px 60px 46px;
-        @include border-radius(15px);
-        background-color: $clr-light-blue;
+        margin-top: 12px;
     }
 }
 
@@ -76,4 +157,16 @@
 .post-wrapper{
     display: flex;
     align-items: center;
+}
+
+.video{
+    &__container{
+        position: relative;
+    }
+}
+
+
+.cta-title{
+    color:$clr-white;
+    text-transform: uppercase;
 }

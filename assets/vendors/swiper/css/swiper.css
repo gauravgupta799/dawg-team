@@ -62,7 +62,7 @@
 }
 
 .swiper-slide,
-swiper-slide {
+.swiper-slide {
     flex-shrink: 0;
     width: 100%;
     height: 100%;
@@ -241,6 +241,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 
 .swiper-virtual .swiper-slide {
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
