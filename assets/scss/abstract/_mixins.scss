@@ -41,6 +41,11 @@
     transform:translate(-50%, -50%);
 }
 
+@mixin relative-hidden {
+    position: relative;
+    overflow: hidden;
+}
+
 @mixin full-dimensions{
     width: 100%;
     height: 100%;
@@ -59,16 +64,6 @@
 
 @mixin border-radius($val){
     border-radius:$val;
-}
-
-@mixin border-radius-tlr($left-radius, $right-radius){
-    border-top-left-radius:$left-radius;
-    border-top-right-radius:$right-radius;
-}
-
-@mixin border-radius-blr($left-radius, $right-radius){
-    border-bottom-left-radius:$left-radius;
-    border-bottom-right-radius:$right-radius;
 }
 
 @mixin transition($property:all, $delay:0, $timing-func:ease){

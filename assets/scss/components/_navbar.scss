@@ -17,8 +17,7 @@
     }
 
     &__link{
-        position: relative;
-        overflow: hidden;
+        @include relative-hidden;
         display: inline-flex;
         align-items: center;
         font-size: rem(18);
@@ -62,11 +61,11 @@
     }
     &__list{
         li{
-            position: relative;
-            overflow: hidden;
+            @include relative-hidden;
         }  
     }
     &__link{
+        @include relative-hidden;
         color:$clr-white;
         text-transform: uppercase;
         font-size: rem(32);
@@ -74,8 +73,6 @@
         font-family: $ff-tertiary;
         display: inline-flex;
         align-items: center;
-        // position: relative;
-        // overflow: hidden;
         @include breakpoint-md{
             font-size: rem(36);
         }
@@ -83,11 +80,14 @@
             color:$clr-white;
             display: inline-flex;
             margin: 0;
-            // transition: transform .3s ease;
+            transition: transform .3s ease;
         }
 
-        // &:hover{
-        //     color:$clr-secondary;
+        &:hover{
+            span{
+                color:$clr-secondary;
+            }
+        }
     }
 }
 
@@ -111,8 +111,7 @@
 
 // ===== SubMenu Start ===========
 .subMenu{
-    position: relative;
-    overflow: hidden;
+    @include relative-hidden;
     &__list{
         position: absolute;
         background: $clr-primary;
@@ -125,8 +124,7 @@
         list-style: none;
 
         li{
-            position: relative;
-            overflow: hidden;
+            @include relative-hidden;
             padding:0.8em 1em;
             @include border-radius(4px);
             white-space: nowrap;
@@ -145,7 +143,6 @@
                 a{
                     color:$clr-white;
                 }
-
                 ul{
                     display: inherit;
                 }
@@ -173,7 +170,7 @@
                 &:hover{
                     background-color: $clr-secondary;
                     .subMenu__link{
-                        color:$clr-primary;
+                        color:$clr-white;
                     }
                 }
             }
@@ -239,7 +236,9 @@
             }
         }
         .mobile-menu__link{
-            color:$clr-secondary
+            span{
+                color:$clr-secondary;
+            }
         }
     }
 }

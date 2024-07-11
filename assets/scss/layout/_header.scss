@@ -24,27 +24,13 @@
         padding:em(20) em(48);
         background: $clr-white;
         @include border-radius(9px);
-        margin-top: 42px;
-        display: none;
+        margin-top: 32px;
         transition: transform 0.25s ease;
+        display: none;
         @include breakpoint-lg{
             display: flex;
         }
     }
-    &__inner-mobile{
-        @include flex-space-between;
-        background: $clr-primary;
-        @include border-radius(12px);
-        margin: rem(16);
-        margin-top: rem(32); margin-top: rem(32);
-        padding: em(16);
-        transition:all 0.35s ease;
-
-        @include breakpoint-lg{
-            display: none;
-        }
-    }
-
     &__right,
     &__mobile-left{
         @include flex-center-vertical;
@@ -61,7 +47,7 @@
         @extend .header__inner-desktop;
         display: flex;
         padding:em(16);
-
+        margin-top: 16px;
         @include breakpoint-lg{
             display: none;
         }
@@ -76,7 +62,8 @@
 
 // ================================
 .header-desktop.sticky{
-    .header__inner-desktop{
+    .header__inner-desktop,
+    .header__mobile{
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
     }
 }
@@ -100,7 +87,6 @@
             @include flex-center;
             @include border-radius(50%);
             @include dimensions(rem(20), rem(20));
-            
         }
         &:hover{
             transform:scale(1.025);

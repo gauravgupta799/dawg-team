@@ -946,12 +946,12 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  line-height: 3rem;
+  line-height: 2.25rem;
 }
 @media screen and (min-width: 36em) {
   h2 {
     font-size: 2.5rem;
-    line-height: 3rem;
+    line-height: 2.25rem;
   }
 }
 @media screen and (min-width: 48em) {
@@ -11424,12 +11424,18 @@ p, ul, ol, body {
   background: #fff;
   border: none;
   outline: 1px solid #1257c6;
-  padding: 1em 1.25em;
+  padding: 1em;
   color: #1257c6;
   font-size: 1rem;
   font-weight: 600;
   line-height: 2;
+  font-family: "RocGrotesk-Black", sans-serif;
   border-radius: 4px;
+}
+@media only screen and (min-width: 48em) {
+  .form__control {
+    padding: 1em 1.25em;
+  }
 }
 .form__control:focus, .form__control:hover {
   outline-color: #ca2027;
@@ -11518,6 +11524,8 @@ p, ul, ol, body {
   overflow: hidden;
 }
 .mobile-menu__link {
+  position: relative;
+  overflow: hidden;
   color: #fff;
   text-transform: uppercase;
   font-size: 2rem;
@@ -11535,6 +11543,10 @@ p, ul, ol, body {
   color: #fff;
   display: inline-flex;
   margin: 0;
+  transition: transform 0.3s ease;
+}
+.mobile-menu__link:hover span {
+  color: #ca2027;
 }
 
 .close-menu-btn {
@@ -11612,7 +11624,7 @@ p, ul, ol, body {
   background-color: #ca2027;
 }
 .subMenu__list--mobile li:hover .subMenu__link {
-  color: #1257c6;
+  color: #fff;
 }
 .subMenu__link {
   display: inline-block;
@@ -11682,7 +11694,7 @@ p, ul, ol, body {
 .mobile-submenu.active .dropdown-icon svg path {
   fill: #ca2027;
 }
-.mobile-submenu.active .mobile-menu__link {
+.mobile-submenu.active .mobile-menu__link span {
   color: #ca2027;
 }
 
@@ -11856,6 +11868,10 @@ p, ul, ol, body {
   fill: #fff;
 }
 
+.main {
+  overflow: hidden;
+}
+
 .section-title {
   text-transform: uppercase;
 }
@@ -11940,6 +11956,7 @@ p, ul, ol, body {
 .dog-pregnancy__bottom-section {
   background: #1257c6;
   height: 56.25rem;
+  overflow: hidden;
 }
 @media only screen and (min-width: 48em) {
   .dog-pregnancy__bottom-section {
@@ -11954,14 +11971,28 @@ p, ul, ol, body {
 .dog-pregnancy__bottom-section .dog-pregnancy__title::before {
   content: url("/assets/icons/stars.svg");
   position: absolute;
-  left: -20px;
-  top: -32px;
+  left: 0;
+  top: 0;
+  margin-left: -62px;
+  margin-top: -96px;
+}
+@media only screen and (min-width: 62em) {
+  .dog-pregnancy__bottom-section .dog-pregnancy__title::before {
+    margin-left: 0;
+    margin-top: -80px;
+  }
 }
 .dog-pregnancy__bottom-section .dog-pregnancy__title::after {
   content: url("/assets/icons/paws.svg");
   position: absolute;
-  top: -80px;
+  top: 0;
   margin-left: -80px;
+  margin-top: -116px;
+}
+@media only screen and (min-width: 62em) {
+  .dog-pregnancy__bottom-section .dog-pregnancy__title::after {
+    margin-top: -80px;
+  }
 }
 .dog-pregnancy__bottom-section .dog-pregnancy__subTitle {
   color: #fff;
@@ -12015,6 +12046,30 @@ p, ul, ol, body {
   text-transform: uppercase;
 }
 
+.team-values {
+  background: #1257c6;
+}
+.team-values__card h4 {
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 48em) {
+  .team-values__card p {
+    padding-inline: 2em;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .team-values__card p {
+    padding-inline: 4em;
+  }
+}
+.team-values__card h4, .team-values__card p {
+  color: #fff;
+}
+.team-values__card figure img {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .header {
   position: fixed;
   z-index: 9;
@@ -12032,30 +12087,13 @@ p, ul, ol, body {
   padding: 1.25em 3em;
   background: #fff;
   border-radius: 9px;
-  margin-top: 42px;
-  display: none;
+  margin-top: 32px;
   transition: transform 0.25s ease;
+  display: none;
 }
 @media only screen and (min-width: 62em) {
   .header__inner-desktop, .header__mobile {
     display: flex;
-  }
-}
-.header__inner-mobile {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #1257c6;
-  border-radius: 12px;
-  margin: 1rem;
-  margin-top: 2rem;
-  margin-top: 2rem;
-  padding: 1em;
-  transition: all 0.35s ease;
-}
-@media only screen and (min-width: 62em) {
-  .header__inner-mobile {
-    display: none;
   }
 }
 .header__right, .header__mobile-left {
@@ -12076,6 +12114,7 @@ p, ul, ol, body {
 .header__mobile {
   display: flex;
   padding: 1em;
+  margin-top: 16px;
 }
 @media only screen and (min-width: 62em) {
   .header__mobile {
@@ -12087,7 +12126,8 @@ p, ul, ol, body {
   transition: all 0.25s ease;
 }
 
-.header-desktop.sticky .header__inner-desktop, .header-desktop.sticky .header__mobile {
+.header-desktop.sticky .header__inner-desktop,
+.header-desktop.sticky .header__mobile {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 

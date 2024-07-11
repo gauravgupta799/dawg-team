@@ -15,13 +15,16 @@
         background: $clr-white;
         border:none;
         outline:1px solid $clr-primary;
-        padding: em(16) em(20);
+        padding: em(16);
         color:$clr-primary;
         font-size: rem(16);
         font-weight: 600;
         line-height: 2;
-        // font-family: $ff-regular;
+        font-family: $ff-primary;
         @include border-radius(4px);
+        @include breakpoint-md{
+            padding: em(16) em(20);
+        }
         &:focus, &:hover{
             outline-color: $clr-secondary;  
         }
@@ -30,8 +33,7 @@
 
 
 .form-group-wrapper{
-    display: flex;
-    align-items: center;
+    @include flex-center-vertical;
     padding:8px;
     @include border-radius(4px);
     background: $clr-white;

@@ -4,6 +4,9 @@
 @use "../abstract/functions" as *;
 @use "../abstract/mixins" as *;
 
+.main{
+    overflow: hidden;
+}
 
 .section-title{
     text-transform: uppercase;
@@ -90,9 +93,9 @@
     }
 
     &__bottom-section{
-        // position: relative;
         background: $clr-primary;
         height: rem(900);
+        overflow: hidden;
 
         @include breakpoint-md{
             height: rem(965);
@@ -102,18 +105,27 @@
             color:$clr-white;
             line-height: 0.88;
             position: relative;
-
             &::before{
                 content: url("/assets/icons/stars.svg");
                 position: absolute;
-                left: -20px;
-                top: -32px;
+                left: 0;
+                top:0;
+                margin-left: -62px;
+                margin-top: -96px;
+                @include breakpoint-lg{
+                    margin-left: 0;
+                    margin-top: -80px;
+                }
             }
             &::after{
                 content: url("/assets/icons/paws.svg");
                 position: absolute;
-                top: -80px;
+                top: 0;
                 margin-left: -80px;
+                margin-top: -116px;
+                @include breakpoint-lg{
+                    margin-top: -80px;
+                }
             }
         }
 
@@ -167,8 +179,7 @@
 
 // ================================
 .post-wrapper{
-    display: flex;
-    align-items: center;
+    @include flex-center-vertical;
 }
 
 // ================================
@@ -182,4 +193,33 @@
 .cta-title{
     color:$clr-white;
     text-transform: uppercase;
+}
+
+
+// ABout
+
+.team-values {
+    background: $clr-primary;
+    &__card{
+        h4{
+            text-transform: uppercase;
+        }
+        p{
+            @include breakpoint-md{
+                padding-inline:2em; 
+            }
+            @include breakpoint-lg{
+                padding-inline:4em; 
+            }
+        }
+        h4, p{
+            color:$clr-white;
+        }
+        figure{
+            img{
+                margin:0 auto;
+                text-align: center;
+            }
+        }
+    }
 }
