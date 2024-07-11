@@ -11519,56 +11519,22 @@ p, ul, ol, body {
 }
 .mobile-menu__link {
   color: #fff;
+  text-transform: uppercase;
   font-size: 2rem;
   line-height: 2;
-  font-family: "Roboto-Regular", sans-serif;
-  font-weight: 700;
+  font-family: "Simpleness-Regular", sans-serif;
   display: inline-flex;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding-right: 14px;
 }
 @media only screen and (min-width: 48em) {
   .mobile-menu__link {
     font-size: 2.25rem;
   }
 }
-@media only screen and (min-width: 62em) {
-  .mobile-menu__link {
-    font-size: 2.5rem;
-  }
-}
 .mobile-menu__link span {
+  color: #fff;
   display: inline-flex;
   margin: 0;
-  transition: transform 0.3s ease;
-}
-.mobile-menu__link span:first-child {
-  transform: translate(0px, 220%);
-}
-.mobile-menu__link::after {
-  content: attr(data-attr);
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 32px;
-  text-transform: capitalize;
-  transform: translate3d(0, 220%, 0);
-  transition: transform 0.3s ease;
-  color: #ca2027;
-}
-.mobile-menu__link.active, .mobile-menu__link:hover {
-  color: #ca2027;
-}
-.mobile-menu__link.active::after, .mobile-menu__link:hover::after {
-  transform: translate3d(0, 0, 0);
-}
-.mobile-menu__link.active span:first-child, .mobile-menu__link:hover span:first-child {
-  transform: translate(0);
-}
-.mobile-menu__link.active span:last-child, .mobile-menu__link:hover span:last-child {
-  transform: translate3d(0, -220%, 0);
 }
 
 .close-menu-btn {
@@ -11581,14 +11547,6 @@ p, ul, ol, body {
 }
 .close-menu-btn:hover svg path {
   fill: #ca2027;
-}
-
-.caret-down-icon svg {
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
-}
-.caret-down-icon svg path {
-  fill: #000;
 }
 
 .subMenu {
@@ -11633,7 +11591,7 @@ p, ul, ol, body {
 }
 .subMenu__list--mobile {
   max-width: 300px;
-  margin-left: 32px;
+  margin-left: 16px;
   border-radius: 4px;
   max-height: 0;
   overflow: hidden;
@@ -11648,7 +11606,7 @@ p, ul, ol, body {
   transform: translateY(0);
   color: #fff;
   font-size: 1.375rem;
-  font-family: "Roboto-Regular", sans-serif;
+  font-family: "Simpleness-Regular", sans-serif;
 }
 .subMenu__list--mobile li:hover {
   background-color: #ca2027;
@@ -11665,6 +11623,7 @@ p, ul, ol, body {
   transform: translateY(50px);
   transition: transform 0.2s ease;
   transition-duration: 0.5s;
+  text-transform: uppercase;
   width: 100%;
 }
 .subMenu__link:nth-of-type(1) {
@@ -11714,6 +11673,25 @@ p, ul, ol, body {
 }
 .subMenu:hover .nav__link .caret-down-icon svg path {
   fill: #ca2027;
+}
+
+.mobile-submenu.active .dropdown-icon svg {
+  transform: rotate(182deg) translateY(-2px);
+  transform-origin: center;
+}
+.mobile-submenu.active .dropdown-icon svg path {
+  fill: #ca2027;
+}
+.mobile-submenu.active .mobile-menu__link {
+  color: #ca2027;
+}
+
+.caret-down-icon svg {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.caret-down-icon svg path {
+  fill: #000;
 }
 
 .marquee-container {
@@ -12046,7 +12024,7 @@ p, ul, ol, body {
   transform: translateY(0);
 }
 
-.header__inner-desktop {
+.header__inner-desktop, .header__mobile {
   position: relative;
   display: flex;
   align-items: center;
@@ -12059,7 +12037,7 @@ p, ul, ol, body {
   transition: transform 0.25s ease;
 }
 @media only screen and (min-width: 62em) {
-  .header__inner-desktop {
+  .header__inner-desktop, .header__mobile {
     display: flex;
   }
 }
@@ -12080,17 +12058,36 @@ p, ul, ol, body {
     display: none;
   }
 }
-.header__right {
+.header__right, .header__mobile-left {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 0.875rem;
+}
+@media only screen and (min-width: 48em) {
+  .header__right, .header__mobile-left {
+    gap: 1.25rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .header__right, .header__mobile-left {
+    gap: 2rem;
+  }
+}
+.header__mobile {
+  display: flex;
+  padding: 1em;
+}
+@media only screen and (min-width: 62em) {
+  .header__mobile {
+    display: none;
+  }
 }
 
 .header-desktop {
   transition: all 0.25s ease;
 }
 
-.header-desktop.sticky .header__inner-desktop {
+.header-desktop.sticky .header__inner-desktop, .header-desktop.sticky .header__mobile {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
@@ -12176,6 +12173,12 @@ p, ul, ol, body {
   align-items: center;
   gap: 1.25rem;
   margin-top: -7px;
+}
+
+.socials-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .socials-item {

@@ -68,57 +68,26 @@
     }
     &__link{
         color:$clr-white;
+        text-transform: uppercase;
         font-size: rem(32);
         line-height: 2;
-        font-family: $ff-secondary;
-        font-weight: 700;
+        font-family: $ff-tertiary;
         display: inline-flex;
         align-items: center;
-        position: relative;
-        overflow: hidden;
-        padding-right: 14px;
+        // position: relative;
+        // overflow: hidden;
         @include breakpoint-md{
             font-size: rem(36);
         }
-        @include breakpoint-lg{
-            font-size: rem(40);
-        }
         span{
+            color:$clr-white;
             display: inline-flex;
             margin: 0;
-            transition: transform .3s ease;
-            &:first-child{
-                transform: translate(0px,220%);
-            }
+            // transition: transform .3s ease;
         }
 
-        &::after {
-            content: attr(data-attr);
-            position: absolute;
-            height: 100%;
-            top: 0;
-            left: 32px;
-            text-transform: capitalize;
-            transform: translate3d(0, 220%, 0);
-            transition: transform .3s ease;
-            color: $clr-secondary;
-        }
-
-        &.active,
-        &:hover{
-            color:$clr-secondary;
-            &::after {
-                transform: translate3d(0, 0, 0);
-            }
-            span{  
-                &:first-child{
-                    transform: translate(0);
-                }
-                &:last-child{
-                    transform: translate3d(0, -220%, 0);
-                }
-            }     
-        }
+        // &:hover{
+        //     color:$clr-secondary;
     }
 }
 
@@ -141,17 +110,6 @@
 
 
 // ===== SubMenu Start ===========
-
-.caret-down-icon{
-    svg{
-        transform: rotate(0deg);
-        transition:transform 0.3s ease;
-        path{
-            fill:$clr-black;
-        }
-    }
-}
-
 .subMenu{
     position: relative;
     overflow: hidden;
@@ -196,7 +154,7 @@
 
         &--mobile{
             max-width: 300px;
-            margin-left: 32px;
+            margin-left: 16px;
             @include border-radius(4px);
             max-height: 0;
             overflow: hidden;
@@ -210,7 +168,7 @@
                     transform:translateY(0);
                     color:$clr-white;
                     font-size: rem(22);
-                    font-family: $ff-secondary;
+                    font-family: $ff-tertiary;
                 }
                 &:hover{
                     background-color: $clr-secondary;
@@ -232,6 +190,7 @@
         transform: translateY(50px);
         transition: transform .2s ease;
         transition-duration: 0.5s;
+        text-transform: uppercase;
         width: 100%;
 
         @for $i from 1 through $n {
@@ -264,26 +223,35 @@
                 }
             }
         }
-
     }
 }
 
 
-
-// .mobile-submenu{
-//     &.active{
-//         .dropdown-icon{
-//             svg{
-//                 transform: rotate(182deg) translateY(-2px);
-//                 transform-origin: center;
-//                 path{
-//                     fill:$clr-secondary;
-//                 }
-//             }
-//         }
-//         .mobile-menu__link{
-//             color:$clr-secondary
-//         }
-//     }
-// }
+.mobile-submenu{
+    &.active{
+        .dropdown-icon{
+            svg{
+                transform: rotate(182deg) translateY(-2px);
+                transform-origin: center;
+                path{
+                    fill:$clr-secondary;
+                }
+            }
+        }
+        .mobile-menu__link{
+            color:$clr-secondary
+        }
+    }
+}
 // ===== SubMenu End ===========
+
+
+.caret-down-icon{
+    svg{
+        transform: rotate(0deg);
+        transition:transform 0.3s ease;
+        path{
+            fill:$clr-black;
+        }
+    }
+}

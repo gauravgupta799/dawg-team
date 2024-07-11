@@ -44,11 +44,31 @@
             display: none;
         }
     }
-    &__right{
+
+    &__right,
+    &__mobile-left{
         @include flex-center-vertical;
-        gap:rem(32);
+        gap:rem(14);
+        @include breakpoint-md{
+            gap:rem(20);
+        }
+        @include breakpoint-lg{
+            gap:rem(32);
+        }
+    }
+
+    &__mobile{
+        @extend .header__inner-desktop;
+        display: flex;
+        padding:em(16);
+
+        @include breakpoint-lg{
+            display: none;
+        }
     }
 }
+
+
 // ================================
 .header-desktop{
     transition:all 0.25s ease;
@@ -84,17 +104,9 @@
         }
         &:hover{
             transform:scale(1.025);
-            // svg{
-            //     path{
-            //         fill:$clr-secondary;
-            //     }
-            // }
         }
     }
 }
-
-
-
 
 
 // ========== hamburger =============
