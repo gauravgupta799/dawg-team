@@ -4,7 +4,7 @@
 @use "../abstract/functions" as *;
 @use "../abstract/mixins" as *;
 
-
+// ================================
 .header{
     position: fixed; 
     z-index: 9;
@@ -12,10 +12,10 @@
     left: 0;
     width: 100%;
     transform:translateY(0);
-    transition: background-color 0.3s ease transform 0.3s ease;
+    // transition: transform 0.3s ease;
 }
 
-
+// ================================
 .header{
     &__inner-desktop{
         position: relative;
@@ -26,6 +26,7 @@
         @include border-radius(9px);
         margin-top: 42px;
         display: none;
+        transition: transform 0.25s ease;
         @include breakpoint-lg{
             display: flex;
         }
@@ -48,18 +49,27 @@
         gap:rem(32);
     }
 }
-
+// ================================
 .header-desktop{
     transition:all 0.25s ease;
 }
 
+// ================================
+.header-desktop.sticky{
+    .header__inner-desktop{
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    }
+}
 
+// ================================
 .action-btns-wrapper{
     @include flex-center-vertical;
     gap:rem(24);
 
     .action-btn{
         position: relative;
+        transform:scale(1);
+        transition:transform 0.35s ease;
         .count{
             position: absolute;
             right: -10px;
@@ -70,20 +80,24 @@
             @include flex-center;
             @include border-radius(50%);
             @include dimensions(rem(20), rem(20));
+            
+        }
+        &:hover{
+            transform:scale(1.025);
+            // svg{
+            //     path{
+            //         fill:$clr-secondary;
+            //     }
+            // }
         }
     }
 }
 
-.header-desktop.sticky{
-    .header__inner-desktop{
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
-    }
-}
+
+
 
 
 // ========== hamburger =============
 .hamburger-wrapper{
     cursor: pointer;
 }
-
-

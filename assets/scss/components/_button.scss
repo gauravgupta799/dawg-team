@@ -12,7 +12,7 @@
     outline:none;
     border:none;
     text-transform: capitalize;
-    font-size:rem(16);
+    font-size:rem(20);
     line-height: 1;
     padding:em(16) em(32);
     color:$clr-white;
@@ -20,13 +20,10 @@
     @include border-radius(7px);
     @include transition(all, 0.35s, ease-out);
  
-    @include breakpoint-md{
-        font-size: rem(18);
-    }
+    // @include breakpoint-md{
+    //     font-size: rem(18);
+    // }
     @include breakpoint-xl{
-        font-size: rem(20);
-    }
-    @include breakpoint-xxl{
         font-size: rem(24);
     }
     span{
@@ -46,6 +43,7 @@
 .btn--primary{
     background: $clr-secondary;
     @include flex-center-horizontal;
+    @include flex-center;
     gap:16px;
  
 }
@@ -82,11 +80,11 @@
 
 .btn--transparent{
     background:transparent;
-    display: flex;
-    align-items: center;
+    @include flex-center-vertical;
     text-transform: uppercase;
     gap:rem(8);
     padding: 0;
+    font-size: 24px;
     span{
         color:$clr-secondary;
         transition:color 0.35s ease;
@@ -96,7 +94,6 @@
             transition:color 0.35s ease;
         }
     }
-
 
     &:hover{
         span{
@@ -148,6 +145,7 @@
         @include border-radius(50%);
         background: $clr-secondary;
         opacity: 0.65;
+        transition:opacity 0.35s ease;
 
         @include breakpoint-md{
             @include dimensions(rem(100), rem(100));
@@ -157,6 +155,10 @@
         }
         @include breakpoint-xl{
             @include dimensions(rem(130), rem(130));
+        }
+        &:hover{
+            cursor: pointer;
+            opacity: 1;
         }
     }
 }

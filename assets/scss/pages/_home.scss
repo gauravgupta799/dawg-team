@@ -13,8 +13,7 @@
     }
 }
 
-
-// ======================================
+// ================================
 .hero{
     &--home{
         background: $clr-primary;
@@ -31,11 +30,18 @@
 // ================================
 .product{
     &__card-image{
-        padding: 65px 170px;
         @include border-radius(12px);
         border: solid 1px #000;
         background: $clr-quaternary;
         height: 370px;
+        @include flex-center;
+
+        @include breakpoint-md{
+            padding-block: em(48);
+        }
+        @include breakpoint-lg{
+            padding-block: em(64);
+        }
         img{
             mix-blend-mode: darken;
         }
@@ -57,8 +63,7 @@
     }
 }
 
-
-
+// ================================
 .dog-pregnancy{
     position: relative;
     &__title{
@@ -71,16 +76,27 @@
         }
     }
     &__top-section{
-        background-image: url("/assets/images/home/dog-pregnancy-banner-img.webp");
+        background-image: url("/assets/images/mobile/home/dog-pregnancy-banner-img.webp");
         background-repeat: no-repeat;
         background-size:cover;
         background-position:center;
+        position: relative;
+        bottom: -20px;
+        z-index: 1;
+
+        @include breakpoint-md{
+            background-image: url("/assets/images/home/dog-pregnancy-banner-img.webp");
+        }
     }
 
     &__bottom-section{
-        position: relative;
+        // position: relative;
         background: $clr-primary;
-        height: 965px;
+        height: rem(900);
+
+        @include breakpoint-md{
+            height: rem(965);
+        }
 
         .dog-pregnancy__title{
             color:$clr-white;
@@ -114,7 +130,6 @@
     }
 }
 
-
 // ================================
 .feedback{
     background: $clr-light-blue;
@@ -135,7 +150,6 @@
     }
 }
 
-
 // ================================
 .testimonial{
     &__title{
@@ -144,28 +158,27 @@
     }
 }
 
-
 // ================================
 .follow-us{
     &__title{
-        span{
-            color:$clr-secondary;
-        }
+        text-transform: uppercase;
     }
 }
 
+// ================================
 .post-wrapper{
     display: flex;
     align-items: center;
 }
 
+// ================================
 .video{
     &__container{
         position: relative;
     }
 }
 
-
+// ================================
 .cta-title{
     color:$clr-white;
     text-transform: uppercase;

@@ -31,16 +31,16 @@ ScrollTrigger.defaults({ scroller: document.body })
 
 
 // Toggle the header on scroll
-// let prevScrollPos = lenis.scroll;
-// function toggleHeader() {
-//     let currentScrollPos = lenis.scroll;
-//     if(prevScrollPos > currentScrollPos){
-//         scrollingHeader.style.transform = "translateY(0)";
-//     }else{
-//         scrollingHeader.style.transform = "translateY(-180px)";
-//     }
-//     prevScrollPos = currentScrollPos;
-// }
+let prevScrollPos = lenis.scroll;
+function toggleHeader() {
+    let currentScrollPos = lenis.scroll;
+    if(prevScrollPos > currentScrollPos){
+        scrollingHeader.style.transform = "translateY(0)";
+    }else{
+        scrollingHeader.style.transform = "translateY(-186px)";
+    }
+    prevScrollPos = currentScrollPos;
+}
 
 //====== Sticky Header start ==========
 function stickyHeader() {
@@ -53,7 +53,7 @@ function stickyHeader() {
 
 
 lenis.on('scroll', (e) => {
-    // toggleHeader();
+    toggleHeader();
     stickyHeader();
 });
 
@@ -74,7 +74,6 @@ function stopLenisScroll(){
 
 // ----=== Loader Start ----=========
 window.onload = function(){
-    // const revealText = new SplitType(".reveal-p");
     const tl = gsap.timeline();
 
     const loader = document.querySelector(".loader-container");
@@ -116,17 +115,6 @@ window.onload = function(){
         delay:-0.92,
         ease:"power3.out",
     })
-    // revealText.lines.forEach(line => {
-    //     tl.from(line,{
-    //         opacity:0,
-    //         y: 100,
-    //         rotation: 10,
-    //         duration: 1.25,
-    //         stagger: 0.1,
-    //         delay:-0.95,
-    //         ease: "expo.out",
-    //     });
-    // })
     // tl.from(".hero-banner__wrapper img", {
     //     opacity:0,
     //     y:60,
@@ -139,24 +127,24 @@ window.onload = function(){
 
 
 //====== Active Page Link Start ======
-// const windowPathname = window.location.pathname;
-// const navLinks = document.querySelectorAll(".nav__link");
-// const mobileNavLinks = document.querySelectorAll(".mobile-menu__link");
+const windowPathname = window.location.pathname;
+const navLinks = document.querySelectorAll(".nav__link");
+const mobileNavLinks = document.querySelectorAll(".mobile-menu__link");
 
-// function activeLink(link) {
-//     const linkPathname = new URL(link.href).pathname;
-//     if((windowPathname === linkPathname) || (windowPathname === "./index.html" && linkPathname === "/")){
-//         link.classList.add("active");
-//     }
-// }
+function activeLink(link) {
+    const linkPathname = new URL(link.href).pathname;
+    if((windowPathname === linkPathname) || (windowPathname === "./index.html" && linkPathname === "/")){
+        link.classList.add("active");
+    }
+}
 
-// navLinks && navLinks.forEach((navLink) => {
-//     activeLink(navLink);
-// });
+navLinks && navLinks.forEach((navLink) => {
+    activeLink(navLink);
+});
 
-// mobileNavLinks && mobileNavLinks.forEach((navLink) => {
-//     activeLink(navLink);
-// });
+mobileNavLinks && mobileNavLinks.forEach((navLink) => {
+    activeLink(navLink);
+});
 
 
 //====== Active Page Link End ======
@@ -180,23 +168,43 @@ window.onload = function(){
 
 // ============ Swipers Start =================
 const swiperTestmonials = new Swiper('.swiper-testmonials', {
-    loop: true,
-    slidesPerView: 1.2,
+    slidesPerView: 1,
     grabCursor: true,
-    // Navigation arrows
+    loop:true,
     navigation: {
         nextEl: '.swiper-button-testmonials-next',
         prevEl: '.swiper-button-testmonials-prev',
     },
     breakpoints: {
         500: {
-            slidesPerView: 1.4,
-        },
-        780: {
             slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
         },
         1400: {
             slidesPerView: 3,
+        },
+    }
+});
+
+const swiperPost = new Swiper('.swiper-post', {
+    slidesPerView: 1.4,
+    grabCursor: true,
+    loop:true,
+    spaceBetween:7,
+    breakpoints: {
+        500: {
+            slidesPerView: 2.4,
+        },
+        768: {
+            slidesPerView: 3.4,
+        },
+        992: {
+            slidesPerView: 4.4,
+        },
+        1200: {
+            slidesPerView: 5,
         },
     }
 });

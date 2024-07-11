@@ -13,6 +13,7 @@
         color:$clr-white;
         line-height: 2.17;
         text-transform: uppercase;
+        font-size: 24px;
     }
     &__link{
         position: relative;
@@ -48,8 +49,7 @@
         }
     }
     &__bottom-right-wrapper{
-        display: flex;
-        align-items: center;
+        @include flex-center-vertical;
         gap:16px;
 
         small{
@@ -58,25 +58,25 @@
         }
     }
 
-}
-
-.footer{
     &__socials-list{
         @include flex-center-vertical;
         gap:rem(20); 
+        margin-top: -7px;
     }
+
 }
 
-.social-item{
+
+.socials-item{
     position: relative;
     overflow: hidden;
 }
 
-.social-link{
+.socials-link{
     position: relative;
     overflow: hidden;
-    padding:em(12);
-    @include border-radius(4px);
+    padding:em(10);
+    @include border-radius(50%);
     @include flex-center; 
     transition:all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
     z-index: 1;
@@ -86,8 +86,7 @@
     &::before{
         content:"";
         position: absolute;
-        width: 100%;
-        height: 100%;
+        @include full-dimensions;
         background: $clr-secondary;
         clip-path: circle(0% at 0 100%);
         transition:clip-path 0.3s cubic-bezier(0.76, 0, 0.24, 1);
@@ -99,17 +98,31 @@
         &::before{
             clip-path: circle(141.2% at 0 100%);
         }
-        svg path{
-            fill:$clr-primary;
+        svg {
+            path{
+                fill:$clr-white;
+            }
         }
     } 
 
 }
 
+.copyright-text-wrapper{
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+    small{
+        margin-top: 0;
+        color:$clr-white;
+        display: inline-flex;
+    }
+}
+
+
 .payment-brands-list{
     list-style: none;
-    display: flex;
-    align-items: center;
+    @include flex-center-vertical;
+    justify-content: flex-end;
     gap:16px;
 
     img{
@@ -119,11 +132,11 @@
     }
 }
 
+
 .grid-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    row-gap: rem(48);
+    row-gap: rem(64);
 
     @include breakpoint-sm{
         grid-template-columns: repeat(3, 1fr);
@@ -135,65 +148,3 @@
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ======= Desktop Footer =======
-// .footer-desktop{
-//     display: none;
-//     @include breakpoint-lg{
-//         display: block;
-//     }
-// }
-
-
-// ======= Mobile Footer =======
-// .footer-mobile{
-//     background: $clr-tertiary;
-//     @include border-radius-tlr(34px , 34px);
-//     position: relative;
-//     margin-top: rem(-32);
-//     @include breakpoint-lg{
-//         display: none;
-//     }
-//     &__content{
-//         p{
-//             font-size: rem(18);
-//             line-height: 1.75;
-//             max-width: 50ch;
-//         }
-//     }
-//     &__list{
-
-//         li{
-//             font-size: rem(20);
-//             font-weight: 300;
-//             line-height: 1.8;
-//         }
-//     }
-
-// }
-
-
-

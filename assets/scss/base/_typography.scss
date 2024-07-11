@@ -45,12 +45,12 @@ $h1-font-sizes: (
 );
 
 $h2-font-sizes:(
-  null:(rem(40), rem(30,5)), 
-  sm:(rem(40), rem(30.5)),
-  md:(rem(48), rem(36.5)),
-  lg:(rem(48), rem(36.5)),
-  xl:(rem(56), rem(43)),
-  xxl:(rem(68), rem(52)),
+  null:(rem(40), rem(48)), 
+  sm:(rem(40), rem(48)),
+  md:(rem(48), rem(43)),
+  lg:(rem(48), rem(43)),
+  xl:(rem(56), rem(50)),
+  xxl:(rem(68), rem(60)),
 );
 
 $h3-font-sizes: (

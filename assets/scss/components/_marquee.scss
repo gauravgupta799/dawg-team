@@ -35,12 +35,12 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        gap: rem(32);
+        gap: rem(128);
         white-space: nowrap;
         animation: marquee-moving  20s linear infinite;
 
         @include breakpoint-sm{
-            gap: rem(80);
+            gap: rem(144);
         }
         @include breakpoint-md{
             gap: rem(160);

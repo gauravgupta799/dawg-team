@@ -7,18 +7,29 @@
 
 
 .swiper-testmonials {
-    width: 80%;
-    margin:0 auto;
     overflow: hidden;
     position: relative;
+    margin:0 auto;
+    width: 100%;
     padding-top:em(48);
+
+    @include breakpoint-xl{
+        width: 80%;
+    }
 
     .swiper-slide {
         position: relative;
         transform: scale(0.9) !important;
         background-color: $clr-light-blue;
-        padding: em(45) em(60);
+        padding: em(45) em(32);
         @include border-radius(15px);
+
+        @include breakpoint-md{
+            padding-inline: em(48);
+        }
+        @include breakpoint-md{
+            padding-inline: em(60);
+        }
 
         .quote-figure{
             position: absolute;
@@ -60,23 +71,31 @@
     gap: 10px;
 
     button{
-        width: 48px;
-        height: 48px;
-        border:1px solid $clr-black;
+        @include dimensions(rem(48), rem(48));
         @include border-radius(50%);
-
-        @include breakpoint-xl{
-            border:none;
+        @include flex-center;
+        border:1px solid $clr-black;
+        background: $clr-quaternary;
+        // @include breakpoint-xl{
+        //     border:none;
+        // }
+        svg{
+            @include dimensions(rem(32), rem(32));
+            @include breakpoint-md{
+                @include dimensions(rem(48), rem(48));
+            }
+            path{
+                fill:$clr-black;
+            }
         }
         &:hover{
-          svg{
-            // circle{
-            //     stroke:$clr-secondary;
-            // }
-            path{
-                fill:$clr-primary;
+            background-color: $clr-secondary;
+            border-color: $clr-secondary;
+            svg{
+                path{
+                    fill:$clr-white;
+                }
             }
-          }
         }
     }
 }
