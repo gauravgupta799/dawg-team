@@ -242,3 +242,31 @@
         padding:0;
     }
 }
+
+
+// services
+
+.banner-section{
+    position: relative;
+    z-index: 1;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        background: $clr-white;
+        z-index: -1;
+    }
+}
+
+.included--item{
+    @include relative-hidden;
+    display: flex;
+    margin-bottom: 16px;
+    &::before{
+        content:url("../../../assets/icons/paw-yellow.svg");
+        margin-right: 14px;
+    }
+}

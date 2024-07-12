@@ -1262,6 +1262,9 @@ p, ul, ol, body {
 .divider--white {
   background: #fff;
 }
+.divider--grey {
+  background: #b1b1b1;
+}
 
 .brdr-none {
   border: none;
@@ -1270,6 +1273,10 @@ p, ul, ol, body {
 .overflow-wrapper {
   position: relative;
   overflow: hidden;
+}
+
+.radius-12 {
+  border-radius: 12px;
 }
 
 .img-hover {
@@ -11706,6 +11713,62 @@ p, ul, ol, body {
   fill: #000;
 }
 
+.accordion__container {
+  display: flex;
+  padding-block: 2em;
+  gap: 6px;
+}
+@media only screen and (min-width: 36em) {
+  .accordion__container {
+    padding-block: 2.25em;
+    gap: 10px;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .accordion__container {
+    padding-block: 2.25em;
+    gap: 16px;
+  }
+}
+.accordion__title {
+  position: relative;
+  text-transform: uppercase;
+  display: flex;
+  gap: 1rem;
+  transition: color 0.25s ease;
+}
+.accordion__title::after {
+  content: "+";
+  color: #ca2027;
+  flex-shrink: 0;
+  position: absolute;
+  right: 0;
+}
+.accordion__title-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.accordion__title-wrapper:hover {
+  cursor: pointer;
+}
+.accordion__title-wrapper:hover .accordion__title {
+  color: #ca2027;
+}
+.accordion__title-wrapper.active .accordion__title {
+  color: #ca2027;
+}
+.accordion__title-wrapper.active .accordion__title::after {
+  content: "-";
+}
+.accordion__content {
+  padding-right: 1.25em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  max-width: min(100%, 76ch);
+  text-align: left;
+}
+
 .marquee-container {
   position: relative;
   overflow: hidden;
@@ -12086,6 +12149,32 @@ p, ul, ol, body {
 .team-member .product__card-image {
   height: auto;
   padding: 0;
+}
+
+.banner-section {
+  position: relative;
+  z-index: 1;
+}
+.banner-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: #fff;
+  z-index: -1;
+}
+
+.included--item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 16px;
+}
+.included--item::before {
+  content: url("../../../assets/icons/paw-yellow.svg");
+  margin-right: 14px;
 }
 
 .team-values {

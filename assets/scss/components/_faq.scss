@@ -8,43 +8,38 @@
 // ===== Accordion ======
 .accordion{
     &__container{
+        display: flex;
         padding-block: em(32);
+        gap:6px;
         @include breakpoint-sm{
-            padding-block: em(35);
+            padding-block: em(36);
+            gap:10px;
         }
-        &:last-child{
-            border-bottom: none;
+        @include breakpoint-md{
+            padding-block: em(36);
+            gap:16px;
         }
     }
     &__title{
         position: relative;
-        text-transform: capitalize;
+        text-transform: uppercase;
         display: flex;
-        justify-content: space-between;
         gap:rem(16);
         @include transition(color, 0.25s, ease);
-        @include breakpoint-sm{
-            gap:rem(32);
-        }
         &::after{
             content: "+";
-            @include dimensions(rem(48), rem(48));
-            background: $clr-secondary;
-            @include border-radius(50%);
-            @include flex-center;
-            color:$clr-primary;
+            color:$clr-secondary;
             flex-shrink: 0;
-            @include breakpoint-md{
-                @include dimensions(rem(54), rem(54));
-            }
-            @include breakpoint-xl{
-                @include dimensions(rem(60), rem(60));
-            }
+            position: absolute;
+            right: 0;
+            
         }
     }
+    &__icon-wrapper{
+        // @include relative-hidden;
+    }
     &__title-wrapper{
-        position: relative;
-        overflow: hidden;
+        @include relative-hidden;
         &:hover{
             cursor: pointer;
             .accordion__title{
@@ -57,8 +52,6 @@
                 color: $clr-secondary;
                 &::after{
                     content: "-";
-                    color:$clr-primary;
-                    
                 }
             }
         }
@@ -68,6 +61,7 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.35s ease;
-        max-width: min(100%, 62ch);
+        max-width: min(100%, 76ch);
+        text-align: left;
     }
 }

@@ -100,6 +100,9 @@
     &--white{
         background:$clr-white;
     }
+    &--grey{
+        background:$clr-grey-3; 
+    }
 }
 
 
@@ -113,6 +116,9 @@
     overflow: hidden;
 }
 
+.radius-12{
+    border-radius:12px;
+}
 
 .img-hover{
     position: relative;

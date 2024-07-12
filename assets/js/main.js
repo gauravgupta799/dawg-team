@@ -14,7 +14,6 @@ const lenis = new Lenis({
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
 })
 
-
 ScrollTrigger.scrollerProxy(document.body, {
     scrollTop(value) {
       if (arguments.length) {
@@ -215,25 +214,25 @@ const swiperPost = new Swiper('.swiper-post', {
 
 
 // ======== Accordian Toggle Start ========
-// const accordions = document.querySelectorAll(".accordion__title-wrapper");
-// accordions && accordions.forEach((accordion)=>{
-//     accordion.addEventListener("click", function(){
-//         this.classList.toggle("active");
-//         let content = this.nextElementSibling;
-//         if (content) {
-//             content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
-//         }
+const accordions = document.querySelectorAll(".accordion__title-wrapper");
+accordions && accordions.forEach((accordion)=>{
+    accordion.addEventListener("click", function(){
+        this.classList.toggle("active");
+        let content = this.nextElementSibling;
+        if (content) {
+            content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+        }
 
-//         accordions.forEach((acdnItem)=>{
-//             if(acdnItem !== accordion){
-//                 acdnItem.classList.remove("active");
-//                 acdnItem.nextElementSibling.style.maxHeight = null;
-//             }
-//         })
-//     });
+        accordions.forEach((acdnItem)=>{
+            if(acdnItem !== accordion){
+                acdnItem.classList.remove("active");
+                acdnItem.nextElementSibling.style.maxHeight = null;
+            }
+        })
+    });
+})
 
-// })
-
+// ===== Mobile SubMenu
 const mobileSubmenu = document.querySelectorAll(".mobile-submenu");
 mobileSubmenu && mobileSubmenu.forEach((submenu)=>{
     submenu.addEventListener("click", function(){
