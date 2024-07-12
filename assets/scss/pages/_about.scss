@@ -1,0 +1,47 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.team-values {
+    background: $clr-primary;
+    &__card{
+        h4{
+            text-transform: uppercase;
+        }
+        p{
+            @include breakpoint-md{
+                padding-inline:2em; 
+            }
+            @include breakpoint-lg{
+                padding-inline:4em; 
+            }
+        }
+        h4, p{
+            color:$clr-white;
+        }
+        figure{
+            img{
+                margin:0 auto;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+// ==========================================
+.journey{
+    &__figure{
+        position: relative;
+        .stars{
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: -92px;
+            margin-left: -40px;
+        }
+    }
+}

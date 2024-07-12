@@ -11879,14 +11879,44 @@ p, ul, ol, body {
   color: #fff;
 }
 
-.hero--home {
-  background: #1257c6;
-}
 .hero__title {
   color: #fff;
 }
+.hero__title--about {
+  position: relative;
+}
+.hero__title--about::before {
+  content: url("/assets/icons/stars.svg");
+  position: absolute;
+  left: 0;
+  margin-left: -32px;
+}
+.hero__title--about::after {
+  content: url("/assets/icons/paws.svg");
+  position: absolute;
+  top: 0;
+  margin-left: -80px;
+  margin-top: -116px;
+}
+@media only screen and (min-width: 62em) {
+  .hero__title--about::after {
+    margin-left: -16px;
+    margin-top: -16px;
+  }
+}
+.hero__title--about::before, .hero__title--about::after {
+  display: none;
+}
+@media only screen and (min-width: 48em) {
+  .hero__title--about::before, .hero__title--about::after {
+    display: inline-flex;
+  }
+}
 .hero__subTitle {
   color: #fff;
+}
+.hero--home {
+  background: #1257c6;
 }
 
 .product__card-image {
@@ -11894,6 +11924,7 @@ p, ul, ol, body {
   border: solid 1px #000;
   background: #f4ebd9;
   height: 370px;
+  transition: all 0.35s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11910,6 +11941,9 @@ p, ul, ol, body {
 }
 .product__card-image img {
   mix-blend-mode: darken;
+}
+.product__card-image:hover {
+  border-color: #ffbc2a;
 }
 .product__card-footer {
   text-align: center;
@@ -12041,9 +12075,17 @@ p, ul, ol, body {
   position: relative;
 }
 
-.cta-title {
+.cta {
+  margin-top: -1px;
+}
+.cta .cta-title {
   color: #fff;
   text-transform: uppercase;
+}
+
+.team-member .product__card-image {
+  height: auto;
+  padding: 0;
 }
 
 .team-values {
@@ -12068,6 +12110,17 @@ p, ul, ol, body {
 .team-values__card figure img {
   margin: 0 auto;
   text-align: center;
+}
+
+.journey__figure {
+  position: relative;
+}
+.journey__figure .stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: -92px;
+  margin-left: -40px;
 }
 
 .header {

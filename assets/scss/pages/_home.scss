@@ -18,14 +18,44 @@
 
 // ================================
 .hero{
-    &--home{
-        background: $clr-primary;
-    }
     &__title{
         color:$clr-white;
+
+        &--about{
+            position: relative;
+            &::before{
+                content: url("/assets/icons/stars.svg");
+                position: absolute;
+                left: 0;
+                margin-left: -32px;
+            }
+            &::after{
+                content: url("/assets/icons/paws.svg");
+                position: absolute;
+                top: 0;
+                margin-left: -80px;
+                margin-top: -116px;
+                @include breakpoint-lg{
+                    margin-left: -16px;
+                    margin-top: -16px;
+                }
+            }
+
+            &::before, 
+            &::after{
+                display: none;
+                @include breakpoint-md{
+                    display: inline-flex;
+                }
+            }
+        }
     }
     &__subTitle{
         color:$clr-white;
+    }
+
+    &--home{
+        background: $clr-primary;
     }
 
 }
@@ -37,6 +67,7 @@
         border: solid 1px #000;
         background: $clr-quaternary;
         height: 370px;
+        @include transition(all, 0.35s, ease);
         @include flex-center;
 
         @include breakpoint-md{
@@ -47,6 +78,9 @@
         }
         img{
             mix-blend-mode: darken;
+        }
+        &:hover{
+            border-color:$clr-tertiary;
         }
     }
     &__card-footer{
@@ -190,36 +224,21 @@
 }
 
 // ================================
-.cta-title{
-    color:$clr-white;
-    text-transform: uppercase;
+.cta{
+    margin-top: -1px;
+    .cta-title{
+        color:$clr-white;
+        text-transform: uppercase;
+    }
 }
 
 
-// ABout
 
-.team-values {
-    background: $clr-primary;
-    &__card{
-        h4{
-            text-transform: uppercase;
-        }
-        p{
-            @include breakpoint-md{
-                padding-inline:2em; 
-            }
-            @include breakpoint-lg{
-                padding-inline:4em; 
-            }
-        }
-        h4, p{
-            color:$clr-white;
-        }
-        figure{
-            img{
-                margin:0 auto;
-                text-align: center;
-            }
-        }
+// Team
+
+.team-member{
+    .product__card-image {
+        height: auto;
+        padding:0;
     }
 }

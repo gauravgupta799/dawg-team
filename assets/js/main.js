@@ -205,6 +205,7 @@ const swiperPost = new Swiper('.swiper-post', {
         },
         1200: {
             slidesPerView: 5,
+            spaceBetween:2,
         },
     }
 });
