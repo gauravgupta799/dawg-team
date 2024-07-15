@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logos/greentek-logo-1.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./dist/bundle.min.css">
+    <script src="./dist/bundle.min.js" defer></script>
+    <title>Product Detail | DawgTeam</title>
+</head>
+<body class="body">
+
+    <!-- Loader Start -->
+     <div class="loader-container">
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
+     </div>
+    <!-- Loader End -->
+
+    <!-- Header Start -->
+    <header class="header">
+        <!-- Desktop Menu Start -->
+        <div class="header-desktop">
+            <div class="page-container">
+                <div class="header__inner-desktop">
+                    <div class="header-logo-wrapper">
+                        <a href="./index.html" class="header__logo d-flex">
+                            <img src="./assets/logos/dawgteam-logo-1.svg" alt="dawgteam's logo" class="img-fluid">                                                                             
+                        </a>
+                    </div>  
+                    
+                    <!-- Navbar Start -->
+                    <nav class="nav pl--xxl--12">
+                        <ul class="nav__menu list-none" role="navigation">
+                            <li class="nav__list">
+                                <a href="./index.html" class="nav__link">                                   
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="nav__list">
+                                <a href="./about.html" class="nav__link">
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li class="nav__list subMenu">
+                                <a href="./services.html" class="nav__link nav__link--submenu">
+                                    <span>Services</span>   
+                                    <span class="caret-down-icon mt-0">
+                                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                            <path d="M14 20l10 10 10-10z" fill="#000"></path>
+                                        </svg> 
+                                    </span>
+                                </a>
+             
+                                <!-- Services Submenu -->
+                                <ul class="subMenu__list list-none" id="submenu--S1">
+                                    <li class="">
+                                        <a href="./services/grooming.html" class="subMenu__link">Grooming</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="./services/pet-boarding.html" class="subMenu__link">Pet Boarding</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="./services/self-serve-dog-wash.html" class="subMenu__link">Self serve dog wash</a>
+                                    </li>                                           
+                                </ul>
+                            </li>
+                            <li class="nav__list">
+                                <a href="./contact.html" class="nav__link" >
+                                    <span>Shop</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                      <!-- Navbar End -->
+
+                    <!-- Right-side start-->
+                     <div class="header__right">
+                        <div class="action-btns-wrapper">
+                            <button class="action-btn">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="22" height="22">
+                                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" fill="#000"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            <button class="action-btn">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag" width="22" height="22"> 
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" ></path>
+                                        <line x1="3" y1="6" x2="21" y2="6" ></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0" ></path>
+                                    </svg>
+                                </span>
+                                <div class="count">1</div>
+                            </button>
+                            <button class="action-btn">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user" width="22" height="22">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="btn-wrapper">
+                            <a href="./contact.html" class="btn btn--outline">
+                               <span class=""> Contact</span>
+                            </a>
+                        </div>
+                     </div>
+                    <!-- Right-side end-->
+                </div>
+
+                <!-- Mobile Header Start -->
+                 <div class="header__mobile">
+                    <div class="header__mobile-left">
+                        <!-- Hamburger -->
+                        <div class="hamburger-wrapper" id="hamburger-btn">
+                            <div class="hamburger-btn">
+                                <span class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24.796" height="13.48" viewBox="0 0 24.796 13.48">
+                                        <g data-name="Group 1818">
+                                            <path data-name="Line 16" transform="translate(0 1)" stroke="#272727" stroke-width="2px" fill="none" d="M0 0h24.796"/>
+                                            <path data-name="Line 17" transform="translate(0 6.741)" stroke="#272727" stroke-width="2px" fill="none" d="M0 0h15.869"/>
+                                            <path data-name="Line 18" transform="translate(0 12.481)" stroke="#272727" stroke-width="2px" fill="none" d="M0 0h24.796"/>
+                                        </g>
+                                    </svg>                                             
+                                </span>
+                            </div>
+                        </div>
+                        <div class="search-icon-wrapper d-flex">
+                            <button class="action-btn">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="22" height="22">
+                                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" fill="#000"/>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>                
+                    </div>
+
+                    <div class="header__mobile-middle">
+                        <div class="logo-wrapper">
+                            <a href="./index.html" class="header__logo d-flex">
+                                <img src="./assets/logos/mobile-logo.svg" alt="dawgteam's logo" class="img-fluid">                                                                             
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header__mobile-right">
+                        <div class="action-btns-wrapper">
+                            <button class="action-btn">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag" width="22" height="22"> 
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" ></path>
+                                        <line x1="3" y1="6" x2="21" y2="6" ></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0" ></path>
+                                    </svg>
+                                </span>
+                                <div class="count">1</div>
+                            </button>
+                            <button class="action-btn">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user" width="22" height="22">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                 </div>
+                <!-- Mobile Header End -->
+
+            </div>
+        </div>
+        <!-- Desktop Menu End -->
+
+
+        <!-- Mobile Menu Start -->
+        <div class="mobile-menu">
+            <div class="close-menu-btn" id="close-menu-btn">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="32" height="32">
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                        fill="#fff"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="page-container mt--3 mt--sm--5 mt--md--7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="mobile-menu__list list-none" id="mobile-menu" role="navigation">
+                            <li class="">
+                                <a href="./index.html" class="mobile-menu__link">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="./about.html" class="mobile-menu__link">
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li class="mobile-submenu">
+                                <a href="./services.html" class="mobile-menu__link">
+                                    <span>Services</span>
+                                    <span class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 30 30">
+                                            <path d="M 24.990234 8.9863281 A 1.0001 1.0001 0 0 0 24.292969 9.2929688 L 15 18.585938 L 5.7070312 9.2929688 A 1.0001 1.0001 0 0 0 4.9902344 8.9902344 A 1.0001 1.0001 0 0 0 4.2929688 10.707031 L 14.292969 20.707031 A 1.0001 1.0001 0 0 0 15.707031 20.707031 L 25.707031 10.707031 A 1.0001 1.0001 0 0 0 24.990234 8.9863281 z" fill="#fff"></path> 
+                                        </svg>  
+                                    </span>
+
+                                    <!-- <span class="caret-down-icon mt-0">
+                                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="34" height="34">
+                                            <path d="M14 20l10 10 10-10z" fill="#fff"></path>
+                                        </svg> 
+                                    </span> -->
+                                </a>
+                           
+                                <!-- Services Submenu -->
+                                <ul class="subMenu__list--mobile list-none">
+                                    <li class="">
+                                        <a href="./services/grooming.html" class="subMenu__link">Grooming</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="./services/pet-boarding.html" class="subMenu__link">Pet Boarding</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="./services/self-serve-dog-wash.html" class="subMenu__link">Self serve dog wash</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="./contact.html" class="mobile-menu__link">
+                                    <span>Shop</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="./contact.html" class="mobile-menu__link">
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 mt--1 mt--md--9">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-10">
+                                <div class="connect-wrapper">
+                                    <div class="overflow-wrapper">
+                                        <p class="footer__link-title mb-1">Connect</p>
+                                    </div>
+                                    <ul class="footer__list list-none overflow-wrapper">
+                                        <li class="footer__list-item">
+                                            <a href="mailto:dawgteam@gmail.com" class="footer__link" target="_blank">dawgteam@gmail.com</a>
+                                        </li>
+                                        <li class="footer__list-item">
+                                            <a href="tel:(901) 310-4773" class="footer__link" target="_blank">(901) 310-4773</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-10">
+                                <ul class="socials-list list-none mt--1 mt--md--2">
+                                    <li class="socials-item ">
+                                        <a href="https://www.facebook.com/greentek" class="socials-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="22" height="22">
+                                                <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" fill="#ffffff"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials-item ">
+                                        <a href="https://www.instagram.com/greentek" class="socials-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="22" height="22">
+                                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="#ffffff" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials-item ">
+                                        <a href="https://www.linkedin.com/greentek" class="socials-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 18.415 18.414">
+                                                <path data-name="Icon awesome-linkedin-in" d="M4.122 18.415H.3V6.121h3.822zM2.211 4.444a2.221 2.221 0 1 1 2.211-2.232 2.23 2.23 0 0 1-2.211 2.232zm16.2 13.971H14.6V12.43c0-1.426-.029-3.255-1.985-3.255-1.985 0-2.289 1.55-2.289 3.153v6.087H6.513V6.121h3.662V7.8h.053a4.012 4.012 0 0 1 3.612-1.985c3.864 0 4.574 2.544 4.574 5.849v6.753z" transform="translate(0 -.001)" fill="#ffffff"/>
+                                            </svg>                                         
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu End -->
+
+    </header>
+    <!-- Header End -->
+
+
+    <!-- Main Start -->
+    <main class="main">
+
+        <!-- Hero Section Start -->
+        <section class="hero pt--10 pt--sm--14 ">
+            <div class="page-container">
+                <div class="page-widgets-wrapper">
+                    <ul class="list list-none">
+                        <li class="page-widget">
+                            <a href="./home.html" class="link">Home</a>
+                        </li>
+                        <li class="page-widget">
+                            <a href="./home.html" class="link">Shop All</a>
+                        </li>
+                        <li class="page-widget active">
+                            <a href="./home.html" class="link">Trending</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="row mt--2 mt--md--3 d-flex align-items-lg-center">
+                    <div class=" col-xl-6">
+                        <div class="row d-flex align-items-xxl-center">
+                            <div class="col-xl-2 order-2 order-xl-0">
+                                <ul class="thumb-list">
+                                    <li class="">
+                                        <a href="img-1" target="imgBox" class="thumb">
+                                            <img src="./assets/images/products/prod-1.webp" alt="product-thumb image" class="img-fluid" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="img-2" target="imgBox" class="thumb">
+                                            <img src="./assets/images/products/prod-2.webp" alt="product-thumb image" class="img-fluid" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="img-3" target="imgBox" class="thumb">
+                                            <img src="./assets/images/products/prod-3.webp" alt="product-thumb image" class="img-fluid" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="img-4" target="imgBox" class="thumb">
+                                            <img src="./assets/images/products/prod-4.webp" alt="product-thumb image" class="img-fluid" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="img-5" target="imgBox" class="thumb">
+                                            <img src="./assets/images/products/prod-1.webp" alt="product-thumb image" class="img-fluid" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="img-6" target="imgBox" class="thumb">
+                                            <img src="./assets/images/products/prod-2.webp" alt="product-thumb image" class="img-fluid" loading="lazy">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-10">
+                                <div class="imgBox ml--xl--3 ml--xxl--1">
+                                    <figure class="">
+                                        <img src="./assets/images/products/img-2.webp" alt="product-image" class="img-fluid" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class=" col-xl-5 offset-xl-1 mt--3 mt-xxl-0">                    
+                        <div class="product__details-top">
+                            <div class="rating-wrapper fade-in-up">
+                                <figure class="">
+                                    <img src="./assets/icons/5-stars-rating.svg" alt="" class="img-fluid" loading="lazy">
+                                </figure>
+                                <small class="mt-0">Rated 4.8 (240 Ratings) on google</small>
+                            </div>
+                            <h2 class="section-title fade-in mt--1">Nutricourge</h2>
+                            <div class="overflow-wrapper mb--2">
+                                <p class="mt-2 fade-in-up">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                                </p>
+                            </div>
+
+                            <div class="divider divider--grey"></div>
+                            <ul class="purity-list list-none">
+                                <li class="fade-in-up">
+                                    <figure class="">
+                                        <img src="./assets/icons/leaves.svg" alt="leaves-icon" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <span>100% Natural</span>
+                                </li>
+                                <li class="fade-in-up">
+                                    <figure class="">
+                                        <img src="./assets/icons/leaves.svg" alt="leaves-icon" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <span>100% Natural</span>
+                                </li>
+                                <li class="fade-in-up">
+                                    <figure class="">
+                                        <img src="./assets/icons/leaves.svg" alt="leaves-icon" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <span>100% Natural</span>
+                                </li>
+                                <li class="fade-in-up">
+                                    <figure class="">
+                                        <img src="./assets/icons/leaves.svg" alt="leaves-icon" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <span>100% Natural</span>
+                                </li>
+                            </ul>
+                            <div class="divider divider--grey"></div>
+                        </div>
+
+                        <div class="product__details-bottom">
+                            <ul class="offers-list list-none">
+                                <li class="fade-in-up">
+                                    <figure class="">
+                                        <img src="./assets/icons/offer.svg" alt="offers-icon" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <div class="coupon-code-wrapper">
+                                        <span class="offer-text">Offer 1 Coupon Code:</span>
+                                        <span class="coupon-code-text">Get50</span>
+                                    </div>
+                                </li>
+                                <li class="fade-in-up">
+                                    <figure class="">
+                                        <img src="./assets/icons/offer.svg" alt="offers-icon" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <div class="coupon-code-wrapper">
+                                        <span class="offer-text">Offer 1 Coupon Code:</span>
+                                        <span class="coupon-code-text">Get50</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="divider divider--grey"></div>
+
+                            <div class="price-container mt--2 overflow-wrapper">
+                                <div class="counter-wrapper">
+                                    <button class="btn increment-btn" id="increment-btn">+</button>
+                                    <div class="count">1</div>
+                                    <button class="btn decrement-btn" id="decrement-btn">-</button>
+                                </div>
+                                <div class="price-wrapper fade-in-up">
+                                    <h4 class="product-price">$40.79</h4>
+                                    <span class="discount-amount">$10.00</span>
+                                    <span class="stock-count">(1 Left in Stock)</span>
+                                </div>
+                            </div>
+
+                            <div class="wgt-options mt--2 overflow-wrapper">
+                                <div class="wgt-box fade-in-up">
+                                    <input type="radio" name="weight" class="" id="wgt-1" value="5lb">
+                                    <label for="wgt-1" class="wgt-option">5LB</label>
+                                </div>
+                                <div class="wgt-box fade-in-up">
+                                    <input type="radio" name="weight" class="" id="wgt-2" value="40lb">
+                                    <label for="wgt-2" class="wgt-option">40LB</label>
+                                </div>
+
+                                <div class="wgt-box fade-in-up">
+                                    <input type="radio" name="weight" class="" id="wgt-3" value="15lb">
+                                    <label for="wgt-3" class="wgt-option">15LB</label>
+                                </div>
+
+                                <div class="wgt-box fade-in-up">
+                                    <input type="radio" name="weight" class="" id="wgt-4" value="30lb">
+                                    <label for="wgt-4" class="wgt-option">30LB</label>
+                                </div>
+                            </div>
+
+                            <div class="btn-wrapper mt--2 overflow-wrapper">
+                                <button class="btn btn--outline fade-in-up">
+                                    <span>Add to cart</span>
+                                </button>
+                                <button class="btn btn--primary fade-in-up">
+                                    <span>Buy Now</span>
+                                </button>
+                            </div>
+
+                            <div class="payment-options">
+                                <figure class="fade-in">
+                                    <img src="./assets/icons/payment-brands/apple-pay.svg" alt="apple-pay" class="img-fluid">
+                                </figure>
+                                <figure class="fade-in">
+                                    <img src="./assets/icons/payment-brands/master-card.svg" alt="master-card" class="img-fluid">
+                                </figure>
+                                <figure class="fade-in">
+                                    <img src="./assets/icons/payment-brands/visa.svg" alt="visa" class="img-fluid">
+                                </figure>
+                                <figure class="fade-in">
+                                    <img src="./assets/icons/payment-brands/paypal.svg" alt="paypal" class="img-fluid">
+                                </figure>
+                                <figure class="fade-in">
+                                    <img src="./assets/icons/payment-brands/american-express.svg" alt="american-express" class="img-fluid">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Product-Details Start -->
+                     <div class="col-md-10 col-lg-8 pb--3 pb--sm--4 mt--6 mt--sm--8 mt--lg--10 mt--xl--12 mt--xxl--14">
+                        <h2 class="section-title fade-in">Product Description</h2>
+                        <div class="overflow-wrapper ">
+                            <p class="mt-2 fade-in-up">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                            </p>
+                        </div>
+                     </div>
+                     <div class="divider divider--grey"></div>
+
+                    <div class="col-md-12 col-xl-8 mt--2 mt--md--4">
+                        <h2 class="section-title fade-in">Product Description</h2>
+                        <div class="overflow-wrapper">
+                            <ul class="purity-list list-none overflow-wrapper">
+                                <li class="fade-in-up">
+                                    <figure class="">
+                                        <img src="./assets/icons/leaves.svg" alt="leaves-icon" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <span>100% Natural</span>
+                                </li>
+                                <li class="fade-in-up">
+                                    <figure class="">
+                                        <img src="./assets/icons/leaves.svg" alt="leaves-icon" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <span>100% Natural</span>
+                                </li>
+                                <li class="fade-in-up">
+                                    <figure class="">
+                                        <img src="./assets/icons/leaves.svg" alt="leaves-icon" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <span>100% Natural</span>
+                                </li>
+                                <li class="fade-in-up">
+                                    <figure class="">
+                                        <img src="./assets/icons/leaves.svg" alt="leaves-icon" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <span>100% Natural</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Product-Description End -->
+
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+
+        <!-- Similar-products Section Start -->
+        <section class="similar-products mt--6 mt--sm--8 mt--lg--10 mt--xl--12 mt--xxl--14">
+            <div class="page-container">
+                <h2 class="section-title fade-in">Similar Products </h2>
+                <!-- Products -->
+                 <div class="row mt--2 mt--md--3">
+                    <div class="col-md-6 col-lg-3 col-xl-4">
+                        <div class="product__card">
+                            <div class="product__card-body fade-in">
+                                <a href="./product-details.html">
+                                    <figure class="product__card-image img-hover">
+                                        <img src="./assets/images/products/prod-1.webp" alt="product-image" class="img-fluid"/>
+                                    </figure>                          
+                                </a>
+                            </div>
+                            <div class="product__card-footer mt-3 mt--sm--2">
+                                <div class="overflow-wrapper">
+                                    <p class="product__name fade-in-up">Boston Red Sox Jersey</p>
+                                </div>
+                                <figure class="product__rating">
+                                    <img src="./assets/images/product-rating-stars.svg" alt="product-rating" class="img-fluid fade-in-up">
+                                </figure>
+                                <div class="overflow-wrapper">
+                                    <h4 class="product__price fade-in-up">$80</h4>                          
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-xl-4 mt--4 mt--md--0">
+                        <div class="product__card">
+                            <div class="product__card-body fade-in">
+                                <a href="./product-details.html">
+                                    <figure class="product__card-image img-hover">
+                                        <img src="./assets/images/products/prod-2.webp" alt="product-image" class="img-fluid"/>
+                                    </figure>                          
+                                </a>
+                            </div>
+                            <div class="product__card-footer mt-3 mt--sm--2">
+                                <div class="overflow-wrapper">
+                                    <p class="product__name fade-in-up">Purina Pro Adult Dog Food Beef & Rice</p>
+                                </div>
+                                <figure class="product__rating ">
+                                    <img src="./assets/images/product-rating-stars.svg" alt="product-rating" class="img-fluid fade-in-up">
+                                </figure>
+                                <div class="overflow-wrapper">
+                                    <h4 class="product__price fade-in-up">$31.99</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-xl-4 mt--4 mt--lg--0">
+                        <div class="product__card">
+                            <div class="product__card-body fade-in">
+                                <a href="./product-details.html">
+                                    <figure class="product__card-image img-hover">
+                                        <img src="./assets/images/products/prod-3.webp" alt="product-image" class="img-fluid"/>
+                                    </figure>                          
+                                </a>
+                            </div>
+                            <div class="product__card-footer mt-3 mt--sm--2">
+                                <div class="overflow-wrapper">
+                                    <p class="product__name fade-in-up">Nutrisource</p>
+                                </div>
+                                <figure class="product__rating">
+                                    <img src="./assets/images/product-rating-stars.svg" alt="product-rating" class="img-fluid fade-in-up">
+                                </figure>
+                                <div class="overflow-wrapper">
+                                    <h4 class="product__price fade-in-up">
+                                        $24.99 – $87.62
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                 </div>
+            </div>
+         </section>
+        <!-- Similar-products Section End -->
+
+
+        <!-- Follow-us Section Start -->
+        <section class="follow-us mt--8 mt--sm--10 mt--xl--12 mt--xxl--15">
+            <div class="page-container">
+                <div class="row ">
+                    <div class="col-8 col-md-6 col-lg-4">
+                        <h2 class="follow-us__title fade-in">
+                            <span>Follow us </span>
+                            <span Class="mt-0 txt-secondary">@THEDAWGTEAM</span>
+                        </h2>
+                    </div>
+                    <div class="col-md-5 offset-md-1 col-lg-4 offset-lg-4 d-none d-md-flex justify-content-end">
+                        <div class="btn-wrapper mt--2 ">
+                            <a href="#" class="btn btn--primary fade-in-up">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30.129 26.363">
+                                        <path id="Icon_awesome-paw" data-name="Icon awesome-paw" d="M15.064,13.548c-4.673,0-11.3,7.224-11.3,11.784,0,2.054,1.578,3.281,4.222,3.281,2.874,0,4.772-1.476,7.077-1.476,2.325,0,4.228,1.476,7.077,1.476,2.644,0,4.222-1.227,4.222-3.281C26.363,20.772,19.737,13.548,15.064,13.548ZM6.4,12.806c-.612-2.039-2.5-3.359-4.211-2.95S-.42,12.251.192,14.29s2.5,3.359,4.211,2.95S7.01,14.845,6.4,12.806Zm4.985-1.223C13.2,11.1,14.115,8.645,13.418,6.09S10.68,1.852,8.86,2.331,6.128,5.27,6.825,7.825,9.563,12.063,11.383,11.583ZM27.941,9.857c-1.714-.41-3.6.911-4.211,2.95s.281,4.024,1.994,4.433,3.6-.911,4.211-2.95S29.655,10.266,27.941,9.857Zm-9.2,1.727c1.821.479,3.861-1.2,4.558-3.758s-.214-5.014-2.035-5.494-3.861,1.2-4.558,3.758.214,5.015,2.035,5.494Z" transform="translate(0.001 -2.25)" fill="#fff"/>
+                                    </svg>
+                                </span>
+                                <span class="">View Gallery</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posts-container mt--3 mt--md--4 mt--xl--6">
+                <div class="swiper swiper-post">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure class="post-figure img-hover fade-in">
+                                <img src="./assets/images/follow-us/follow-us-img-1.webp" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="post-figure img-hover fade-in">
+                                <img src="./assets/images/follow-us/follow-us-img-2.webp" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="post-figure img-hover fade-in">
+                                <img src="./assets/images/follow-us/follow-us-img-3.webp" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="post-figure img-hover fade-in">
+                                <img src="./assets/images/follow-us/follow-us-img-4.webp" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="post-figure img-hover fade-in">
+                                <img src="./assets/images/follow-us/follow-us-img-5.webp" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <!-- Follow-us Section End -->
+
+
+        <!-- CTA-section Start -->
+         <section class="cta bg--primary py--5 py--lg--6">
+            <div class="page-container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-sm-8  col-lg-5">
+                        <h2 class="cta-title fade-in">Have any Questions?</h2>
+                        <div class="overflow-wrapper">
+                            <p class="txt-white fade-in-up">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            </p>
+                        </div>
+                        <div class="btn-wrapper mt--2">
+                            <a href="./contact.html" class="btn btn--primary fade-in-up">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30.129 26.363">
+                                        <path id="Icon_awesome-paw" data-name="Icon awesome-paw" d="M15.064,13.548c-4.673,0-11.3,7.224-11.3,11.784,0,2.054,1.578,3.281,4.222,3.281,2.874,0,4.772-1.476,7.077-1.476,2.325,0,4.228,1.476,7.077,1.476,2.644,0,4.222-1.227,4.222-3.281C26.363,20.772,19.737,13.548,15.064,13.548ZM6.4,12.806c-.612-2.039-2.5-3.359-4.211-2.95S-.42,12.251.192,14.29s2.5,3.359,4.211,2.95S7.01,14.845,6.4,12.806Zm4.985-1.223C13.2,11.1,14.115,8.645,13.418,6.09S10.68,1.852,8.86,2.331,6.128,5.27,6.825,7.825,9.563,12.063,11.383,11.583ZM27.941,9.857c-1.714-.41-3.6.911-4.211,2.95s.281,4.024,1.994,4.433,3.6-.911,4.211-2.95S29.655,10.266,27.941,9.857Zm-9.2,1.727c1.821.479,3.861-1.2,4.558-3.758s-.214-5.014-2.035-5.494-3.861,1.2-4.558,3.758.214,5.015,2.035,5.494Z" transform="translate(0.001 -2.25)" fill="#fff"/>
+                                    </svg>
+                                </span>
+                                <span class="">Contact Us</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-8  col-lg-5 offset-lg-2 mt--4 mt-lg-0">
+                        <div class="form-container">
+                            <div class="overflow-wrapper">
+                                <p class="form-lable txt-white fade-in-up">Sign up</p>
+                            </div>
+                            <form class="form-wrapper mt--1 overflow-wrapper" id="signup-cta-form">
+                                <div class="form__group form-group-wrapper mb-0 fade-in-up">
+                                    <input type="text" placeholder="Type Your Email Address" class="form__control">
+                                    <button class="btn btn--primary" id="sign-up-btn">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
+                                                <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#fff"/>
+                                            </svg>                                        
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <!-- CTA-section End -->
+
+    </main>
+    <!-- Main End -->
+
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="footer-desktop bg--primary">
+            <div class="divider divider--white"></div>
+
+            <div class="footer__top py--5 pt--lg--6 pb--lg--4">
+                <div class="page-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="grid-container">
+                                <div class="grid-item">
+                                    <h6 class="footer__link-title mb-lg-3 fade-in">Shop</h6>
+                                    <ul class="footer__list list-none overflow-wrapper">
+                                        <li class="fade-in-up">
+                                            <a href="./about.html" class="footer__link ">Apparel</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="./case-studies.html" class="footer__link ">Dog Food</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="./contact.html" class="footer__link ">Dog Leashes</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid-item">
+                                    <a href="./services.html" class="">
+                                        <h6 class="footer__link-title mb-lg-3 fade-in">Company</h6>
+                                    </a>
+                                    <ul class="footer__list list-none overflow-wrapper">
+                                        <li class="fade-in-up">
+                                            <a href="./services/atts.html" class="footer__link">Story</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="./services/enrg-blanket.html" class="footer__link">About</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="./services/enrg-panel.html" class="footer__link">Join Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid-item">
+                                    <a href="./services.html" class="">
+                                        <h6 class="footer__link-title mb-lg-3 fade-in">Services</h6>
+                                    </a>
+                                    <ul class="footer__list list-none">
+                                        <li class="fade-in-up">
+                                            <a href="./resources/technology.html" class="footer__link">Grooming</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="./resources/blog.html" class="footer__link ">Pet Boarding</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="./resources/blog.html" class="footer__link ">Sell Serve Dog Wash</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="grid-item">
+                                    <h6 class="footer__link-title mb-lg-3 fade-in">Other Links</h6>
+                                    <ul class="footer__list list-none overflow-wrapper">
+                                        <li class="fade-in-up">
+                                            <a href="#" class="footer__link">Refund Policy</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="#" class="footer__link">Privacy Policy</a>
+                                        </li>                             
+                                        <li class="fade-in-up">
+                                            <a href="#" class="footer__link">Terms Of Services</a>
+                                        </li>                             
+                                    </ul>
+                                </div>
+                                <div class="grid-item">
+                                    <h6 class="footer__link-title mb-lg-3 fade-in">Contact</h6>
+                                    <ul class="footer__list list-none overflow-wrapper">
+                                        <li class="fade-in-up">
+                                            <a href="tel: (901) 310-4773" class="footer__link" target="_blank"> (901) 310-4773</a>
+                                        </li>
+                                        <li class="fade-in-up">
+                                            <a href="mailto:dawgteam@gmail.com" class="footer__link" target="_blank">dawgteam@gmail.com </a>
+                                        </li>                            
+                                        <li class="fade-in-up">
+                                            <a href="https://maps.app.goo.gl/vUQLXMdHwnoLpkZ8A" class="footer__link" target="_blank">
+                                                <address>
+                                                    420 N Cleveland St,  Memphis, <br>
+                                                    TN, US, 38104
+                                                </address>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="col-12 col-md-10 col-lg-8 overflow-wrapper mt--4">
+                            <small class="txt-white fade-in-up">NCAA JERSERY / MLB Jerseys / NBA Jerseys / NFL Jerseys / NHL Jerseys / Food / Dog Harnesses / Dog Leashes / Dog Collars / Raincoats / Jackets / Vest / Dog Sweaters / Dog Overalls / Dog Dresses / Dog Polo Shirts / Dog T-Shirts</small>
+                        </div>                     
+                    </div> 
+                </div>
+            </div>
+
+            <div class="divider divider--white"></div>
+
+            <div class="footer__bottom pt--4 pb--2 py--md--3">
+                <div class="page-container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-5 col-lg-3">
+                                    <a href="./index.html" class="d-inline-flex">
+                                        <figure class="fade-in">
+                                            <img src="./assets/logos/dawgteam-logo-2.svg" alt="greentek's logo" class="img-fluid">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="col-6 offset-1 col-lg-6 offset-lg-0 overflow-wrapper">
+                                    <h4 class="txt-white uppercase fade-in-up">
+                                        Your Premier Pet Superstore
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mt--2">
+                            <div class="row pr-0">
+                                <div class="col-12 overflow-wrapper d-flex justify-content-end">
+                                    <small class="txt-white fade-in-up mt-0">Designed by Your Hustler</small>
+                                </div>
+
+                                <div class="col-6 d-flex justify-content-end d-none d-lg-flex">
+                                    <ul class="footer__socials-list list-none">
+                                        <li class="socials-item fade-in-up">
+                                            <a href="https://www.facebook.com/dawgteam" class="socials-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="18" height="18">
+                                                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" fill="#fff"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials-item fade-in-up">
+                                            <a href="https://www.instagram.com/dawgteam" class="socials-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" height="18">
+                                                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="#ffffff" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials-item fade-in-up">
+                                            <a href="https://www.youtube.com/dawgteam" class="socials-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="18" height="18">
+                                                    <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" fill="#fff"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials-item fade-in-up">
+                                            <a href="https://www.linkedin.com/dawgteam" class="socials-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18.415 18.414">
+                                                    <path data-name="Icon awesome-linkedin-in" d="M4.122 18.415H.3V6.121h3.822zM2.211 4.444a2.221 2.221 0 1 1 2.211-2.232 2.23 2.23 0 0 1-2.211 2.232zm16.2 13.971H14.6V12.43c0-1.426-.029-3.255-1.985-3.255-1.985 0-2.289 1.55-2.289 3.153v6.087H6.513V6.121h3.662V7.8h.053a4.012 4.012 0 0 1 3.612-1.985c3.864 0 4.574 2.544 4.574 5.849v6.753z" transform="translate(0 -.001)" fill="#fff"/>
+                                                </svg>
+                                                
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 col-lg-6 copyright-text-wrapper">
+                                    <small class="fade-in-up">
+                                        &copy; 2024 Dawg Team Apparel, USA.  All Rights Reserved.
+                                    </small>
+                                </div>
+
+                                <div class="col-12 mt-2 d-flex justify-content-end d-lg-none">
+                                    <ul class="footer__socials-list list-none">
+                                        <li class="socials-item fade-in-up">
+                                            <a href="https://www.facebook.com/dawgteam" class="socials-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="18" height="18">
+                                                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" fill="#fff"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials-item fade-in-up">
+                                            <a href="https://www.instagram.com/dawgteam" class="socials-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" height="18">
+                                                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="#ffffff" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials-item fade-in-up">
+                                            <a href="https://www.youtube.com/dawgteam" class="socials-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="18" height="18">
+                                                    <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" fill="#fff"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials-item fade-in-up">
+                                            <a href="https://www.linkedin.com/dawgteam" class="socials-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18.415 18.414">
+                                                    <path data-name="Icon awesome-linkedin-in" d="M4.122 18.415H.3V6.121h3.822zM2.211 4.444a2.221 2.221 0 1 1 2.211-2.232 2.23 2.23 0 0 1-2.211 2.232zm16.2 13.971H14.6V12.43c0-1.426-.029-3.255-1.985-3.255-1.985 0-2.289 1.55-2.289 3.153v6.087H6.513V6.121h3.662V7.8h.053a4.012 4.012 0 0 1 3.612-1.985c3.864 0 4.574 2.544 4.574 5.849v6.753z" transform="translate(0 -.001)" fill="#fff"/>
+                                                </svg>
+                                                
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 mt--1">
+                                    <ul class="payment-brands-list">
+                                        <li class="">
+                                            <figure class="fade-in">
+                                                <img src="./assets/icons/payment-brands/apple-pay.svg" alt="apple-pay" class="img-fluid">
+                                            </figure>
+                                        </li>
+                                        <li class="">
+                                            <figure class="fade-in">
+                                                <img src="./assets/icons/payment-brands/master-card.svg" alt="master-card" class="img-fluid">
+                                            </figure>
+                                        </li>
+                                        <li class="">
+                                            <figure class="fade-in">
+                                                <img src="./assets/icons/payment-brands/visa.svg" alt="visa" class="img-fluid">
+                                            </figure>
+                                        </li>
+                                        <li class="">
+                                            <figure class="fade-in">
+                                                <img src="./assets/icons/payment-brands/paypal.svg" alt="paypal" class="img-fluid">
+                                            </figure>
+                                        </li>
+                                        <li class="">
+                                            <figure class="fade-in">
+                                                <img src="./assets/icons/payment-brands/american-express.svg" alt="american-express" class="img-fluid">
+                                            </figure>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>                 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    
+</body>
+</html>
+
