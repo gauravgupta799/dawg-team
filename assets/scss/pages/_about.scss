@@ -15,7 +15,7 @@
             @include breakpoint-md{
                 padding-inline:2em; 
             }
-            @include breakpoint-lg{
+            @media only screen and (min-width:1600px){
                 padding-inline:4em; 
             }
         }
@@ -42,6 +42,23 @@
             top: 0;
             margin-top: -92px;
             margin-left: -40px;
+        }
+    }
+}
+
+.team-container{
+    &--about {
+        position: relative;
+        z-index: 1;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            background: $clr-white;
+            z-index: -1;
         }
     }
 }

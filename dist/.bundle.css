@@ -1257,13 +1257,16 @@ p, ul, ol, body {
 .divider {
   height: 1px;
   width: 100%;
-  background: #fff;
+  background: #000;
 }
 .divider--white {
   background: #fff;
 }
 .divider--grey {
   background: #b1b1b1;
+}
+.divider--black {
+  height: 2px;
 }
 
 .brdr-none {
@@ -11401,20 +11404,20 @@ p, ul, ol, body {
 }
 @media only screen and (min-width: 48em) {
   .play-button-wrapper .play-button {
-    width: 6.25rem;
-    height: 6.25rem;
+    width: 6rem;
+    height: 6rem;
   }
 }
 @media only screen and (min-width: 62em) {
   .play-button-wrapper .play-button {
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 7rem;
+    height: 7rem;
   }
 }
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 100em) {
   .play-button-wrapper .play-button {
-    width: 8.125rem;
-    height: 8.125rem;
+    width: 8rem;
+    height: 8rem;
   }
 }
 .play-button-wrapper .play-button:hover {
@@ -11735,7 +11738,7 @@ p, ul, ol, body {
   text-transform: uppercase;
   display: flex;
   gap: 1rem;
-  transition: color 0.25s ease;
+  transition: all 0.25s ease;
 }
 .accordion__title::after {
   content: "+";
@@ -11743,22 +11746,18 @@ p, ul, ol, body {
   flex-shrink: 0;
   position: absolute;
   right: 0;
+  transition: all 0.25s ease;
 }
 .accordion__title-wrapper {
   position: relative;
   overflow: hidden;
+  text-align: left;
 }
 .accordion__title-wrapper:hover {
   cursor: pointer;
 }
 .accordion__title-wrapper:hover .accordion__title {
   color: #ca2027;
-}
-.accordion__title-wrapper.active .accordion__title {
-  color: #ca2027;
-}
-.accordion__title-wrapper.active .accordion__title::after {
-  content: "-";
 }
 .accordion__content {
   padding-right: 1.25em;
@@ -11767,6 +11766,13 @@ p, ul, ol, body {
   transition: max-height 0.35s ease;
   max-width: min(100%, 76ch);
   text-align: left;
+}
+
+.accordion__title-wrapper.active .accordion__title {
+  color: #ca2027;
+}
+.accordion__title-wrapper.active .accordion__title::after {
+  content: "-";
 }
 
 .marquee-container {
@@ -11839,6 +11845,128 @@ p, ul, ol, body {
 }
 .marquee-icon {
   flex-shrink: 0;
+}
+
+.video__popup-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 996;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.video__popup-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.video__popup-container.show {
+  display: flex;
+}
+
+.video__popup-wrapper {
+  position: relative;
+  width: min(90%, 75rem);
+  height: 16.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border: 1px solid #fff;
+  z-index: 1;
+}
+@media only screen and (min-width: 36em) {
+  .video__popup-wrapper {
+    height: 23.75rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .video__popup-wrapper {
+    height: 28.125rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .video__popup-wrapper {
+    height: 36.25rem;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .video__popup-wrapper {
+    height: 37.5rem;
+  }
+}
+.video__popup-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+  border: 20px solid #fafafa;
+  border-top-color: #1257c6;
+  box-shadow: 0 0 0 1px #fafafa;
+  animation: borderloader infinite 0.8s linear;
+}
+@keyframes borderloader {
+  0% {
+    border-color: #fafafa;
+    border-top-color: #1257c6;
+  }
+  25% {
+    border-color: #fafafa;
+    border-right-color: #1257c6;
+  }
+  50% {
+    border-color: #fafafa;
+    border-bottom-color: #1257c6;
+  }
+  75% {
+    border-color: #fafafa;
+    border-left-color: #1257c6;
+  }
+}
+
+.video__popup-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #000;
+  font-size: 1.125rem;
+  transition: all 0.25s ease-out;
+}
+@media only screen and (min-width: 36em) {
+  .video__popup-close {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+.video__popup-close:hover {
+  cursor: pointer;
+  background: #ca2027;
+  color: #fff;
+}
+
+.video__popup-iframe-container {
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-testmonials {
@@ -11954,6 +12082,11 @@ p, ul, ol, body {
   left: 0;
   margin-left: -32px;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .hero__title--about::before {
+    margin-left: -60px;
+  }
+}
 .hero__title--about::after {
   content: url("/assets/icons/paws.svg");
   position: absolute;
@@ -12036,7 +12169,7 @@ p, ul, ol, body {
   content: url("/assets/icons/heart.svg");
   margin-left: 10px;
 }
-.dog-pregnancy__top-section {
+.dog-pregnancy__top {
   background-image: url("/assets/images/mobile/home/dog-pregnancy-banner-img.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -12046,26 +12179,19 @@ p, ul, ol, body {
   z-index: 1;
 }
 @media only screen and (min-width: 48em) {
-  .dog-pregnancy__top-section {
+  .dog-pregnancy__top {
     background-image: url("/assets/images/home/dog-pregnancy-banner-img.webp");
   }
 }
-.dog-pregnancy__bottom-section {
+.dog-pregnancy__bottom {
   background: #1257c6;
-  height: 56.25rem;
-  overflow: hidden;
 }
-@media only screen and (min-width: 48em) {
-  .dog-pregnancy__bottom-section {
-    height: 60.3125rem;
-  }
-}
-.dog-pregnancy__bottom-section .dog-pregnancy__title {
+.dog-pregnancy__bottom .dog-pregnancy__title {
   color: #fff;
   line-height: 0.88;
   position: relative;
 }
-.dog-pregnancy__bottom-section .dog-pregnancy__title::before {
+.dog-pregnancy__bottom .dog-pregnancy__title::before {
   content: url("/assets/icons/stars.svg");
   position: absolute;
   left: 0;
@@ -12073,32 +12199,46 @@ p, ul, ol, body {
   margin-left: -62px;
   margin-top: -96px;
 }
-@media only screen and (min-width: 62em) {
-  .dog-pregnancy__bottom-section .dog-pregnancy__title::before {
+@media only screen and (min-width: 1600px) {
+  .dog-pregnancy__bottom .dog-pregnancy__title::before {
     margin-left: 0;
     margin-top: -80px;
   }
 }
-.dog-pregnancy__bottom-section .dog-pregnancy__title::after {
+.dog-pregnancy__bottom .dog-pregnancy__title::after {
   content: url("/assets/icons/paws.svg");
   position: absolute;
   top: 0;
-  margin-left: -80px;
   margin-top: -116px;
 }
-@media only screen and (min-width: 62em) {
-  .dog-pregnancy__bottom-section .dog-pregnancy__title::after {
+@media only screen and (max-width: 992px) {
+  .dog-pregnancy__bottom .dog-pregnancy__title::after {
+    margin-left: -80px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .dog-pregnancy__bottom .dog-pregnancy__title::after {
     margin-top: -80px;
   }
 }
-.dog-pregnancy__bottom-section .dog-pregnancy__subTitle {
+.dog-pregnancy__bottom .dog-pregnancy__subTitle {
   color: #fff;
   max-width: 60ch;
   margin-inline: auto;
 }
-.dog-pregnancy .team-container {
+.dog-pregnancy__bottom .team-container {
   position: relative;
-  margin-top: -320px;
+  z-index: 1;
+}
+.dog-pregnancy__bottom .team-container::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
 }
 
 .feedback {
@@ -12118,6 +12258,16 @@ p, ul, ol, body {
   display: flex;
   align-items: center;
   gap: 1.75rem;
+}
+@media only screen and (min-width: 62em) {
+  .feedback__footer-inner {
+    gap: 0.5rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .feedback__footer-inner {
+    gap: 1.75rem;
+  }
 }
 
 .testimonial__title {
@@ -12161,7 +12311,7 @@ p, ul, ol, body {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 50%;
+  height: 40%;
   background: #fff;
   z-index: -1;
 }
@@ -12175,6 +12325,130 @@ p, ul, ol, body {
 .included--item::before {
   content: url("../../../assets/icons/paw-yellow.svg");
   margin-right: 14px;
+}
+
+.team-values {
+  background: #1257c6;
+}
+.team-values__card h4 {
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 48em) {
+  .team-values__card p {
+    padding-inline: 2em;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .team-values__card p {
+    padding-inline: 4em;
+  }
+}
+.team-values__card h4, .team-values__card p {
+  color: #fff;
+}
+.team-values__card figure img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.journey__figure {
+  position: relative;
+}
+.journey__figure .stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: -92px;
+  margin-left: -40px;
+}
+
+.team-container--about {
+  position: relative;
+  z-index: 1;
+}
+.team-container--about::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: #fff;
+  z-index: -1;
+}
+
+.sort-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+}
+.sort-container label,
+.sort-container .sort {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #b1b1b1;
+  font-family: "Roboto-Regular", sans-serif;
+}
+.sort-container .sort {
+  border: none;
+  color: #000;
+}
+
+.product-fliter-container {
+  display: grid;
+  grid-template-columns: min(100%, 210px) 1fr;
+  gap: 32px;
+}
+@media only screen and (min-width: 62em) {
+  .product-fliter-container {
+    gap: 48px;
+  }
+}
+
+.filter-wrapper {
+  padding-block: 0.8em;
+}
+.filter-wrapper .filter-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #000;
+}
+.filter-wrapper .filter-options .filter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.filter-wrapper .filter-options .filter-option label {
+  font-size: 16px;
+  line-height: 2.25;
+  color: #3e3e3e;
+  font-family: "Roboto-Regular", sans-serif;
+}
+.filter-wrapper .filter-options .filter-option label:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding-left: 0.8em;
+}
+.search-group .form__control {
+  border: none;
+  outline: none;
+  color: #000;
+  padding: 0.65em;
+}
+.search-group .form__control::-moz-placeholder {
+  color: #000;
+}
+.search-group .form__control::placeholder {
+  color: #000;
 }
 
 .page-widgets-wrapper ul {
@@ -12467,39 +12741,51 @@ p, ul, ol, body {
   flex-shrink: 0;
 }
 
-.team-values {
-  background: #1257c6;
+.pet-boarding .card {
+  border-radius: 12px;
+  border: solid 2px #000;
+  background-color: #f4ebd9;
 }
-.team-values__card h4 {
-  text-transform: uppercase;
+.pet-boarding .card__header, .pet-boarding .card__body {
+  padding: 1.85em 1em;
 }
-@media only screen and (min-width: 48em) {
-  .team-values__card p {
-    padding-inline: 2em;
+@media only screen and (min-width: 36em) {
+  .pet-boarding .card__header, .pet-boarding .card__body {
+    padding: 1.85em 1.5em;
   }
 }
-@media only screen and (min-width: 62em) {
-  .team-values__card p {
-    padding-inline: 4em;
-  }
+.pet-boarding .card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
 }
-.team-values__card h4, .team-values__card p {
-  color: #fff;
+.pet-boarding .card__header small {
+  margin-top: 0;
 }
-.team-values__card figure img {
-  margin: 0 auto;
-  text-align: center;
+.pet-boarding .card__body a {
+  font-family: "RocGrotesk-Black", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  font-stretch: condensed;
+  font-style: normal;
+  line-height: 1.33;
+  gap: 16px;
 }
-
-.journey__figure {
+.pet-boarding .card__body a span:first-child {
+  margin-top: 5px;
+}
+.pet-boarding .card__body a:hover svg path {
+  fill: #1257c6;
+}
+.pet-boarding .card__list li {
   position: relative;
+  font-size: 16px;
+  line-height: 1.75;
 }
-.journey__figure .stars {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-top: -92px;
-  margin-left: -40px;
+.pet-boarding .card__list li::before {
+  content: url("../../../assets/icons/checked.svg");
+  margin-right: 6px;
 }
 
 .header {
@@ -12535,10 +12821,10 @@ p, ul, ol, body {
 }
 @media only screen and (min-width: 48em) {
   .header__right, .header__mobile-left {
-    gap: 1.25rem;
+    gap: 1rem;
   }
 }
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 1600px) {
   .header__right, .header__mobile-left {
     gap: 2rem;
   }

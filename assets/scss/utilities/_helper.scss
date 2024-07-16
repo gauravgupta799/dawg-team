@@ -95,13 +95,16 @@
 .divider{
     height: 1px;
     width: 100%;
-    background:$clr-white;
+    background:$clr-black;
 
     &--white{
         background:$clr-white;
     }
     &--grey{
         background:$clr-grey-3; 
+    }
+    &--black{
+        height: 2px;
     }
 }
 

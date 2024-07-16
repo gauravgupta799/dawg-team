@@ -179,9 +179,9 @@ const swiperTestmonials = new Swiper('.swiper-testmonials', {
             slidesPerView: 2,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 2.3,
         },
-        1400: {
+        1280: {
             slidesPerView: 3,
         },
     }
@@ -273,41 +273,37 @@ mobileSubmenu && mobileSubmenu.forEach((submenu)=>{
 
 // ============ Custom select box end ============
 
+//========== Video Play /Pause Button Start ============
+const playBtns = document.querySelectorAll(".play-button-wrapper");
+if(playBtns) {
+  const videoContainer = document.querySelector(".video__popup-container");
+  const closeBtn = document.querySelector(".video__popup-close");
+  let iframe = document.querySelector(".video__popup-iframe-container > iframe");
 
-// ========== Counter script start ============
-// const counterSections = document.querySelectorAll(".counter-section");
-// counterSections && counterSections.forEach((counterSection)=>{
-//     const counters = counterSection.querySelectorAll(".counter-number");
-//     if(counters.length > 0) {
-//         let CounterObserver = new IntersectionObserver(
-//             (entries, observer)=>{
-//                 let [entry] = entries;
-//                 if(!entry.isIntersecting) return;
-        
-//                 let speed = 200;
-//                 counters.forEach((counter, index) => {
-//                     const updateCounter = () =>{
-//                         let targetNumber = +counter.dataset.target;
-//                         let initialNumber = +counter.innerText;
-//                         let incPerCount = targetNumber / speed;
-//                         if(initialNumber  < targetNumber ){
-//                             counter.innerText = Math.ceil(initialNumber + incPerCount);
-//                             setTimeout(updateCounter, 40);
-//                         }
-//                     }
-//                     updateCounter();
-//                 })
-//                 observer.unobserve(counterSection);
-//             },{
-//                 root:null,
-//                 threshold:0.4,
-//             }
-//         );
-//         CounterObserver.observe(counterSection);
-//     }
-// })
-// ============ Counter script end ============
+  function togglePopup() {
+    videoContainer.classList.toggle("show");
+    body.classList.toggle("disable-scroll");
+    gsap.fromTo(".video__popup-wrapper", 0.5,
+      { opacity:0, y:50},
+      { opacity:1, y:0, ease:Power4.easeOut }
+    );
+    stopLenisScroll();
+  }
 
+  playBtns.forEach((playBtn, index) => {
+    playBtn.addEventListener("click",() => {
+      const videoId = playBtn.dataset.id;
+      iframe.src = `https://www.youtube.com/embed/${videoId}`;
+      togglePopup();
+    })
+  });
+
+  closeBtn && closeBtn.addEventListener("click", ()=>{
+    iframe.src = "";
+    togglePopup();
+  });
+}
+//========== Video Play /Pause Button End ============
 
 // ========= Animation Starts =========
 //  animation fade in 
@@ -315,16 +311,16 @@ const fadeIn = gsap.utils.toArray(".fade-in");
 fadeIn.forEach((mainContent, i) => {
     const anim = gsap.fromTo(mainContent,
         { opacity: 0 },
-        { opacity: 1, duration: 1.35, ease: "power3.in" }
+        { opacity: 1, duration: 1.15, ease: "power4.in" }
     );
     ScrollTrigger.create({
         trigger: mainContent,
         animation: anim,
         toggleActions: "play",
         once: true,
-        duration: 1.35,
+        duration: 1.15,
         stagger:0.1,
-        ease: "power3.in"
+        ease: "power4.in"
     });
 });
 

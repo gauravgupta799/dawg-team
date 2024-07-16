@@ -36,9 +36,12 @@
         @include flex-center-vertical;
         gap:rem(14);
         @include breakpoint-md{
-            gap:rem(20);
+            gap:rem(16);
         }
-        @include breakpoint-lg{
+        // @include breakpoint-xxl{
+        //     gap:rem(32);
+        // }
+        @media only screen and (min-width:1600px){
             gap:rem(32);
         }
     }

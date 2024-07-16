@@ -1,0 +1,70 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.pet-boarding {
+
+    .card{
+        @include border-radius(12px);
+        border: solid 2px $clr-black;
+        background-color: $clr-quaternary;
+        
+        &__header,
+        &__body{
+            padding: 1.85em 1em;
+            @include breakpoint-sm{
+                padding: 1.85em 1.5em;
+            }
+        }
+        &__header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 1em;
+            small{
+                margin-top: 0;
+            }
+        }
+        &__body{
+            a{
+                font-family:$ff-primary;
+                font-size: 24px;
+                font-weight: 900;
+                font-stretch: condensed;
+                font-style: normal;
+                line-height: 1.33;
+                gap:16px;
+
+                span{
+                    &:first-child{
+                        margin-top: 5px;
+                    }
+                }
+
+                &:hover{
+                    svg{
+                        path{
+                            fill:$clr-primary;
+                        }
+                    }
+                }
+            }
+        }
+        &__list{
+            li{
+                position: relative;
+                font-size: 16px;
+                line-height: 1.75;
+
+                &::before{
+                    content: url("../../../assets/icons/checked.svg");
+                    margin-right: 6px;
+
+                }
+            }
+        }
+    }
+}

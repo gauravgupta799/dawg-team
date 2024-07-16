@@ -28,6 +28,9 @@
                 position: absolute;
                 left: 0;
                 margin-left: -32px;
+                @media only screen and (min-width:1400px) and (max-width:1600px){
+                    margin-left: -60px;
+                }
             }
             &::after{
                 content: url("/assets/icons/paws.svg");
@@ -112,7 +115,7 @@
             margin-left: 10px;
         }
     }
-    &__top-section{
+    &__top{
         background-image: url("/assets/images/mobile/home/dog-pregnancy-banner-img.webp");
         background-repeat: no-repeat;
         background-size:cover;
@@ -126,14 +129,14 @@
         }
     }
 
-    &__bottom-section{
+    &__bottom{
         background: $clr-primary;
-        height: rem(900);
-        overflow: hidden;
+        // height: rem(900);
+        // overflow: hidden;
 
-        @include breakpoint-md{
-            height: rem(965);
-        }
+        // @include breakpoint-md{
+        //     height: rem(965);
+        // }
 
         .dog-pregnancy__title{
             color:$clr-white;
@@ -146,18 +149,21 @@
                 top:0;
                 margin-left: -62px;
                 margin-top: -96px;
-                @include breakpoint-lg{
+               @media only screen and (min-width:1600px){
                     margin-left: 0;
                     margin-top: -80px;
-                }
+               }
             }
             &::after{
                 content: url("/assets/icons/paws.svg");
                 position: absolute;
                 top: 0;
-                margin-left: -80px;
                 margin-top: -116px;
-                @include breakpoint-lg{
+                @media only screen and (max-width:992px){
+                    margin-left: -80px;
+                }
+              
+                @media only screen and (min-width:1600px){
                     margin-top: -80px;
                 }
             }
@@ -168,31 +174,48 @@
             max-width: 60ch;
             margin-inline:auto;
         }
+
+        .team-container{
+            position: relative;
+            z-index: 1;
+            // margin-top: -320px;
+
+            &::before{
+                content: "";
+                position: absolute;
+                background: $clr-white;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 50%;
+                z-index: -1;
+            }
+        }
     }
 
-    .team-container{
-        position: relative;
-        margin-top: -320px;
-    }
 }
 
 // ================================
 .feedback{
     background: $clr-light-blue;
     &__right-container{
-        display: flex;
-        align-items: center;
+        @include flex-center-vertical;
     }
     &__footer{
-        display: flex;
-        align-items: center;
+        @include flex-center-vertical;
         justify-content: space-between;
         flex-wrap: wrap;
     }
     &__footer-inner{
-        display: flex;
-        align-items: center;
+        @include flex-center-vertical;
         gap:rem(28);
+        @include breakpoint-lg{
+            gap:rem(8);
+        }
+
+        @media only screen and (min-width:1600px){
+            gap:rem(28);
+        }
     }
 }
 
@@ -252,7 +275,7 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 50%;
+        height: 40%;
         background: $clr-white;
         z-index: -1;
     }
@@ -269,290 +292,5 @@
 }
 
 
-
-// Product-Details
-
-.page-widgets-wrapper{
-    ul{
-        @include flex-center-vertical;
-        gap:10px;
-        li{
-            position: relative;
-            font-size: 16px;
-            font-family: $ff-secondary;
-            line-height: 1.75;
-            &:not(:last-child){
-                &::after{
-                    content:"/";
-                    margin-left: 10px;
-                }
-            }
-
-            &.active{
-                a{
-                    color:$clr-secondary;
-                    font-weight: 600;
-                }
-            }
-           
-        }
-    }
-}
-
-// ------- Product Left Side ------------
-.thumb-list{
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    gap:rem(8);
-    margin-top: 28px;
-
-    @include breakpoint-xl{
-        margin:0 auto;
-        flex-direction: column;
-        gap:rem(14);
-    }
-
-    li{
-        // @include dimensions(rem(80), rem(80));
-        overflow: hidden;
-        @include border-radius(12px);
-        @include flex-center;
-        border: 1px solid $clr-black;
-        padding: 6px;
-        cursor: pointer;
-        @include breakpoint-md{
-            @include dimensions(rem(120), rem(110));
-            padding:1.25em;
-        }
-        @include breakpoint-lg{
-            padding:1em;
-        }
-    }
-}
-
-.imgBox{
-    overflow: hidden;
-    @include border-radius(12px);
-    @include flex-center;
-    border: 1px solid $clr-black;
-    background-color: $clr-quaternary;
-    padding:2em;
-
-    @include breakpoint-xl{
-        width: min(100%, 740px);
-        height: 735px;
-    }
-
-}
-
-
-// ------- Product Right Side ------------
-.product{
-    &__details-top{
-        .rating-wrapper{
-            @include flex-center-vertical;
-            gap:10px;
-            text-transform: capitalize;
-            small{
-                font-size: 14px;
-                line-height: 1;
-                @include breakpoint-lg{
-                    font-size: 16px;
-                }
-            }
-        }
-
-        .purity-list{
-            @include flex-center-vertical;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            padding-block:1.5em;
-            gap:14px;
-
-            li{
-                @include flex-center-vertical;
-                gap:10px;
-                figure{
-                    flex-shrink: 0;
-                }
-            }
-        }
-    }
-
-    &__details-bottom{
-        .offers-list{
-            @include flex-center-vertical;
-            flex-wrap: wrap;
-            gap:16px;
-            padding-block:1.5em;
-            @include breakpoint-sm{
-                gap:24px;
-            }
-            @include breakpoint-md{
-                gap:28px;
-            }
-            @include breakpoint-lg{
-                gap:32px;
-            }
-            @include breakpoint-xl{
-                gap:48px;
-            }
-            @include breakpoint-xxl{
-                gap:64px;
-            }
-            li{
-                @include flex-center-vertical;
-                gap:14px;
-            }
-
-            .coupon-code-wrapper{
-                @include flex-center-vertical;
-                gap: 8px;
-                font-size: 16px;
-                line-height: 1.75;
-
-                .coupon-code-text{
-                    font-weight: 600;
-                    margin-top: 0;
-                }
-            }
-        }
-
-        .price-wrapper{
-            @include flex-center-vertical;
-            flex-wrap: wrap;
-            @include breakpoint-sm{
-                gap:10px;
-            }
-
-            span{
-                font-size: 16px;
-                line-height: 1.75;
-                margin-top: 0;
-                margin-left: 8px;
-            }
-            .discount-amount{
-                text-decoration: line-through;
-                color: $clr-grey-2;
-            }
-
-            .stock-count{
-                font-style: italic;
-                color:$clr-secondary;
-            }
-        }
-
-        .wgt-options{
-            @include flex-center-vertical;
-            flex-wrap: wrap;
-            gap:14px;
-            @include breakpoint-sm{
-                gap:16px; 
-            }
-
-            input[type="radio"]{
-                display: none;
-            }
-        }
-
-        .wgt-box{
-            @include flex-center;
-            @include border-radius(4px);
-            border:1px solid $clr-black;
-            padding:em(12) em(24);
-            transition:all 0.35s ease;
-            .wgt-option{
-                font-size: 24px;
-                line-height: 1;
-                font-family:$ff-primary;
-                color:$clr-black;
-                cursor: pointer;
-            }
-
-            &:hover{
-                cursor: pointer;
-                border-color: $clr-secondary;
-                background-color: $clr-secondary;
-                .wgt-option{
-                    color:$clr-white;
-                }
-            }
-        }
-
-        .btn-wrapper{
-            @include flex-center-vertical;
-            gap:16px;
-
-            button{
-                width: min(100%, 50%);
-                font-size: 24px;
-                font-family:$ff-primary;
-                text-transform: uppercase;
-                padding:0;
-                line-height: 2;
-                
-
-                @include breakpoint-md{
-                    font-size: 28px;
-                }
-                @include breakpoint-lg{
-                    font-size: 32px;
-                }
-            }
-        }
-
-        .payment-options{
-            @include flex-center-vertical;
-            justify-content: flex-end;
-            gap:16px;
-            margin-top: 16px;
-            @include breakpoint-sm{
-                margin-top: 10px;
-            }
-        }
-    }
-
-}
-
-.price-container{
-    display: flex;
-    align-items: center;
-    gap:28px;
-
-    .counter-wrapper{
-        display: flex;
-        align-items: center;
-        gap:16px;
-        @include border-radius(4px);
-        border: solid 1px $clr-black;
-        button{
-            color:$clr-black;
-            padding-inline:1em;
-            @include border-radius(4px);
-            &:hover{
-                background-color:$clr-secondary;
-                color:$clr-white;
-            }
-        }
-    }
-}
-
-
-.purity-list{
-    @include flex-center-vertical;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-block:1.5em;
-    gap:14px;
-
-    li{
-        @include flex-center-vertical;
-        gap:10px;
-        figure{
-            flex-shrink: 0;
-        }
-    }
-}
 
 

@@ -25,37 +25,29 @@
         text-transform: uppercase;
         display: flex;
         gap:rem(16);
-        @include transition(color, 0.25s, ease);
+        @include transition(all, 0.25s, ease);
         &::after{
+            // content: url("../../../assets/icons/plus.svg");
             content: "+";
             color:$clr-secondary;
             flex-shrink: 0;
             position: absolute;
             right: 0;
-            
+            transition:all 0.25s ease;
+            // transform: translateY(0px);
         }
-    }
-    &__icon-wrapper{
-        // @include relative-hidden;
     }
     &__title-wrapper{
         @include relative-hidden;
+        text-align:left;
         &:hover{
             cursor: pointer;
             .accordion__title{
                 color: $clr-secondary;
             }
-
-        }
-        &.active{
-            .accordion__title{
-                color: $clr-secondary;
-                &::after{
-                    content: "-";
-                }
-            }
         }
     }
+
     &__content{
         padding-right: em(20);
         max-height: 0;
@@ -63,5 +55,17 @@
         transition: max-height 0.35s ease;
         max-width: min(100%, 76ch);
         text-align: left;
+    }
+}
+
+
+.accordion__title-wrapper.active{
+    .accordion__title{
+        color: $clr-secondary;
+        &::after{
+            // content: url("../../../assets/icons/minus.svg");
+            content:"-";
+            // transform: translateY(-6px);
+        }
     }
 }

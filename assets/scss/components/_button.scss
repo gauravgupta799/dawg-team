@@ -148,13 +148,13 @@
         transition:opacity 0.35s ease;
 
         @include breakpoint-md{
-            @include dimensions(rem(100), rem(100));
+            @include dimensions(rem(96), rem(96));
         }
         @include breakpoint-lg{
-            @include dimensions(rem(120), rem(120));
+            @include dimensions(rem(112), rem(112));
         }
-        @include breakpoint-xl{
-            @include dimensions(rem(130), rem(130));
+        @include breakpoint-xxl{
+            @include dimensions(rem(128), rem(128));
         }
         &:hover{
             cursor: pointer;
