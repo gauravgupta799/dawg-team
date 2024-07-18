@@ -40,13 +40,13 @@ html{
 
 ::-webkit-scrollbar-track {
   background-color: $clr-white;
-  -webkit-border-radius: 10px;
-  @include border-radius(10px);
+  -webkit-border-radius: 8px;
+  @include border-radius(8px);
 }
 
 ::-webkit-scrollbar-thumb {
-  @include border-radius(10px);
-  -webkit-border-radius: 10px;
+  @include border-radius(8px);
+  -webkit-border-radius: 8px;
   background: $clr-primary; 
 }
 

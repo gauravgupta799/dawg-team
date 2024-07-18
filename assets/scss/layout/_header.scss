@@ -7,12 +7,11 @@
 // ================================
 .header{
     position: fixed; 
-    z-index: 9;
+    z-index: 10;
     top:0;
     left: 0;
     width: 100%;
     transform:translateY(0);
-    // transition: transform 0.3s ease;
 }
 
 // ================================
@@ -23,7 +22,7 @@
         justify-content: space-between;
         padding:em(20) em(48);
         background: $clr-white;
-        @include border-radius(9px);
+        @include border-radius(8px);
         margin-top: 32px;
         transition: transform 0.25s ease;
         display: none;
@@ -102,3 +101,49 @@
 .hamburger-wrapper{
     cursor: pointer;
 }
+
+
+// Filter Header
+.filter-header{
+    position: fixed;
+    bottom: -2px;
+    width: 100%;
+    background: $clr-primary;
+    z-index:9;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding-block: 1em;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, .5);
+
+    .filter-option,
+    .sort-wrapper{
+        @include flex-center-vertical;
+        gap:8px;
+
+        p{
+            color:$clr-white;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+    }
+    .sort-wrapper{
+        justify-content: flex-end;
+        gap:4px;
+    }
+}
+
+
+// Search Container
+// .header-search-container{
+//     position: absolute;
+//     width: 100%;
+//     left: 0;
+//     top: 16.5%;
+//     z-index: 10;
+//     display: flex;
+//     justify-content: center;
+  
+//     .form-wrapper{
+//         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+//     }
+// }

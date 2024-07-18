@@ -37,15 +37,20 @@
             // transform: translateY(0px);
         }
     }
+    &__icon-wrapper{
+        span{
+            display: flex;
+            @include transition(all, 0.25s, ease);
+            // svg{
+            //     path{
+            //         fill:$clr-tertiary;
+            //     }
+            // }
+        }
+    }
     &__title-wrapper{
         @include relative-hidden;
         text-align:left;
-        &:hover{
-            cursor: pointer;
-            .accordion__title{
-                color: $clr-secondary;
-            }
-        }
     }
 
     &__content{
@@ -58,6 +63,21 @@
     }
 }
 
+.accordion__title-wrapper:hover{
+    cursor: pointer;
+    .accordion__title{
+        color: $clr-secondary;
+    }
+    .accordion__icon-wrapper{
+        span{
+            svg{
+                path{
+                    fill:$clr-secondary;
+                }
+            }
+        }
+    }
+}
 
 .accordion__title-wrapper.active{
     .accordion__title{

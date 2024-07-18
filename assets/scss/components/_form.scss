@@ -20,7 +20,7 @@
         font-size: rem(16);
         font-weight: 600;
         line-height: 2;
-        font-family: $ff-primary;
+        font-family: $ff-secondary;
         @include border-radius(4px);
         @include breakpoint-md{
             padding: em(16) em(20);
@@ -35,88 +35,13 @@
 .form-group-wrapper{
     @include flex-center-vertical;
     padding:8px;
-    @include border-radius(4px);
+    @include border-radius(8px);
     background: $clr-white;
     .form__control{
         outline: none;
         padding-block:0;
     }
 }
-
-
-// .footer-form{
-//     .form__group{
-//         display: flex;
-//         align-items: center;
-//         background: $clr-bg-1;
-//         padding: 6px;
-//         @include border-radius(37px);
-//         position: relative;
-//     }
-//     .footer-form-control{
-//         background:$clr-bg-1;
-//         outline: 0;
-//         color:$clr-white;
-//         font-size: 16px;
-//         font-weight: 300;
-//         line-height: 2.25;
-//         @include border-radius(37px);
-//         padding-left: 1.5em;
-//         padding-block:0;
-//         transition:all 0.3s ease;
-//     }
-//     &__label{
-//         color:$clr-white;
-//         font-size: rem(16);
-//         font-weight: 300;
-//         line-height: 2.25;
-//         position: absolute;
-//         top: 20px;
-//         left: 32px;
-//         cursor: text;
-//         transition:all 0.3s ease;
-//     }
-
-//     .form-btn{
-//         border: 0;
-//         outline: 0;
-//         width: 63px;
-//         height: 63px;
-//         background-color: $clr-secondary;
-//         @include flex-center;
-//         @include border-radius(50%);
-//         flex-shrink: 0;
-//         position: relative;
-//         overflow: hidden;
-//         transition:transform 0.35s ease;
-//         span{
-//             transition:transform 0.35s ease;
-//             &:first-child{
-//                 transform: translate(0,3px);
-//             }
-//             &:last-child{
-//                 transform: translate(-165%,150%);
-//                 position: absolute;
-//             }
-//         }
-        
-//         &:hover{
-//             cursor: pointer;
-//             transform:scale(1.022);
-//             span{
-//                 &:first-child{
-//                     transform: translate(165%,-150%);
-//                 }
-//                 &:last-child{
-//                     transform: translate(0, 3px);
-//                     position: absolute;
-//                 }
-//             }
-//         }
-
-//         // transform: translate(120%,-100%);
-//     }
-// }
 
 
 .footer-form-control:focus + label,
@@ -143,130 +68,126 @@
 // }
 
 
-// .cta-form{
-//     .form__group{
-//         position: relative;
-//         border-bottom: 1px solid $clr-primary;
-//         &::after{
-//           @extend .border-after;
-//         }
-
-//         &:focus-within{
-//             &::after{
-//                 width: 100%;
-//             }
-//         }
-//     }
-//     .form__label{
-//         font-size: rem(22);
-//         font-weight: 500;
-//         line-height: 1.43;
-//         font-family: $ff-secondary;
-//         color: $clr-primary;
-//         @include breakpoint-lg{
-//             font-size: rem(24);
-//         }
-//         @include breakpoint-xl{
-//             font-size: rem(28);
-//         }
-//     }
-//     .form__control{
-//         border:0;
-//         outline:0;
-//         border-radius:0;
-//         padding-left: 0;
-//         font-weight: 400;
-//         font-family: $ff-secondary;
-//         transition:all 0.5s ease-out;
-
-//         &:focus{
-//             border-color: $clr-secondary;
-//         }
-//     }
-// }
 
 
+// ========== Custom Select Start==============
+.custom-select-wrapper {
+    position: relative;
+}
 
-// ========== Custom Select ==============
-// .select-box{
-//     .selected{
-//         position: relative;
-//         margin-bottom: 8px;
-//         font-size: rem(16);
-//         font-family: $ff-secondary;
-//         color:$grey;
-//         border-bottom: 1px solid $clr-primary;
-    
-//         &::before{
-//             content:url("../assets/icons/arrow-down.svg");
-//             position: absolute;
-//             right: 10px;
-//             top: 12px;
-//             transform:rotate(0deg) translateY(0);
-//             transition:transform 0.35s ease;
-//             transform-origin: center;
-//         }
-//     }
+.custom-select {
+    position: relative;
+    @include flex-cloumn;
+}
 
-//     .options-container{
-//         max-height: 0;
-//         opacity: 0;
-//         width: 100%;
-//         @include border-radius(8px);
-//         background: $clr-white;
-//         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
-//         transition:max-height 0.35s ease, opacity 0.35s ease;
-//         overflow: hidden;
-//         overflow-y: scroll;
-    
-//         &::-webkit-scrollbar{
-//             width: 8px;
-//             background: $clr-secondary;
-//             border-radius:0 8px 8px 0;
-//         }
-//         &::-webkit-scrollbar-thumb{
-//             background: $clr-primary;
-//             border-radius:0 8px 8px 0;
-//         }
-//     }
-    
-//     .option, .selected{
-//         padding:12px 24px;
-//         cursor: pointer;
-//     }
+.custom-select-trigger {
+    position: relative;
+    @include flex-space-between;
+    gap:10px;
+    cursor: pointer;
 
-//     .option{
-//         transition:all 0.2s ease;
-//         .radio{
-//             display: none;
-//         }
-//         label{
-//             color:$clr-primary;
-//             cursor: pointer;
-//         }
-//         &:hover{
-//             background: $clr-primary;
-//             @include border-radius(8px);
-//             label{
-//                 color:$clr-white;
-//             }
-//         }
-//     }
-// }
+    .arrow {
+        @include dimensions(rem(10),rem(10));
+        border-left: 2px solid $clr-grey-1;
+        border-bottom: 2px solid $clr-grey-1;
+        transform: translateY(-1px) rotate(-45deg);
+        @include transition(transform, 0.35s , ease);
+        transform-origin: center;
+    }
+}
+
+.custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $clr-white;
+    border: 1px solid #ddd;
+    border-top: none;
+    max-height: 200px;
+    width: 180px;
+    overflow-y: auto;
+    z-index: 1;
+    @include border-radius(4px);
+    margin-left: -65px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+    margin-top: 4px;
+    display: none;
+    flex-direction: column;
+    @include breakpoint-xxl{
+        margin-left: -55px;
+    }
+
+    span{
+        margin-top: 0;
+    }
+}
+
+.custom-option {
+    padding: 10px;
+    transition: background-color 0.3s;
+    @include border-radius(4px);
+    &:hover, .selected{
+        cursor: pointer;
+        color:$clr-white;
+        background-color: $clr-secondary;
+    }
+}
+
+.custom-select-wrapper.open{
+    .arrow {
+        transform: translateY(0px) rotate(140deg);
+    }
+    .custom-options {
+        display: flex;
+    }
+}
+
+// ========== Custom Select End==============
 
 
-// .select-box.active{
-//     .options-container{
-//         max-height: rem(214);
-//         opacity: 1;
-//     }
-//     .selected{
-//         &::before{
-//             transform:rotate(180deg) translateY(8px);
-//         }
-//     }
-// }
 
-// .selected.active{
-//     color:$clr-primary;
-// }
+
+
+// ======================================
+.radio-input .label input[type="radio"] {
+    background-color: #202030;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .radio-input .label input[type="radio"]:checked {
+    background-color: #435dd8;
+    -webkit-animation: puls 0.7s forwards;
+    animation: pulse 0.7s forwards;
+  }
+  
+  .radio-input .label input[type="radio"]:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: #fff;
+    transform: scale(0);
+  }
+  
+  .radio-input .label input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }

@@ -73,6 +73,7 @@
         font-family: $ff-tertiary;
         display: inline-flex;
         align-items: center;
+        gap:5px;
         @include breakpoint-md{
             font-size: rem(36);
         }

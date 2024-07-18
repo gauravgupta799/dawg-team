@@ -56,7 +56,6 @@ lenis.on('scroll', (e) => {
     stickyHeader();
 });
 
-
 function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
@@ -79,17 +78,22 @@ window.onload = function(){
     if(loader){
         loader.style.display = "none"; 
     }
+    tl.fromTo(".header",
+        {
+            opacity:0,
+            y:30,
+        },{
+            opacity:1,
+            y:0,
+            duration: 1,
+            ease:"power4.out"
+        }
+    )
 
     tl.from(".header__logo", {
         opacity:0,
-        duration:1.5,
-        delay:-0.95,
-        ease:"power3.out",
-    })
-    .from(".nav", {
-        opacity:0,
-        duration:1,
-        delay:-0.8,
+        duration:1.25,
+        delay:-1,
         ease:"power3.out",
     })
     .from(".nav__link", {
@@ -97,23 +101,61 @@ window.onload = function(){
         y:30,
         stagger:0.01,
         duration:1,
-        delay:-0.85,
+        delay:-1.15,
         ease:"power3.out",
     })
-    .from(".h-title-reveal", {
-        opacity:0,
-        backgroundPositionX:"0%",
-        duration:1.15,
-        delay:-0.9,
-        ease:"power3.out",
-    })
-    .from(".h-reveal-btn", {
+    .fromTo(".action-btn", 
+        {
+            opacity:0,
+            y:30,
+        },{
+            opacity:1,
+            y:0,
+            stagger:0.01,
+            duration:1,
+            delay:-1.2,
+            ease:"power3.out",
+        }
+    )
+    .from(".header-btn", {
         opacity:0,
         y:30,
         duration:1,
-        delay:-0.92,
+        delay:-1.25,
+        ease:"power3.out",
+
+    })
+    .from(".hero__title", {
+        opacity:0,
+        y:50,
+        duration:1,
+        delay:-1.25,
         ease:"power3.out",
     })
+    .from(".hero__subTitle", {
+        opacity:0,
+        y:50,
+        duration:1,
+        delay:-1.3,
+        ease:"power3.out",
+    })
+
+    .from(".hero-btn", {
+        opacity:0,
+        y:30,
+        duration:1,
+        delay:-1.35,
+        ease:"power3.out",
+    })
+    .from(".hero-banner", {
+        opacity:0,
+        y:10,
+        duration:1.25,
+        delay:-1.45,
+        ease:"power3.out",
+    })
+
+
     // tl.from(".hero-banner__wrapper img", {
     //     opacity:0,
     //     y:60,
@@ -144,8 +186,6 @@ navLinks && navLinks.forEach((navLink) => {
 mobileNavLinks && mobileNavLinks.forEach((navLink) => {
     activeLink(navLink);
 });
-
-
 //====== Active Page Link End ======
 
 
@@ -208,32 +248,38 @@ const swiperPost = new Swiper('.swiper-post', {
         },
     }
 });
-
-
 // ============ Swipers End =================
 
 
 // ======== Accordian Toggle Start ========
-const accordions = document.querySelectorAll(".accordion__title-wrapper");
-accordions && accordions.forEach((accordion)=>{
-    accordion.addEventListener("click", function(){
-        this.classList.toggle("active");
-        let content = this.nextElementSibling;
-        if (content) {
-            content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
-        }
-
-        accordions.forEach((acdnItem)=>{
-            if(acdnItem !== accordion){
-                acdnItem.classList.remove("active");
-                acdnItem.nextElementSibling.style.maxHeight = null;
+function toggleAccordion(accordions){
+    accordions.forEach((accordion)=>{
+        accordion.addEventListener("click", function(){
+            this.classList.toggle("active");
+            let content = this.nextElementSibling;
+            if (content) {
+                content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
             }
-        })
-    });
-})
+    
+            accordions.forEach((acdnItem)=>{
+                if(acdnItem !== accordion){
+                    acdnItem.classList.remove("active");
+                    acdnItem.nextElementSibling.style.maxHeight = null;
+                }
+            })
+        });
+    })
+}
 
-// ===== Mobile SubMenu
-const mobileSubmenu = document.querySelectorAll(".mobile-submenu");
+const accordions = document.querySelectorAll(".accordion__title-wrapper");
+accordions && toggleAccordion(accordions);
+
+const filterAccordions = document.querySelectorAll(".filter-label");
+filterAccordions && toggleAccordion(filterAccordions);
+
+
+// ---------- Mobile SubMenu Start --------
+const mobileSubmenu = document.querySelectorAll(".mobile-submenu ");
 mobileSubmenu && mobileSubmenu.forEach((submenu)=>{
     submenu.addEventListener("click", function(){
         const menu = submenu.querySelector(".subMenu__list--mobile");
@@ -251,27 +297,40 @@ mobileSubmenu && mobileSubmenu.forEach((submenu)=>{
         })
     })
 })
+// ---------- Mobile SubMenu End --------
+
 // ======== Accordian Toggle End ========
 
 
 // ============ Custom select box start ============
-// const selectBox = document.querySelector(".select-box");
-// const selected = document .querySelector(".selected");
-// const optionList = document.querySelectorAll(".option");
+const selectWrapper = document.querySelector('.custom-select-wrapper');
+const selectTrigger = document.querySelector('.custom-select-trigger');
+const options = document.querySelectorAll('.custom-option');
 
-// selected && selected.addEventListener("click", ()=>{
-//     selectBox.classList.toggle("active");
-// });
+selectTrigger && selectTrigger.addEventListener('click', () => {
+    selectWrapper && selectWrapper.classList.toggle('open');
+});
 
-// optionList && optionList.forEach((option)=>{
-//     option.addEventListener("click", ()=>{
-//         selected.innerHTML = option.querySelector("label")?.innerHTML;
-//         selectBox.classList.remove("active");
-//         selected.classList.add("active");
-//     });
-// });
+options && options.forEach(option => {
+    option.addEventListener('click', () => {
+        // const value = option.getAttribute('data-value');
+        const text = option.textContent;
+        document.querySelector('.custom-option.selected').classList.remove('selected');
+        option.classList.add('selected');
+        selectTrigger.querySelector('span').textContent = text;
+        selectWrapper.classList.remove('open');
+    });
+});
 
+if(selectWrapper){
+    document.addEventListener('click', (e) => {
+        if (!selectWrapper.contains(e.target)) {
+            selectWrapper && selectWrapper.classList.remove('open');
+        }
+    });
+}
 // ============ Custom select box end ============
+
 
 //========== Video Play /Pause Button Start ============
 const playBtns = document.querySelectorAll(".play-button-wrapper");
@@ -304,6 +363,25 @@ if(playBtns) {
   });
 }
 //========== Video Play /Pause Button End ============
+
+
+//===================
+const thumbImages = document.querySelectorAll(".thumb-img img");
+
+if(thumbImages) {
+    thumbImages.forEach(function(thumbImage){
+        thumbImage.addEventListener("click", function(e){
+            // const grandParentNode = thumbImage.parentNode.parentNode;
+            // grandParentNode.classList.toggle("active");
+            const src = thumbImage.src;
+            const mainImage = document.querySelector(".main-imgBox-figure > img");
+            if(mainImage){
+                mainImage.src = src;
+            }
+        })
+    })
+}
+
 
 // ========= Animation Starts =========
 //  animation fade in 
@@ -456,7 +534,6 @@ menuHamburgerBtn.onclick = function(){
     stopLenisScroll();
 }
 
-
 closeMenuBtn.onclick = function(){
 
     gsap.fromTo(".caret-down-icon",
@@ -500,7 +577,6 @@ closeMenuBtn.onclick = function(){
     );
     stopLenisScroll();  
 }
-
 
 const update = (time, deltaTime, frame) => {
     lenis.raf(time * 1000)

@@ -67,7 +67,7 @@
 .product{
     &__card-image{
         @include border-radius(12px);
-        border: solid 1px #000;
+        border: solid 1px $clr-black;
         background: $clr-quaternary;
         height: 370px;
         @include transition(all, 0.35s, ease);

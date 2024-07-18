@@ -17,7 +17,7 @@
     padding:em(16) em(32);
     color:$clr-white;
     font-family: $ff-tertiary;
-    @include border-radius(7px);
+    @include border-radius(8px);
     @include transition(all, 0.35s, ease-out);
  
     // @include breakpoint-md{
