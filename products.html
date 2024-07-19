@@ -104,7 +104,7 @@
                                         <a href="./services/pet-boarding.html" class="subMenu__link">Pet Boarding</a>
                                     </li>
                                     <li class="">
-                                        <a href="./services/self-serve-dog-wash.html" class="subMenu__link">Self serve dog wash</a>
+                                        <a href="./services/dog-wash.html" class="subMenu__link">Self serve dog wash</a>
                                     </li>                                           
                                 </ul>
                             </li>
@@ -127,7 +127,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button class="action-btn" id="cart-btn">
+                            <a href="./cart.html" class="action-btn" id="cart-btn">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag" width="22" height="22"> 
                                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" ></path>
@@ -136,17 +136,17 @@
                                     </svg>
                                 </span>
                                 <div class="count">1</div>
-                            </button>
-                            <button class="action-btn" id="user-profile-btn">
+                            </a>
+                            <a href="./profile.html" class="action-btn" id="user-profile-btn">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user" width="22" height="22">
                                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                         <circle cx="12" cy="7" r="4"></circle>
                                     </svg>
                                 </span>
-                            </button>
+                            </a>
                         </div>
-                        <div class="btn-wrapper">
+                        <div class="btn-wrapper header-btn">
                             <a href="./contact.html" class="btn btn--outline">
                                <span class=""> Contact</span>
                             </a>
@@ -172,7 +172,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="search-icon-wrapper d-flex">
+                        <div class="search-icon-wrapper d-flex" id="search-btn">
                             <button class="action-btn">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="22" height="22">
@@ -193,7 +193,7 @@
 
                     <div class="header__mobile-right">
                         <div class="action-btns-wrapper">
-                            <button class="action-btn">
+                            <a href="./cart.html" class="action-btn" id="cart-btn">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag" width="22" height="22"> 
                                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" ></path>
@@ -202,15 +202,15 @@
                                     </svg>
                                 </span>
                                 <div class="count">1</div>
-                            </button>
-                            <button class="action-btn">
+                            </a>
+                            <a href="./profile.html" class="action-btn" id="user-profile-btn">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user" width="22" height="22">
                                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                         <circle cx="12" cy="7" r="4"></circle>
                                     </svg>
                                 </span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                  </div>
@@ -220,8 +220,9 @@
         </div>
         <!-- Desktop Menu End -->
 
+
         <!-- Mobile Menu Start -->
-        <div class="mobile-menu">
+        <aside class="mobile-menu">
             <div class="close-menu-btn" id="close-menu-btn">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="32" height="32">
@@ -244,13 +245,13 @@
                                     <span>About</span>
                                 </a>
                             </li>
-                            <li class="mobile-submenu" id="mobile-submenu">
+                            <li class="mobile-submenu">
                                 <a href="./services.html" class="mobile-menu__link">
                                     <span>Services</span>
                                     <span class="dropdown-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 15.997 9.878">
                                             <path data-name="Icon material-navigate-next" d="M1.88 0 0 1.88 6.106 8 0 14.118 1.88 16l8-8z" transform="rotate(90 7.998 7.999)" fill="#fff"/>
-                                        </svg>   
+                                        </svg>  
                                     </span>
                                 </a>
                            
@@ -263,7 +264,7 @@
                                         <a href="./services/pet-boarding.html" class="subMenu__link">Pet Boarding</a>
                                     </li>
                                     <li class="">
-                                        <a href="./services/self-serve-dog-wash.html" class="subMenu__link">Self serve dog wash</a>
+                                        <a href="./services/dog-wash.html" class="subMenu__link">Self serve dog wash</a>
                                     </li>
                                 </ul>
                             </li>
@@ -325,19 +326,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </aside>
         <!-- Mobile Menu End -->
-
-        <!-- <div class="header-search-container">
-            <form class="form-wrapper mt--1 overflow-wrapper" id="signup-cta-form">
-                <div class="form__group form-group-wrapper mb-0 fade-in-up">
-                    <input type="search" placeholder="Search..." class="form__control">
-                    <button class="btn btn--primary" id="search-btn">
-                        <span>Search</span>
-                    </button>
-                </div>
-            </form>
-        </div> -->
 
     </header>
     <!-- Header End -->
@@ -346,15 +336,15 @@
     <main class="main">
 
         <!-- Hero Section Start -->
-        <section class="hero pt--10 pt--sm--14 ">
+        <section class="hero pt--10 pt--sm--14 pt--xl--16">
             <div class="page-container">
                 <div class="row">
                     <div class="col-sm-8 col-xl-5 mx-auto text-center">
-                        <h1 class=" section-title">
+                        <h1 class="hero__title section-title">
                             Shop All lorem impsum dolor
                         </h1>
                         <div class="overflow-wrapper">
-                            <p class="mt--1">
+                            <p class="hero__subTitle mt--1">
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
                             </p>
                         </div>
@@ -371,24 +361,24 @@
                     <div class="col-md-4">
                         <div class="page-widgets-wrapper">
                             <ul class="list list-none">
-                                <li class="page-widget">
+                                <li class="page-widget hero__title">
                                     <a href="./home.html" class="link">Home</a>
                                 </li>
-                                <li class="page-widget">
+                                <li class="page-widget hero__title">
                                     <a href="./home.html" class="link">Shop All</a>
                                 </li>
-                                <li class="page-widget active">
+                                <li class="page-widget active hero__title">
                                     <a href="./home.html" class="link">Trending</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 offset-md-4 ">
+                    <div class="col-md-4 offset-md-4  ">
                         <div class="sort-container">
-                            <label for="sort">Sort By:</label>
+                            <label for="sort" class="hero__title">Sort By:</label>
                             <div class="custom-select-wrapper">
                                 <div class="custom-select">
-                                    <div class="custom-select-trigger">
+                                    <div class="custom-select-trigger hero__title">
                                         <span>Best Selling</span>
                                         <div class="arrow"></div>
                                     </div>
@@ -408,8 +398,8 @@
         
                     <!-- Filter-Container Start-->
                      <aside class="filter-container">
-                        <div class="search-container">
-                            <div class="search-group">
+                        <div class="search-container overflow-wrapper">
+                            <div class="search-group hero__title">
                                 <span class="d-flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18">
                                         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" fill="#3e3e3e"/>
@@ -421,7 +411,7 @@
                         </div>
         
                         <div class="filter-wrapper">
-                            <div class="filter-label">
+                            <div class="filter-label fade-in-up hero__title">
                                 <p class="">Jerseys</p>
                                 <span class="d-flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="12.484" height="7.709" viewBox="0 0 12.484 7.709">
@@ -455,7 +445,7 @@
                         <div class="divider divider--grey"></div>
         
                         <div class="filter-wrapper">
-                            <div class="filter-label">
+                            <div class="filter-label fade-in-up hero__title">
                                 <p class="">Dog Food</p>
                                 <span class="d-flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="12.484" height="7.709" viewBox="0 0 12.484 7.709">
@@ -477,48 +467,48 @@
                         <div class="divider divider--grey"></div>
         
                         <div class="filter-wrapper">
-                            <div class="filter-optionss mt-1 ">
-                                <div class="filter-option">
+                            <div class="filter-optionss mt-1 overflow-wrapper">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="jerseys" id="dog-harnesses" value="dog harnesses">
                                     <label for="dog-harnesses">Dog Harnesses</label>
                                 </div>
-                                <div class="filter-option">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="jerseys" id="dog-leashes" value="dog leashes">
                                     <label for="dog-leashes">Dog Leashes</label>
                                 </div>
-                                <div class="filter-option">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="dog-collars" id="j3" value="dog collars">
                                     <label for="dog-collars">Dog Collars</label>
                                 </div>
-                                <div class="filter-option">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="jerseys" id="raincoats" value="raincoats">
                                     <label for="raincoats">Raincoats</label>
                                 </div>
-                                <div class="filter-option">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="jerseys" id="jackets-and-vest" value="jackets and vest">
                                     <label for="jackets-and-vest">Jackets and Vest</label>
                                 </div>
-                                <div class="filter-option">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="jerseys" id="dog-sweaters" value="dog sweaters">
                                     <label for="dog-sweaters">Dog Sweaters</label>
                                 </div>
-                                <div class="filter-option">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="jerseys" id="dog-overalls" value="gog overalls">
                                     <label for="dog-overalls">Dog Overalls</label>
                                 </div>
-                                <div class="filter-option">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="jerseys" id="dog-dresses" value="dog dresses">
                                     <label for="dog-dresses">Dog Dresses</label>
                                 </div>
-                                <div class="filter-option">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="jerseys" id="dog-polo-shirts" value="dog polo shirts">
                                     <label for="dog-polo-shirts">Dog Polo Shirts</label>
                                 </div>
-                                <div class="filter-option">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="jerseys" id="dog t-shirts" value="dog t-shirts">
                                     <label for="dog t-shirts">Dog T-Shirts</label>
                                 </div>
-                                <div class="filter-option">
+                                <div class="filter-option fade-in-up">
                                     <input type="radio" name="jerseys" id="Dog-Jogging-Suits" value="dog jogging Suits">
                                     <label for="Dog-Jogging-Suits">Dog Jogging Suits</label>
                                 </div>
@@ -676,7 +666,6 @@
                 <!-- Products Filter-Container End-->
             </div>
         </section>
-
         <!-- Filter-Products Section end -->
 
 
@@ -800,35 +789,55 @@
                                         <path data-name="Icon material-navigate-next" d="M1.88 0 0 1.88 6.106 8 0 14.118 1.88 16l8-8z" transform="rotate(90 7.998 7.999)" fill="#fff"/>
                                     </svg>                                    
                                 </span>
-
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="sort-container--mobile">
-                            <div class="sort-wrapper">
-                                <p class="">Sort By</p>
-                                <span class="d-flex">
-                                    <svg width="32" height="32" viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve">
-                                        <path fill-opacity="1" stroke-linejoin="round" d="M 51.25,40L 38,53.25L 24.75,40L 51.25,40 Z M 51.25,36L 24.75,36L 38,22.75L 51.25,36 Z " fill="#ffffff"/>
-                                    </svg>
-                                </span>
-                            </div>                    
-                            <div class="custom-select-wrapper">
-                                <div class="custom-select">
-                                    <div class="custom-options">
-                                        <span class="custom-option selected" data-value="best-selling">Best Selling</span>
-                                        <span class="custom-option" data-value="low-to-high">Low to High Price</span>
-                                        <span class="custom-option" data-value="high-to-low">High to Low Price</span>
+                    <div class="col-6 sort-container--mobile">
+                        <div class="sort-wrapper" id="sort-btn">
+                            <p class="">Sort By</p>
+                            <span class="d-flex">
+                                <svg width="32" height="32" viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve">
+                                    <path fill-opacity="1" stroke-linejoin="round" d="M 51.25,40L 38,53.25L 24.75,40L 51.25,40 Z M 51.25,36L 24.75,36L 38,22.75L 51.25,36 Z " fill="#ffffff"/>
+                                </svg>
+                            </span>
+                        </div>                    
+                        <div class="custom-select-wrapper">
+                            <h6 class="sort-by-title">SORT BY</h6>
+                            <div class="divider-white"></div>
+                            <div class="custom-select">
+                                <div class="custom-optio">
+                                    <div class="option-group">
+                                        <input type="radio" name="sorting" id="best-selling" value="best selling">
+                                        <label for="best-selling">Best Selling</label>
                                     </div>
+                                    <div class="option-group">
+                                        <input type="radio" name="sorting" id="latest" value="lastest">
+                                        <label for="latest">Latest</label>
+                                    </div>
+                                    <div class="option-group">
+                                        <input type="radio" name="sorting" id="low-to-high" value="low-to-high">
+                                        <label for="low-to-high">Price: Low to High</label>
+                                    </div>
+                                    <div class="option-group">
+                                        <input type="radio" name="sorting" id="high-to-low" value="high-to-low">
+                                        <label for="high-to-low">Price: High to Low</label>
+                                    </div>
+
+                                    <!-- <span class="custom-option selected" data-value="best-selling">Best Selling</span>
+                                    <span class="custom-option" data-value="low-to-high">Low to High Price</span>
+                                    <span class="custom-option" data-value="high-to-low">High to Low Price</span> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="overlay"></div>
         </div>
         <!-- Filteer Header End -->
+
+ 
 
     </main>
     <!-- Main End -->

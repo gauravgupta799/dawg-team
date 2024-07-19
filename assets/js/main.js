@@ -111,7 +111,7 @@ window.onload = function(){
         },{
             opacity:1,
             y:0,
-            stagger:0.01,
+            stagger:0.02,
             duration:1,
             delay:-1.2,
             ease:"power3.out",
@@ -142,16 +142,17 @@ window.onload = function(){
 
     .from(".hero-btn", {
         opacity:0,
-        y:30,
-        duration:1,
+        y:50,
+        duration:1.2,
         delay:-1.35,
         ease:"power3.out",
     })
-    .from(".hero-banner", {
+    .from(".hero-banner-img", {
         opacity:0,
-        y:10,
+        y:30,
         duration:1.25,
         delay:-1.45,
+        stagger:0.25,
         ease:"power3.out",
     })
 
@@ -329,7 +330,27 @@ if(selectWrapper){
         }
     });
 }
+
+// ----- Mobile------------
+const overlay = document.querySelector('.overlay');
+const customSelectWrapper = document.querySelector('.sort-container--mobile .custom-select-wrapper');
+const sortBtn = document.querySelector("#sort-btn");
+
+
+function toggleSort(){
+    customSelectWrapper.classList.toggle("active");
+    overlay.classList.toggle("active");
+    body.classList.toggle("disable-scroll");
+    stopLenisScroll();
+}
+
+sortBtn && sortBtn.addEventListener('click', toggleSort);
+overlay && overlay.addEventListener('click', toggleSort);
+
+
 // ============ Custom select box end ============
+
+
 
 
 //========== Video Play /Pause Button Start ============
@@ -398,7 +419,7 @@ fadeIn.forEach((mainContent, i) => {
         once: true,
         duration: 1.15,
         stagger:0.1,
-        ease: "power4.in"
+        ease: "power3.in"
     });
 });
 

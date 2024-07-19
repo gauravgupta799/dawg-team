@@ -33,6 +33,10 @@
     color:$clr-white;
 }
 
+.txt-black{
+    color:$clr-black;
+}
+
 .txt-center{
     text-align:center;
 }
@@ -139,4 +143,27 @@
 
 .body.disable-scroll{
     overflow-y: hidden;
+}
+
+.divider-white{
+    height: 1px;
+    width: 0%;
+    background: $clr-white;
+}
+
+
+// ===== Overlay ========
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 11;
+    display: none;
+
+    &.active{
+        display: block;
+    }
 }

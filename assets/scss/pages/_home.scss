@@ -19,10 +19,9 @@
 // ================================
 .hero{
     &__title{
-        color:$clr-white;
-
         &--about{
             position: relative;
+            
             &::before{
                 content: url("/assets/icons/stars.svg");
                 position: absolute;
@@ -53,10 +52,6 @@
             }
         }
     }
-    &__subTitle{
-        color:$clr-white;
-    }
-
     &--home{
         background: $clr-primary;
     }
@@ -290,7 +285,3 @@
         margin-right: 14px;
     }
 }
-
-
-
-
