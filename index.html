@@ -337,7 +337,7 @@
     <main class="main">
 
         <!-- Hero Section Start -->
-        <section class="hero hero--home pt--12 pt--sm--14 pt--lg--16">
+        <section class="hero pt--12 pt--sm--14 pt--lg--16">
             <div class="page-container">
                 <div class="row">
                     <div class="col-11 col-sm-10 col-lg-8 col-xl-12 mx-auto text-center">
@@ -362,18 +362,43 @@
                                 <span class="">Shop Now</span>
                             </a>
                         </div>
-                        <figure class="mt--2 hero-banner-img">
-                            <img src="./assets/images/home/home-banner.webp" alt="banner-image" class="img-fluid mx-auto">
-                            <!-- <img 
-                                srcset="./assets/images/mobile/home/dawgs-1-2x.webp 480w,
-                                ./assets/images/dawgs-1-2x.png  800w "
-                                sizes="(max-width:768px) 480px, 800px"
-                                src="./assets/images/dawgs-1-2x.png" 
-                                alt="banner-image"
-                                class="img-flui" 
-                                loading="lazy"
-                            > -->
-                        </figure>
+                        <div class="hero-banner-container mt--2 ">
+                            <div class="icon-box icon-1">
+                                <figure class="">
+                                    <img src="./assets/icons/stars.svg" alt="" class="img-fluid" loading="lazy">
+                                </figure>
+                            </div>
+                            <div class="icon-box icon-2">
+                                <figure class="">
+                                    <img src="./assets/icons/spiral.svg" alt="" class="img-fluid" loading="lazy">
+                                </figure>
+                            </div>                   
+                            <div class="icon-box icon-3">
+                                <figure class="">
+                                    <img src="./assets/icons/stars.svg" alt="" class="img-fluid" loading="lazy">
+                                </figure>
+                            </div>
+                            <div class="icon-box icon-4">
+                                <figure class="">
+                                    <img src="./assets/icons/paws.svg" alt="" class="img-fluid" loading="lazy">
+                                </figure>
+                            </div>
+
+                            <div class="hero-banner-wrapper">
+                                <figure class="hero-banner-img">
+                                    <img src="./assets/images/home/home-banner.webp" alt="banner-image" class="img-fluid mx-auto">
+                                    <!-- <img 
+                                        srcset="./assets/images/mobile/home/dawgs-1-2x.webp 480w,
+                                        ./assets/images/dawgs-1-2x.png  800w "
+                                        sizes="(max-width:768px) 480px, 800px"
+                                        src="./assets/images/dawgs-1-2x.png" 
+                                        alt="banner-image"
+                                        class="img-flui" 
+                                        loading="lazy"
+                                    > -->
+                                </figure>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -806,14 +831,27 @@
             </div>
 
             <div class="dog-pregnancy__bottom  fade-in">
-                <div class="page-container py--10 py--md--12 py--xxl--14">
+                <div class="page-container pt--10 pt--lg--12 pb--8  pt--xxl--14">
                     <div class="row">
-                        <div class="col-lg-6 mx-auto">
-                            <h2 class="section-title dog-pregnancy__title fade-in">
-                                Dawg team apparel is an all inclusive pet store that values quality, convenience and community
-                            </h2>
+                        <div class="col-sm-10 col-lg-8 col-xxl-7 mx-auto">
+                            <div class="section-heading-container">
+                                <div class="icon-box icon-1">
+                                    <figure class="">
+                                        <img src="./assets/icons/stars.svg" alt="" class="img-fluid" loading="lazy">
+                                    </figure>
+                                </div>
+                                <div class="icon-box icon-2">
+                                    <figure class="">
+                                        <img src="./assets/icons/paws.svg" alt="" class="img-fluid" loading="lazy">
+                                    </figure>
+                                </div>
+
+                                <h2 class="section-title dog-pregnancy__title fade-in">
+                                    Dawg team apparel is an all inclusive pet store that values quality, convenience and community
+                                </h2>
+                            </div>
                             <div class="overflow-wrapper">
-                                <p class="mt--1 dog-pregnancy__subTitle fade-in-up">
+                                <p class="mt-1 dog-pregnancy__subTitle fade-in-up">
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
                                 </p>
                             </div>
@@ -855,7 +893,7 @@
 
 
         <!-- feedback Section Start -->
-         <section class="feedback fade-in mt--6 mt--sm--8 mt--md--10 mt--xl--12 mt--xxl--15">
+         <section class="feedback fade-in mt--8 mt--sm--10 mt--lg--12 mt--xl--14 mt--xxl--16">
             <div class="page-container page-container--mr">
                 <div class="row">
                     <div class="col-lg-6 gx-lg-0 d-none d-lg-block">
@@ -1214,7 +1252,7 @@
                             </div>
                             <form class="form-wrapper mt--1 overflow-wrapper" id="signup-cta-form">
                                 <div class="form__group form-group-wrapper mb-0 fade-in-up">
-                                    <input type="text" placeholder="Type Your Email Address" class="form__control">
+                                    <input type="text" placeholder="Type Your Email Address" class="form__control" required>
                                     <button class="btn btn--primary" id="sign-up-btn">
                                         <span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">

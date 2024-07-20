@@ -910,8 +910,8 @@ label {
 }
 
 h1 {
-  font-size: 3.25rem;
-  line-height: 2.75rem;
+  font-size: 3rem;
+  line-height: 2.5625rem;
 }
 @media screen and (min-width: 36em) {
   h1 {
@@ -921,20 +921,20 @@ h1 {
 }
 @media screen and (min-width: 48em) {
   h1 {
-    font-size: 4.75rem;
-    line-height: 4rem;
+    font-size: 4rem;
+    line-height: 3.375rem;
   }
 }
 @media screen and (min-width: 62em) {
   h1 {
-    font-size: 4.75rem;
-    line-height: 4rem;
+    font-size: 4.625rem;
+    line-height: 3.875rem;
   }
 }
 @media screen and (min-width: 75em) {
   h1 {
-    font-size: 6rem;
-    line-height: 5.0625rem;
+    font-size: 5.375rem;
+    line-height: 4.5rem;
   }
 }
 @media screen and (min-width: 100em) {
@@ -12220,43 +12220,11 @@ p, ul, ol, body {
   color: #fff;
 }
 
-.hero__title--about {
-  position: relative;
-}
-.hero__title--about::before {
-  content: url("/assets/icons/stars.svg");
-  position: absolute;
-  left: 0;
-  margin-left: -32px;
-}
-@media only screen and (min-width: 1400px) and (max-width: 1600px) {
-  .hero__title--about::before {
-    margin-left: -60px;
-  }
-}
-.hero__title--about::after {
-  content: url("/assets/icons/paws.svg");
-  position: absolute;
-  top: 0;
-  margin-left: -80px;
-  margin-top: -116px;
-}
-@media only screen and (min-width: 62em) {
-  .hero__title--about::after {
-    margin-left: -16px;
-    margin-top: -16px;
-  }
-}
-.hero__title--about::before, .hero__title--about::after {
-  display: none;
-}
-@media only screen and (min-width: 48em) {
-  .hero__title--about::before, .hero__title--about::after {
-    display: inline-flex;
-  }
-}
-.hero--home {
+.hero {
   background: #1257c6;
+}
+.hero--bg-white {
+  background: #fff;
 }
 
 .product__card-image {
@@ -12309,10 +12277,6 @@ p, ul, ol, body {
   color: #fff;
   text-transform: uppercase;
 }
-.dog-pregnancy__title::after {
-  content: url("/assets/icons/heart.svg");
-  margin-left: 10px;
-}
 .dog-pregnancy__top {
   background-image: url("/assets/images/mobile/home/dog-pregnancy-banner-img.webp");
   background-repeat: no-repeat;
@@ -12333,37 +12297,7 @@ p, ul, ol, body {
 .dog-pregnancy__bottom .dog-pregnancy__title {
   color: #fff;
   line-height: 0.88;
-  position: relative;
-}
-.dog-pregnancy__bottom .dog-pregnancy__title::before {
-  content: url("/assets/icons/stars.svg");
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-left: -62px;
-  margin-top: -96px;
-}
-@media only screen and (min-width: 1600px) {
-  .dog-pregnancy__bottom .dog-pregnancy__title::before {
-    margin-left: 0;
-    margin-top: -80px;
-  }
-}
-.dog-pregnancy__bottom .dog-pregnancy__title::after {
-  content: url("/assets/icons/paws.svg");
-  position: absolute;
-  top: 0;
-  margin-top: -116px;
-}
-@media only screen and (max-width: 992px) {
-  .dog-pregnancy__bottom .dog-pregnancy__title::after {
-    margin-left: -80px;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  .dog-pregnancy__bottom .dog-pregnancy__title::after {
-    margin-top: -80px;
-  }
+  padding: 10px;
 }
 .dog-pregnancy__bottom .dog-pregnancy__subTitle {
   color: #fff;
@@ -12381,7 +12315,7 @@ p, ul, ol, body {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 50%;
+  height: 40%;
   z-index: -1;
 }
 
@@ -12469,6 +12403,83 @@ p, ul, ol, body {
 .included--item::before {
   content: url("../../../assets/icons/paw-yellow.svg");
   margin-right: 14px;
+}
+
+.icon-box {
+  position: absolute;
+}
+
+.hero-banner-container {
+  position: relative;
+}
+.hero-banner-container .icon-1 {
+  left: 0;
+  margin-top: 12%;
+}
+.hero-banner-container .icon-2 {
+  left: 0;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+.hero-banner-container .icon-3 {
+  left: 65%;
+  margin-top: 3rem;
+}
+.hero-banner-container .icon-4 {
+  right: 0;
+}
+
+.section-heading-container {
+  position: relative;
+}
+.section-heading-container .icon-1 {
+  left: 0;
+  margin-left: -10%;
+  margin-top: -8%;
+}
+.section-heading-container .icon-2 {
+  right: 0;
+  margin-top: -10%;
+  margin-right: -10%;
+}
+
+.heading-container {
+  position: relative;
+}
+.heading-container .icon-1 {
+  left: 0;
+  bottom: 0;
+  margin-bottom: -8rem;
+}
+.heading-container .icon-2 {
+  top: 0;
+  right: 0;
+  margin-right: -7.5rem;
+  margin-top: -4rem;
+}
+
+.team-banner-container {
+  position: relative;
+}
+.team-banner-container .icon-1 {
+  left: 0;
+  margin-top: 3rem;
+}
+.team-banner-container .icon-2 {
+  right: 0;
+  top: 0;
+  margin-right: 3rem;
+  margin-top: -4rem;
+}
+@media only screen and (min-width: 100em) {
+  .team-banner-container .icon-2 {
+    margin-right: 6rem;
+  }
+}
+@media (min-width: 1900px) {
+  .team-banner-container .icon-2 {
+    margin-right: 12rem;
+  }
 }
 
 .team-values {

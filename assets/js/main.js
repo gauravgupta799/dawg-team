@@ -72,98 +72,80 @@ function stopLenisScroll(){
 
 // ----=== Loader Start ----=========
 window.onload = function(){
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({
+        defaults:{
+            opacity:0,
+            duration:1,
+            ease:"power3.out"
+        }
+    });
 
     const loader = document.querySelector(".loader-container");
     if(loader){
         loader.style.display = "none"; 
     }
     tl.fromTo(".header",
-        {
-            opacity:0,
-            y:30,
-        },{
-            opacity:1,
-            y:0,
-            duration: 1,
-            ease:"power4.out"
-        }
+        { opacity:0, y:30 },
+        { opacity:1, y:0, }
     )
 
     tl.from(".header__logo", {
-        opacity:0,
         duration:1.25,
         delay:-1,
-        ease:"power3.out",
     })
     .from(".nav__link", {
-        opacity:0,
         y:30,
         stagger:0.01,
-        duration:1,
         delay:-1.15,
-        ease:"power3.out",
     })
     .fromTo(".action-btn", 
-        {
-            opacity:0,
-            y:30,
-        },{
+        { opacity:0, y:30 },
+        { 
             opacity:1,
-            y:0,
-            stagger:0.02,
-            duration:1,
-            delay:-1.2,
-            ease:"power3.out",
+            y:0, 
+            stagger:0.02, 
+            delay:-1.2, 
+            duration:1
         }
     )
     .from(".header-btn", {
-        opacity:0,
         y:30,
-        duration:1,
         delay:-1.25,
-        ease:"power3.out",
-
+    })
+    .from(".hero-rating", {
+        y:50,
+        delay:-1.25,
     })
     .from(".hero__title", {
-        opacity:0,
         y:50,
-        duration:1,
-        delay:-1.25,
-        ease:"power3.out",
+        delay:-1.3,
     })
     .from(".hero__subTitle", {
-        opacity:0,
         y:50,
-        duration:1,
-        delay:-1.3,
-        ease:"power3.out",
+        delay:-1.35,
     })
 
     .from(".hero-btn", {
-        opacity:0,
         y:50,
         duration:1.2,
-        delay:-1.35,
-        ease:"power3.out",
+        delay:-1.4,
     })
     .from(".hero-banner-img", {
-        opacity:0,
-        y:30,
+        y:50,
         duration:1.25,
         delay:-1.45,
-        stagger:0.25,
-        ease:"power3.out",
+        ease:"power3.out"
     })
-
-
-    // tl.from(".hero-banner__wrapper img", {
-    //     opacity:0,
-    //     y:60,
-    //     duration:1.5,
-    //     delay:-2.5,
-    //     ease: "power3.inOut"
-    // })
+    .fromTo(".icon-box", 
+        { opacity:0,  y:50, },
+        { 
+            opacity:1, y:0, 
+            stagger:0.15,
+            delay:-1.5, 
+            duration:1, 
+            ease:"power3.out" 
+        }
+    )
 }
 // ----=== Loader End ----=========
 
@@ -333,12 +315,11 @@ if(selectWrapper){
 
 // ----- Mobile------------
 const overlay = document.querySelector('.overlay');
-const customSelectWrapper = document.querySelector('.sort-container--mobile .custom-select-wrapper');
 const sortBtn = document.querySelector("#sort-btn");
 
-
 function toggleSort(){
-    customSelectWrapper.classList.toggle("active");
+    const customSelectWrapper = document.querySelector('.sort-container--mobile .custom-select-wrapper');
+    customSelectWrapper && customSelectWrapper.classList.toggle("active");
     overlay.classList.toggle("active");
     body.classList.toggle("disable-scroll");
     stopLenisScroll();
@@ -347,10 +328,7 @@ function toggleSort(){
 sortBtn && sortBtn.addEventListener('click', toggleSort);
 overlay && overlay.addEventListener('click', toggleSort);
 
-
 // ============ Custom select box end ============
-
-
 
 
 //========== Video Play /Pause Button Start ============
@@ -410,15 +388,15 @@ const fadeIn = gsap.utils.toArray(".fade-in");
 fadeIn.forEach((mainContent, i) => {
     const anim = gsap.fromTo(mainContent,
         { opacity: 0 },
-        { opacity: 1, duration: 1.15, ease: "power4.in" }
+        { opacity: 1, duration: 1.25, ease: "power4.in" }
     );
     ScrollTrigger.create({
         trigger: mainContent,
         animation: anim,
         toggleActions: "play",
         once: true,
-        duration: 1.15,
-        stagger:0.1,
+        duration: 1.25,
+        stagger:0.15,
         ease: "power3.in"
     });
 });
@@ -428,15 +406,15 @@ const textContainers = gsap.utils.toArray(".fade-in-up");
 textContainers.forEach((item, i) => {
     const anim = gsap.fromTo(item,
         { opacity: 0, y: 60},
-        { opacity: 1, y: 0, duration: 1.25, ease: "power3.out"  }
+        { opacity: 1, y: 0, duration: 1.15, ease: "power3.out" }
     );
     ScrollTrigger.create({
         trigger: item,
         animation: anim,
         toggleActions: "play",
         once: true,
-        duration: 1.25,
-        stagger:0.75,
+        duration: 1.15,
+        stagger:0.15,
         ease: "power3.out"
     });
 });

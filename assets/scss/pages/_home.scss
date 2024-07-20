@@ -18,44 +18,10 @@
 
 // ================================
 .hero{
-    &__title{
-        &--about{
-            position: relative;
-            
-            &::before{
-                content: url("/assets/icons/stars.svg");
-                position: absolute;
-                left: 0;
-                margin-left: -32px;
-                @media only screen and (min-width:1400px) and (max-width:1600px){
-                    margin-left: -60px;
-                }
-            }
-            &::after{
-                content: url("/assets/icons/paws.svg");
-                position: absolute;
-                top: 0;
-                margin-left: -80px;
-                margin-top: -116px;
-                @include breakpoint-lg{
-                    margin-left: -16px;
-                    margin-top: -16px;
-                }
-            }
-
-            &::before, 
-            &::after{
-                display: none;
-                @include breakpoint-md{
-                    display: inline-flex;
-                }
-            }
-        }
+    background: $clr-primary;
+    &--bg-white{
+        background: $clr-white;
     }
-    &--home{
-        background: $clr-primary;
-    }
-
 }
 
 // ================================
@@ -105,10 +71,6 @@
         position: relative;
         color:$clr-white;
         text-transform: uppercase;
-        &::after{
-            content: url("/assets/icons/heart.svg");
-            margin-left: 10px;
-        }
     }
     &__top{
         background-image: url("/assets/images/mobile/home/dog-pregnancy-banner-img.webp");
@@ -126,42 +88,11 @@
 
     &__bottom{
         background: $clr-primary;
-        // height: rem(900);
-        // overflow: hidden;
-
-        // @include breakpoint-md{
-        //     height: rem(965);
-        // }
-
         .dog-pregnancy__title{
             color:$clr-white;
             line-height: 0.88;
-            position: relative;
-            &::before{
-                content: url("/assets/icons/stars.svg");
-                position: absolute;
-                left: 0;
-                top:0;
-                margin-left: -62px;
-                margin-top: -96px;
-               @media only screen and (min-width:1600px){
-                    margin-left: 0;
-                    margin-top: -80px;
-               }
-            }
-            &::after{
-                content: url("/assets/icons/paws.svg");
-                position: absolute;
-                top: 0;
-                margin-top: -116px;
-                @media only screen and (max-width:992px){
-                    margin-left: -80px;
-                }
-              
-                @media only screen and (min-width:1600px){
-                    margin-top: -80px;
-                }
-            }
+            padding:10px;
+            // position: relative;
         }
 
         .dog-pregnancy__subTitle{
@@ -173,8 +104,6 @@
         .team-container{
             position: relative;
             z-index: 1;
-            // margin-top: -320px;
-
             &::before{
                 content: "";
                 position: absolute;
@@ -182,12 +111,11 @@
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                height: 50%;
+                height: 40%;
                 z-index: -1;
             }
         }
     }
-
 }
 
 // ================================
@@ -283,5 +211,82 @@
     &::before{
         content:url("../../../assets/icons/paw-yellow.svg");
         margin-right: 14px;
+    }
+}
+
+// ========= Banner Icons Positioning ========
+.icon-box{
+    position: absolute;
+}
+
+.hero-banner-container{
+    position: relative;
+    .icon-1{
+        left: 0;
+        margin-top: 12%;
+    }
+    .icon-2{
+        left: 0;
+        margin-left: 30%;
+        margin-top: 5%;
+    }
+    .icon-3{
+        left: 65%;
+        margin-top: 3rem;
+    }
+    .icon-4{
+        right: 0;
+    }
+}
+
+
+.section-heading-container{
+    position: relative;
+    .icon-1{
+        left: 0;
+        margin-left: -10%;
+        margin-top: -8%;
+    }
+    .icon-2{
+        right: 0;
+        margin-top: -10%;
+        margin-right: -10%;
+    }
+}
+
+
+.heading-container{
+    position: relative;
+    .icon-1{
+        left: 0;
+        bottom:0;
+        margin-bottom: -8rem;
+    }
+    .icon-2{
+        top: 0;
+        right:0;
+        margin-right: -7.5rem;
+        margin-top: -4rem;
+    }
+}
+
+
+.team-banner-container {
+    position: relative;
+    .icon-1{
+        left: 0;
+        margin-top: 3rem;
+    }
+    .icon-2{
+        right: 0;
+        top: 0;
+        margin-right: 3rem;
+        margin-top: -4rem;
+        @include breakpoint-xxl{
+            margin-right: 6rem;
+        }
+        @media (min-width: 1900px) {
+            margin-right: 12rem;
+        }
     }
 }
