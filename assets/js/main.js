@@ -176,7 +176,6 @@ mobileNavLinks && mobileNavLinks.forEach((navLink) => {
 function toggleMobileMenu(){
     const mobileMenu = document.querySelector(".mobile-menu");
     mobileMenu.classList.toggle("is-open");
-    body.classList.toggle("disable-scroll");
     stopLenisScroll();
 }
 
@@ -186,6 +185,38 @@ if(hamburgerBtn){
     closeMenuBtn.onclick = toggleMobileMenu;
 }
 //====== Toggle Mobile Menu End ==========
+
+
+// Toggle Search Bar
+function toggleSearchBar(){
+    const searchContainer = document.querySelector(".header-search-container");
+    searchContainer.classList.toggle("is-open");
+    stopLenisScroll();
+    gspa.from(".header-search-wrapper", {
+        opacity:0,
+        y:50,
+        duration:1,
+        ease:"power3.out"
+    });
+}
+
+// const searchBtns  = document.querySelectorAll(".search-icon-wrapper");
+// searchBtns && searchBtns.forEach(searchBtn =>{
+//    searchBtn.onclick  = toggleSearchBar;
+// })
+const searchBtn  = document.querySelector("#search-btn");
+if(searchBtn){
+    searchBtn.onclick  = toggleSearchBar;
+}
+const mobileSearchBtn = document.querySelector(".search-icon-wrapper");
+if(mobileSearchBtn){
+    mobileSearchBtn.onclick  = toggleSearchBar;
+}
+
+const closeFormBtn = document.getElementById("close-form-btn");
+if(closeFormBtn){
+    closeFormBtn.onclick = toggleSearchBar;
+}
 
 
 // ============ Swipers Start =================
@@ -214,6 +245,9 @@ const swiperPost = new Swiper('.swiper-post', {
     slidesPerView: 1.4,
     grabCursor: true,
     loop:true,
+    autoplay: {
+        delay: 2000,
+      },
     spaceBetween:7,
     breakpoints: {
         500: {
@@ -312,22 +346,6 @@ if(selectWrapper){
         }
     });
 }
-
-// ----- Mobile------------
-const overlay = document.querySelector('.overlay');
-const sortBtn = document.querySelector("#sort-btn");
-
-function toggleSort(){
-    const customSelectWrapper = document.querySelector('.sort-container--mobile .custom-select-wrapper');
-    customSelectWrapper && customSelectWrapper.classList.toggle("active");
-    overlay.classList.toggle("active");
-    body.classList.toggle("disable-scroll");
-    stopLenisScroll();
-}
-
-sortBtn && sortBtn.addEventListener('click', toggleSort);
-overlay && overlay.addEventListener('click', toggleSort);
-
 // ============ Custom select box end ============
 
 
@@ -340,7 +358,6 @@ if(playBtns) {
 
   function togglePopup() {
     videoContainer.classList.toggle("show");
-    body.classList.toggle("disable-scroll");
     gsap.fromTo(".video__popup-wrapper", 0.5,
       { opacity:0, y:50},
       { opacity:1, y:0, ease:Power4.easeOut }
@@ -366,12 +383,9 @@ if(playBtns) {
 
 //===================
 const thumbImages = document.querySelectorAll(".thumb-img img");
-
 if(thumbImages) {
     thumbImages.forEach(function(thumbImage){
         thumbImage.addEventListener("click", function(e){
-            // const grandParentNode = thumbImage.parentNode.parentNode;
-            // grandParentNode.classList.toggle("active");
             const src = thumbImage.src;
             const mainImage = document.querySelector(".main-imgBox-figure > img");
             if(mainImage){
@@ -380,6 +394,84 @@ if(thumbImages) {
         })
     })
 }
+
+//======= Filter (Mobile) Start ========
+function toggleFilterContainer(){
+    const filterContainer = document.querySelector(".filters-container");
+    filterContainer && filterContainer.classList.toggle("show");
+    overlay.classList.toggle("active");
+    stopLenisScroll();
+}
+
+const filterBtn = document.getElementById("filter-btn");
+const closeFilterBtn = document.getElementById("close-filter-btn");
+
+filterBtn && filterBtn.addEventListener("click", toggleFilterContainer)
+closeFilterBtn && closeFilterBtn.addEventListener("click", toggleFilterContainer)
+//======= Filter (Mobile) End ========
+
+
+
+//======= Sort By (Mobile) Start ========
+const overlay = document.querySelector('.overlay');
+const sortBtn = document.getElementById("sort-by-btn");
+
+function toggleSort(){
+    const customSelectWrapper = document.querySelector('.sort-container--mobile .custom-select-wrapper');
+    customSelectWrapper && customSelectWrapper.classList.toggle("active");
+    overlay.classList.toggle("active");
+    stopLenisScroll();
+}
+
+sortBtn && sortBtn.addEventListener('click', toggleSort);
+overlay && overlay.addEventListener('click', toggleSort);
+
+//======= Sort By (Mobile) End ========
+
+
+// ===== Mobile Filter Tabs Start ======
+function openTab(event, tabName){
+    // Hide All Tab Contents
+    const tabContents = document.querySelectorAll(".tab-content");
+    tabContents && tabContents.forEach((tabContent)=>{
+        tabContent.classList.remove("active");
+    });
+
+    // Remove Active Class From All The Tablinks
+    const tabLinks = document.querySelectorAll(".tablinks");
+    tabLinks && tabLinks.forEach((tabLink)=>{
+        tabLink.classList.remove("active");
+    });
+
+    // Show the current tab and active class to the tab link
+    const currentTab =  document.getElementById(tabName);
+    currentTab && currentTab.classList.add("active");
+    const tabChildren = currentTab.children;
+    gsap.fromTo(tabChildren , 
+        { 
+            opacity:0, 
+            y:50
+        },
+        {
+            opacity:1,
+            y:0,
+            duration:1,
+            stagger:0.15,
+            ease:"power3.out"
+        }
+    )
+    event.currentTarget.classList.add("active");
+}
+
+// Add event listeners to all tablinks
+const tabLinks = document.querySelectorAll(".tablinks");
+tabLinks && tabLinks.forEach((tabLink)=>{
+    tabLink.addEventListener("click", (e)=>{
+        const tabName = tabLink.dataset.tab;
+        openTab(e, tabName);
+    })
+})
+// ===== Mobile Filter Tabs End ======
 
 
 // ========= Animation Starts =========
@@ -402,8 +494,8 @@ fadeIn.forEach((mainContent, i) => {
 });
 
 // animate fade in up
-const textContainers = gsap.utils.toArray(".fade-in-up");
-textContainers.forEach((item, i) => {
+const fadeInUp = gsap.utils.toArray(".fade-in-up");
+fadeInUp.forEach((item, i) => {
     const anim = gsap.fromTo(item,
         { opacity: 0, y: 60},
         { opacity: 1, y: 0, duration: 1.15, ease: "power3.out" }
@@ -534,7 +626,6 @@ menuHamburgerBtn.onclick = function(){
 }
 
 closeMenuBtn.onclick = function(){
-
     gsap.fromTo(".caret-down-icon",
         {
             opacity:1,

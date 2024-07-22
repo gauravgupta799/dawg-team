@@ -332,6 +332,34 @@
     </header>
     <!-- Header End -->
 
+    <!-- Search Header Start -->
+    <div class="header-search-container">
+        <div class="header-search-wrapper">
+            <button class="close-form-btn" id="close-form-btn">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="32" height="32">
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                        fill="#fff"/>
+                    </svg>
+                </span>
+            </button>
+            <form class="form-wrapper mt--4" id="h-search-form">
+                <div class="form__group form-group-wrapper mb-0 fade-in-up">
+                    <input type="text" placeholder="" class="form__control" required>
+                    <label for="name" class="form__label">Search...</label>
+                    <button class="btn btn--primary" id="h-search-btn">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
+                                <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#fff"/>
+                            </svg>                                        
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Search Header End -->
+
 
     <!-- Main Start -->
     <main class="main">
@@ -956,14 +984,16 @@
                             </p>
                         </div>
                         <div class="btn-wrapper mt--2">
-                            <a href="./contact.html" class="btn btn--primary fade-in-up">
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30.129 26.363">
-                                        <path id="Icon_awesome-paw" data-name="Icon awesome-paw" d="M15.064,13.548c-4.673,0-11.3,7.224-11.3,11.784,0,2.054,1.578,3.281,4.222,3.281,2.874,0,4.772-1.476,7.077-1.476,2.325,0,4.228,1.476,7.077,1.476,2.644,0,4.222-1.227,4.222-3.281C26.363,20.772,19.737,13.548,15.064,13.548ZM6.4,12.806c-.612-2.039-2.5-3.359-4.211-2.95S-.42,12.251.192,14.29s2.5,3.359,4.211,2.95S7.01,14.845,6.4,12.806Zm4.985-1.223C13.2,11.1,14.115,8.645,13.418,6.09S10.68,1.852,8.86,2.331,6.128,5.27,6.825,7.825,9.563,12.063,11.383,11.583ZM27.941,9.857c-1.714-.41-3.6.911-4.211,2.95s.281,4.024,1.994,4.433,3.6-.911,4.211-2.95S29.655,10.266,27.941,9.857Zm-9.2,1.727c1.821.479,3.861-1.2,4.558-3.758s-.214-5.014-2.035-5.494-3.861,1.2-4.558,3.758.214,5.015,2.035,5.494Z" transform="translate(0.001 -2.25)" fill="#fff"/>
-                                    </svg>
-                                </span>
-                                <span class="">Contact Us</span>
-                            </a>
+                            <div class="fade-in-up">
+                                <a href="./contact.html" class="btn btn--primary has-primary">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30.129 26.363">
+                                            <path id="Icon_awesome-paw" data-name="Icon awesome-paw" d="M15.064,13.548c-4.673,0-11.3,7.224-11.3,11.784,0,2.054,1.578,3.281,4.222,3.281,2.874,0,4.772-1.476,7.077-1.476,2.325,0,4.228,1.476,7.077,1.476,2.644,0,4.222-1.227,4.222-3.281C26.363,20.772,19.737,13.548,15.064,13.548ZM6.4,12.806c-.612-2.039-2.5-3.359-4.211-2.95S-.42,12.251.192,14.29s2.5,3.359,4.211,2.95S7.01,14.845,6.4,12.806Zm4.985-1.223C13.2,11.1,14.115,8.645,13.418,6.09S10.68,1.852,8.86,2.331,6.128,5.27,6.825,7.825,9.563,12.063,11.383,11.583ZM27.941,9.857c-1.714-.41-3.6.911-4.211,2.95s.281,4.024,1.994,4.433,3.6-.911,4.211-2.95S29.655,10.266,27.941,9.857Zm-9.2,1.727c1.821.479,3.861-1.2,4.558-3.758s-.214-5.014-2.035-5.494-3.861,1.2-4.558,3.758.214,5.015,2.035,5.494Z" transform="translate(0.001 -2.25)" fill="#fff"/>
+                                        </svg>
+                                    </span>
+                                    <span class="">Contact Us</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-8  col-lg-5 offset-lg-2 mt--4 mt-lg-0">
@@ -973,7 +1003,8 @@
                             </div>
                             <form class="form-wrapper mt--1 overflow-wrapper" id="signup-cta-form">
                                 <div class="form__group form-group-wrapper mb-0 fade-in-up">
-                                    <input type="text" placeholder="Type Your Email Address" class="form__control">
+                                    <input type="text" placeholder="" class="form__control footer-form-control" required>
+                                    <label for="name" class="form__label">Type Your Email Address</label>
                                     <button class="btn btn--primary" id="sign-up-btn">
                                         <span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">

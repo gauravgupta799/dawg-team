@@ -27,16 +27,16 @@
             font-size: rem(20);
         }
         span{
-            color:$clr-black;
+            position: relative;
             display: inline-flex;
             margin: 0;
-            transition: transform 0.3s ease;
+            @include link-hover-effect();
         }
 
         &.active,
         &:hover{
             span{
-                color:$clr-secondary; 
+                background-position: 0 0;
             }
         }
     }
@@ -78,15 +78,15 @@
             font-size: rem(36);
         }
         span{
-            color:$clr-white;
             display: inline-flex;
             margin: 0;
-            transition: transform .3s ease;
+            @include link-hover-effect($clr-white, $clr-secondary);
         }
 
         &:hover{
             span{
-                color:$clr-secondary;
+                // color:$clr-secondary;
+                background-position: 0 0;
             }
         }
     }
@@ -244,6 +244,17 @@
     }
 }
 // ===== SubMenu End ===========
+
+// Widgets Link
+.widgets-link{
+    @include link-hover-effect;
+
+    &.active,
+    &:hover{
+        background-position: 0 0;
+        font-weight: 600;
+    }
+}
 
 
 .caret-down-icon{

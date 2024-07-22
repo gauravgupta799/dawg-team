@@ -37,7 +37,7 @@
         width: 100%;
         gap: rem(128);
         white-space: nowrap;
-        animation: marquee-moving  20s linear infinite;
+        animation: marquee-moving  10s linear infinite;
 
         @include breakpoint-sm{
             gap: rem(144);
@@ -72,39 +72,3 @@
 .marquee-icon{
     flex-shrink: 0;
 }
-
-
-// .marquee-wrapper:first-child {
-//     position: absolute;
-//     top: rem(16);
-//     left: -20px;
-//     right: 0px;
-
-//     .marquee-item {
-//         &--no-rotate {
-//             transform: unset;
-//         }
-//     }
-
-//     .marquee-banner {
-//         background: $clr-tertiary;
-//     }
-
-//     .marquee-banner--transparent {
-//         background: transparent;
-//     }
-// }
-
-// .marquee-wrapper:last-child {
-//     position: absolute;
-//     right: -10px;
-//     left: -20px;
-
-//     .marquee-banner {
-//         background: $clr-tertiary;
-//     }
-
-//     .marquee-banner--transparent {
-//         background: transparent;
-//     }
-// }

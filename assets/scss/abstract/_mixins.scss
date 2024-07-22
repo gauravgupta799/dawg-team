@@ -116,6 +116,17 @@
 }
 
 
+@mixin link-hover-effect($main-clr:$clr-black, $hover-clr:$clr-secondary){
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to bottom, $hover-clr, $hover-clr 50%, $main-clr 50%);
+    background-position: 0 -100%;
+    background-size: 100% 200%;
+    transition: background-position .35s ease;
+}
+
+
 // @mixin caret-down{
 //     content:"";
 //     position: absolute;

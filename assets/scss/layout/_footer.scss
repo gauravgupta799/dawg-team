@@ -6,7 +6,7 @@
 
 
 .footer{
-    &__link-title, &__link{
+    &__link{
         color:$clr-white;
     }
     &__link-title{
@@ -23,35 +23,22 @@
         position: relative;
         overflow: hidden;
         font-size: rem(16);
-        font-weight: 400;
+        font-weight: 600;
         line-height: 2.3;
         font-family: $ff-secondary;
+        @include link-hover-effect($clr-white, $clr-secondary);
         
         address{
             @extend .footer__link;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            left: 0;
-            background-color: $clr-secondary;
-            height: 2px;
-            bottom: -5px;
-            transform-origin: 100% 50%;
-            transform: scaleX(0);
-            transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+            line-height: 1.65;
+            display: inline-flex;
         }
 
         &:hover{
-            color:$clr-secondary;
-            &::before {
-                transform-origin: 0% 50%;
-                transform: scaleX(1);
-            }
+            background-position: 0 0;
         }
     }
+
     &__bottom-right-wrapper{
         @include flex-center-vertical;
         gap:16px;
@@ -69,6 +56,31 @@
 
         @media only screen and (min-width:1200px) and (max-width:1600px){
             margin-top: -32px;
+        }
+    }
+
+    .products-list{
+        display: flex;
+        align-items: center;
+        li{
+          
+        }
+
+        .product-link{
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+            @include link-hover-effect($clr-white, $clr-secondary);
+            &::after{
+                content: "/";
+                margin-left: 10px;
+                color:white;
+            }
+            &:hover{
+                cursor: pointer;
+                background-position: 0 0;
+            }
         }
     }
 
@@ -101,7 +113,7 @@
         position: absolute;
         @include full-dimensions;
         background: $clr-secondary;
-        clip-path: circle(0% at 0 100%);
+        clip-path: circle(0.0% at 50% 100%);
         transition:clip-path 0.3s cubic-bezier(0.76, 0, 0.24, 1);
         z-index: -1;
     }
@@ -109,7 +121,7 @@
     &:hover{
         cursor: pointer;
         &::before{
-            clip-path: circle(141.2% at 0 100%);
+            clip-path: circle(50% at 50% 50%);
         }
         svg {
             path{

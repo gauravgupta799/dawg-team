@@ -124,6 +124,9 @@
         gap:6px;
         color:$clr-black;
         @include transition(all, 0.35s, ease);
+        p{
+            @include link-hover-effect();
+        }
         svg{
             @include transform-rotate(0deg);
             transform-origin: center;
@@ -132,7 +135,7 @@
         &:hover{
             cursor: pointer;
             p{
-                color:$clr-secondary;
+                background-position: 0 0;
             }
             svg{
                 path{
@@ -276,14 +279,13 @@
 }
 
 
-
 .main-imgBox{
     overflow: hidden;
     @include border-radius(12px);
     @include flex-center;
     border: 1px solid $clr-black;
     background-color: $clr-quaternary;
-    padding:2em;
+    // padding:2em;
 
     @include breakpoint-xl{
         width: min(100%, 740px);
@@ -502,3 +504,178 @@ input[type="radio"]:checked + .wgt-option{
     color:$clr-white;
 }
 // Product-Details Page Styles End
+
+
+// Filter Header
+.filter-header{
+    position: fixed;
+    bottom: -2px;
+    width: 100%;
+    background: $clr-primary;
+    z-index:6;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, .5);
+
+    button{
+        @include flex-center;
+        gap:5px;
+        // color:$clr-white;
+        font-size: 16px;
+        line-height: 1.75;
+        width: 100%;
+        transition:all 0.3s ease;
+        span{
+            margin: 0;
+            @include link-hover-effect($clr-white, $clr-secondary);
+        }
+
+        &:hover{
+            span{
+                background-position: 0 0;
+                svg {
+                    path{
+                        fill:$clr-secondary;
+                    }
+                }
+            }
+        }
+    }
+    .sort-wrapper{
+        justify-content: flex-end;
+        border-left: 1px solid $clr-white;
+        @include breakpoint-sm{
+            justify-content: center;
+        }
+    }
+}
+
+// ====== Mobile ======
+.filters-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $clr-white;
+    width: 100%;
+    z-index: 12;
+    opacity: 0;
+    visibility: hidden;
+    transform:translateX(-100%);
+    transition:transform 0.35s ease-out;
+    @include breakpoint-lg{
+        display: none;
+    }
+    &.show{
+        opacity: 1;
+        visibility:visible;
+        transform:translateX(0);
+    }
+}
+
+
+.filters-wrapper{
+    .filters-header{
+        height: 10vh;
+        background: $clr-primary;
+        p{
+            color:$clr-white;
+            text-transform: uppercase;
+            padding:1em;
+        }
+    }
+    .filters-body{
+        display: grid;
+        grid-template-columns:40% 60%;
+        height: 80vh;
+        overflow-y: auto;
+        @include breakpoint-sm{
+            grid-template-columns:30% 70%;
+        }
+    }
+    .tabs{
+        background: $clr-light-blue;
+        padding-block:1rem 2rem;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+    }
+    .tablinks{
+        transition:all 0.3s ease;
+        p{
+            padding:1em;
+        }
+        &:hover{
+            cursor: pointer;
+            background: $clr-primary;
+            p{
+                color:$clr-white;
+            }
+        }
+    }
+
+    .filters-footer{
+        height: 10vh;
+        background: $clr-primary;
+        @include flex-center-vertical;
+        justify-content: space-around;
+        .filters-footer-btn{
+            width: 100%;
+            text-align: center;
+            &:first-child{
+                border-right: 1px solid $clr-white;
+            }
+            button{
+                // color:$clr-white;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 1.5;
+                font-family: $ff-secondary;
+                padding: 0.25em 1em;
+                @include link-hover-effect($clr-white, $clr-secondary);
+                &:hover{
+                    // color:$clr-secondary;
+                    background-position: 0 0;
+                }
+            }
+
+        }
+    }
+}
+
+
+.tablinks.active{
+    background: $clr-primary;
+    p{
+        color:$clr-white;
+    }
+}
+
+
+.tab-content-container{
+    padding:1em;
+}
+
+.tab-content{
+    display: none;
+    opacity: 0;
+    p{
+        margin-top: 0.5rem;
+    }
+    &.active{
+        display: block;
+        opacity: 1;
+    }
+}
+
+.weight-item{
+    padding-block:0.5em;
+
+    label{
+        font-size: 18px;
+        line-height: 1.5;
+        font-family: $ff-secondary;
+        color:$clr-black;
+    }
+}

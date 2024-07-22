@@ -73,7 +73,7 @@
         text-transform: uppercase;
     }
     &__top{
-        background-image: url("/assets/images/mobile/home/dog-pregnancy-banner-img.webp");
+        background-image: url("../assets/images/mobile/home/dog-pregnancy-banner-img.webp");
         background-repeat: no-repeat;
         background-size:cover;
         background-position:center;
@@ -82,7 +82,7 @@
         z-index: 1;
 
         @include breakpoint-md{
-            background-image: url("/assets/images/home/dog-pregnancy-banner-img.webp");
+            background-image: url("../assets/images/home/dog-pregnancy-banner-img.webp");
         }
     }
 
