@@ -11902,7 +11902,6 @@ p, ul, ol, body {
 }
 .widgets-link.active, .widgets-link:hover {
   background-position: 0 0;
-  font-weight: 600;
 }
 
 .caret-down-icon svg {
@@ -12788,16 +12787,22 @@ p, ul, ol, body {
 .filter-wrapper .filter-option label {
   font-size: 16px;
   line-height: 2.25;
-  color: #3e3e3e;
   font-family: "Roboto-Regular", sans-serif;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to bottom, #ca2027, #ca2027 50%, #3e3e3e 50%);
+  background-position: 0 -100%;
+  background-size: 100% 200%;
+  transition: background-position 0.35s ease;
 }
 .filter-wrapper .filter-option label:hover {
   cursor: pointer;
-  color: #000;
+  background-position: 0 0;
 }
 
 .filter-label.active p {
-  color: #ca2027;
+  background-position: 0 0;
 }
 .filter-label.active svg {
   transform: rotate(180deg);
@@ -13587,6 +13592,11 @@ input[type=radio]:checked + .wgt-option {
 .footer .products-list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+.footer .products-list li {
+  white-space: nowrap;
+  margin-right: 10px;
 }
 .footer .products-list .product-link {
   position: relative;
@@ -13603,8 +13613,8 @@ input[type=radio]:checked + .wgt-option {
 }
 .footer .products-list .product-link::after {
   content: "/";
-  margin-left: 10px;
-  color: white;
+  margin-left: 6px;
+  color: #fff;
 }
 .footer .products-list .product-link:hover {
   cursor: pointer;

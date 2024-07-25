@@ -60,10 +60,11 @@
     }
 
     .products-list{
-        display: flex;
-        align-items: center;
+        @include flex-center-vertical;
+        flex-wrap: wrap;
         li{
-          
+          white-space: nowrap;
+          margin-right: 10px;
         }
 
         .product-link{
@@ -74,8 +75,8 @@
             @include link-hover-effect($clr-white, $clr-secondary);
             &::after{
                 content: "/";
-                margin-left: 10px;
-                color:white;
+                margin-left: 6px;
+                color:$clr-white;
             }
             &:hover{
                 cursor: pointer;

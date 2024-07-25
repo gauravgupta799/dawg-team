@@ -157,11 +157,13 @@
         label{
             font-size: 16px;
             line-height: 2.25;
-            color:$clr-grey-1;
+            // color:$clr-grey-1;
             font-family: $ff-secondary;
+            @include link-hover-effect($clr-grey-1 , $clr-secondary);
             &:hover{
                 cursor: pointer;
-                color:$clr-black;
+                // color:$clr-black;
+                background-position: 0 0;
             }
         }
     }
@@ -170,7 +172,8 @@
 
 .filter-label.active{
     p{
-        color:$clr-secondary;
+        // color:$clr-secondary;
+        background-position: 0 0;
     }
     svg{
          @include transform-rotate(180deg);
