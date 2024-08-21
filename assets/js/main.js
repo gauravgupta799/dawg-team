@@ -88,7 +88,6 @@ window.onload = function(){
         { opacity:0, y:30 },
         { opacity:1, y:0, }
     )
-
     tl.from(".header__logo", {
         duration:1.25,
         delay:-1,
@@ -121,10 +120,9 @@ window.onload = function(){
         delay:-1.3,
     })
     .from(".hero__subTitle", {
-        y:50,
+        y:60,
         delay:-1.35,
     })
-
     .from(".hero-btn", {
         y:50,
         duration:1.2,
@@ -144,6 +142,17 @@ window.onload = function(){
             delay:-1.5, 
             duration:1, 
             ease:"power3.out" 
+        }
+    )
+    .fromTo([".cta-item", ".form-group"], 
+        { opacity:0, y:50, },
+        { 
+            opacity:1,
+            y:0 ,        
+            duration:1.5,
+            stagger:0.1,
+            delay:-1.55,
+            ease:"power3.out"
         }
     )
 }
@@ -200,10 +209,7 @@ function toggleSearchBar(){
     });
 }
 
-// const searchBtns  = document.querySelectorAll(".search-icon-wrapper");
-// searchBtns && searchBtns.forEach(searchBtn =>{
-//    searchBtn.onclick  = toggleSearchBar;
-// })
+
 const searchBtn  = document.querySelector("#search-btn");
 if(searchBtn){
     searchBtn.onclick  = toggleSearchBar;
@@ -247,7 +253,7 @@ const swiperPost = new Swiper('.swiper-post', {
     loop:true,
     autoplay: {
         delay: 2000,
-      },
+    },
     spaceBetween:7,
     breakpoints: {
         500: {
@@ -276,6 +282,14 @@ function toggleAccordion(accordions){
             let content = this.nextElementSibling;
             if (content) {
                 content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+                gsap.from(content.querySelector("p"), 
+                {
+                    opacity: 0,
+                    y:50,
+                    duration:1,
+                    ease:"power3.out",
+                }
+            )
             }
     
             accordions.forEach((acdnItem)=>{
@@ -480,15 +494,15 @@ const fadeIn = gsap.utils.toArray(".fade-in");
 fadeIn.forEach((mainContent, i) => {
     const anim = gsap.fromTo(mainContent,
         { opacity: 0 },
-        { opacity: 1, duration: 1.25, ease: "power4.in" }
+        { opacity: 1, duration: 1.1, ease: "power4.in" }
     );
     ScrollTrigger.create({
         trigger: mainContent,
         animation: anim,
         toggleActions: "play",
         once: true,
-        duration: 1.25,
-        stagger:0.15,
+        duration: 1.1,
+        stagger:0.1,
         ease: "power3.in"
     });
 });
@@ -498,15 +512,15 @@ const fadeInUp = gsap.utils.toArray(".fade-in-up");
 fadeInUp.forEach((item, i) => {
     const anim = gsap.fromTo(item,
         { opacity: 0, y: 60},
-        { opacity: 1, y: 0, duration: 1.15, ease: "power3.out" }
+        { opacity: 1, y: 0, duration: 1.05, ease: "power3.out" }
     );
     ScrollTrigger.create({
         trigger: item,
         animation: anim,
         toggleActions: "play",
         once: true,
-        duration: 1.15,
-        stagger:0.15,
+        duration: 1.05,
+        stagger:0.1,
         ease: "power3.out"
     });
 });

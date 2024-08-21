@@ -120,7 +120,7 @@ a {
 address{
   font-style:normal;
   font-size:100%;
-  color:$clr-white;
+  // color:$clr-white;
 }
 
 small{
@@ -166,6 +166,13 @@ label{
   font-family: $ff-primary;
 }
 
+.header,
+.footer{
+  ::selection{
+    color:$clr-secondary;
+    background-color: $clr-primary;
+  }
+}
 
 
 

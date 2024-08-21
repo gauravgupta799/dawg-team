@@ -61,11 +61,11 @@
             transform-origin: bottom;
         }
 
-        &-active{
-            transform: scale(1) !important;
-        }
+        // &-active{
+        //     transform: scale(1) !important;
+        // }
 
-        &-active,
+        // &-active,
         &:hover{
             &::before{
                 transform:translateY(0);

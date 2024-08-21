@@ -4,67 +4,70 @@
 @use "../abstract/functions" as *;
 @use "../abstract/mixins" as *;
 
-.contact-form-container{
-    background:$clr-white;
-    padding:em(80) em(20);
-    @include border-radius-tlr(24px,24px);
-    @include breakpoint-sm{
-        padding-inline:em(32);
-    }
-    @include breakpoint-xxl{
-        padding:em(80);
-    }
-}
 
-.address-item-wrapper{
-    @include flex-center-vertical;
-    flex-wrap: wrap;
-    gap:1rem;
-    @include breakpoint-sm{
-        gap:2rem; 
-    }
-}
-
-.cta-link{
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap:1.5rem;
-    span{
-        display: flex
-    }
-    span:last-child, address{
-        position: relative;
-        &::before{
-            content: " ";
-            position: absolute;
-            left: 0;
-            bottom: 3px;
-            width: 100%;
-            height: 1px;
-            transform:scaleX(0);
-            transform-origin: left;
-            background: $clr-secondary;
-            transition:transform 0.35s ease-out;
+.cta-item {
+ 
+    .cta-link{
+        display: inline-flex;
+        align-items: center;
+        gap:24px;
+        @include breakpoint-md{
+            gap:32px;
         }
 
-        &:hover{
-            color: $clr-secondary;
-            &::before{
-                transform:scaleX(1);
+        .cta-icon-box{
+            @include dimensions(rem(48), rem(48));
+            @include border-radius(4px);
+            @include flex-center;
+            padding: em(16);
+            background-color: $clr-secondary;
+            @include breakpoint-md{
+                @include dimensions(rem(54), rem(54));
             }
+        }
+
+        .cta-link-text{
+            font-size: rem(24);
+            font-weight: 900;
+            font-family: $ff-primary;
+            line-height: 1.63;
+            text-transform: uppercase;
+            text-decoration: underline;
+            @include link-hover-effect();
+
+            @include breakpoint-md{
+                font-size: rem(28);
+            }
+            @include breakpoint-xl{
+                font-size: rem(32);
+            }
+
+            &:hover{
+                background-position: 0 0;
+                text-decoration-color:$clr-secondary;
+                -moz-text-decoration-color:$clr-secondary;
+            }
+        }
+
+        .cta-address{
+            text-decoration: none;
+            line-height: 1;
         }
     }
 }
 
 .view-on-map-link{
-    font-size: rem(14);
+    font-size: rem(16);
+    line-height: 1.75;
     font-weight: normal;
-    font-style: italic;
-    line-height: 2.29;
     text-decoration: underline;
-
+    text-decoration-color:$clr-secondary;
+    font-family: $ff-secondary;
+    margin-left: 85px;
+    @include link-hover-effect($clr-secondary, $clr-black);
     &:hover{
-        color:$clr-secondary;
+        cursor: pointer;
+        background-position: 0 0;
+        text-decoration-color:$clr-black;
     }
 }

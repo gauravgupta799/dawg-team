@@ -25,6 +25,12 @@
 }
 
 .pet-boarding {
+    max-width: none;
+    margin-inline: rem(16);
+    @include breakpoint-md{
+        max-width: 90%;
+        margin-inline:auto;
+    }
 
     .card{
         @include border-radius(12px);
@@ -39,9 +45,7 @@
             }
         }
         &__header{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include flex-space-between;
             padding-bottom: 1em;
             small{
                 margin-top: 0;
@@ -49,17 +53,16 @@
         }
         &__body{
             a{
-                font-family:$ff-primary;
-                font-size: 24px;
-                font-weight: 900;
-                font-stretch: condensed;
-                font-style: normal;
+                font-size: rem(24);
+                font-family: $ff-primary;
                 line-height: 1.33;
-                gap:16px;
+                gap:rem(16);
 
                 span{
                     &:first-child{
-                        margin-top: 5px;
+                        margin-top: rem(5);
+                        text-decoration: underline;
+                        text-decoration-color: $clr-secondary;
                     }
                 }
 
@@ -69,13 +72,18 @@
                             fill:$clr-primary;
                         }
                     }
+                    span{
+                        &:first-child{
+                            text-decoration-color: $clr-primary;
+                        }
+                    }
                 }
             }
         }
         &__list{
             li{
                 position: relative;
-                font-size: 16px;
+                font-size: rem(16);
                 line-height: 1.75;
 
                 &::before{
@@ -122,5 +130,94 @@
                 text-align:center;
             }
         }
+    }
+}
+
+.book-appointment-link{
+    span{
+        &:nth-child(1){
+            text-decoration: underline;
+            font-family: $ff-primary;
+            text-decoration-color: $clr-secondary;
+        }
+    }
+    &:hover{
+        svg{
+            path{
+                fill:$clr-primary;
+            }
+        }
+        span{
+            &:nth-child(1){
+                text-decoration-color: $clr-primary;
+            }
+        }
+    }
+}
+
+
+.price-table{
+    width: 100%;
+
+    tr,th{
+       display: flex;
+       justify-content: space-between;
+       background: $clr-quaternary;
+    }
+
+    tr{
+        padding-inline:1em; 
+        @include breakpoint-md{
+            padding-inline:2em; 
+        }
+        @include breakpoint-md{
+            padding-inline:3em; 
+        }
+    }
+
+    &__head{
+        tr{
+            padding-block: em(24);
+            border: 2px solid  $clr-black;
+            @include border-radius(12px);
+            @include breakpoint-md{
+                padding-block: em(28);
+            }
+        }
+
+        th{
+            font-size: rem(20);
+            line-height: 1;
+            font-family: $ff-primary;
+            text-transform: uppercase;
+            @include breakpoint-sm{
+                font-size: rem(24);
+            }
+            @include breakpoint-md{
+                font-size: rem(28);
+            }
+        }
+    }
+
+    &__body{
+        tr{
+            border: 1px solid  $clr-black;
+            @include border-radius(4px);
+            padding-block:em(10);
+            margin-block:rem(8);
+            &:nth-child(odd){
+                background: $clr-quaternary-2;
+            }
+        }
+        td{
+            font-size: rem(16);
+            line-height: 1.56;
+            font-family: $ff-secondary;
+            color:$clr-black;
+            @include breakpoint-sm{
+                font-size: rem(18); 
+            }
+        }
+
     }
 }

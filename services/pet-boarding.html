@@ -332,34 +332,33 @@
     </header>
     <!-- Header End -->
 
-
-        <!-- Search Header Start -->
-        <div class="header-search-container">
-            <div class="header-search-wrapper">
-                <button class="close-form-btn" id="close-form-btn">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="32" height="32">
-                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-                            fill="#fff"/>
-                        </svg>
-                    </span>
-                </button>
-                <form class="form-wrapper mt--4" id="h-search-form">
-                    <div class="form__group form-group-wrapper mb-0 fade-in-up">
-                        <input type="text" placeholder="" class="form__control" required>
-                        <label for="name" class="form__label">Search...</label>
-                        <button class="btn btn--primary" id="h-search-btn">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
-                                    <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#fff"/>
-                                </svg>                                        
-                            </span>
-                        </button>
-                    </div>
-                </form>
-            </div>
+    <!-- Search Header Start -->
+    <div class="header-search-container">
+        <div class="header-search-wrapper">
+            <button class="close-form-btn" id="close-form-btn">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="32" height="32">
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                        fill="#fff"/>
+                    </svg>
+                </span>
+            </button>
+            <form class="form-wrapper mt--4" id="h-search-form">
+                <div class="form__group form-group-wrapper mb-0 fade-in-up">
+                    <input type="text" placeholder="" class="form__control" required>
+                    <label for="name" class="form__label">Search...</label>
+                    <button class="btn btn--primary" id="h-search-btn">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
+                                <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#fff"/>
+                            </svg>                                        
+                        </span>
+                    </button>
+                </div>
+            </form>
         </div>
-        <!-- Search Header End -->
+    </div>
+    <!-- Search Header End -->
 
     <!-- Main Start -->
     <main class="main">
@@ -469,6 +468,15 @@
                         <figure class="fade-in journey__figure">
                             <img src="../assets/images/stars.svg" alt="" class="img-fluid stars">
                             <img src="../assets/images/Dawg-Team-1.webp" alt="" class="img-fluid">
+                            <div class="video__wrapper">
+                                <div class="play-button-wrapper" data-id="yiv4bso9N90?si=csjEvMFR1YchlL2g">
+                                    <button class="play-button">
+                                        <svg  width="32" height="32" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.92 24.096q0 1.088 0.928 1.728 0.512 0.288 1.088 0.288 0.448 0 0.896-0.224l16.16-8.064q0.48-0.256 0.8-0.736t0.288-1.088-0.288-1.056-0.8-0.736l-16.16-8.064q-0.448-0.224-0.896-0.224-0.544 0-1.088 0.288-0.928 0.608-0.928 1.728v16.16z" fill="#ffffff"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
                         </figure>
                     </div>
                 </div>
@@ -581,7 +589,7 @@
                 </div>
 
                 <div class="steps__container mt--5 mt--md--6 mt--lg--8 mt--xl--10">
-                    <div class="line-contianer">
+                    <div class="line-contianer d-none d-lg-block">
                         <figure class="">
                             <img src="../assets/icons/dotted-line.svg" alt="" class="img-fluid">
                         </figure>
@@ -600,7 +608,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="steps-grid-item mt--4">
+                        <div class="steps-grid-item mt--lg--4">
                             <div class="steps__card">
                                 <figure class="">
                                     <img src="../assets/icons/cat-icon.svg" alt="" class="img-fluid">
@@ -613,7 +621,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="steps-grid-item mt--9">
+                        <div class="steps-grid-item mt--lg--9">
                             <div class="steps__card">
                                 <figure class="">
                                     <img src="../assets/icons/cat-icon.svg" alt="" class="img-fluid">
@@ -677,10 +685,247 @@
          </section>
         <!-- Dog-Pregnanancy Section End -->
 
+
         <!-- Pet Boarding Section Start -->
-         <section class="pet-boarding mt--8 mt--lg--10 mt--xxl--13">
+         <section class="pet-boarding mt--8 mt--lg--10 mt--xxl--14">
             <div class="page-container">
+                <!-- Our Grooming Rates Start -->
                 <div class="row">
+                    <div class="col-sm-10 col-md-8 col-xl-6 col-xxl-5 mx-auto text-center">
+                        <h2 class="section-title fade-in">
+                            Our Grooming Rates For Your Furry Family Member
+                        </h2>
+                        <div class="overflow-wrapper">
+                            <p class="mt--1 fade-in-up">
+                                Your dog is your family – at Dawg Team Apparel, we understand that. As dog lovers ourselves, we take your pup’s care very seriously.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt--4 mt--md--6 mt--lg--8 mt--xxl--10">
+                    <div class="col-lg-6">
+                        <div class="price-table-container">
+                            <table class="price-table">
+                                <thead class="price-table__head fade-in-up">
+                                    <tr class="">
+                                        <th>Category</th>
+                                        <th>Without Haircut/Trim</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="price-table__body">
+                                    <tr class="fade-in-up">
+                                        <td>With Haircut/Trim</td>
+                                        <td>$67.60</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>Medium Breeds</td>
+                                        <td>$83.20</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>Large Breeds</td>
+                                        <td>$98.90</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>XL Breeds</td>
+                                        <td>$119</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>XXL Breeds</td>
+                                        <td>$135.25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btn-wrapper mt--1 mt--sm--2">
+                                <a href="./contact.html" class="btn btn--transparent fade-in-up book-appointment-link">
+                                    <span>Book Appointment</span>
+                                    <span class="d-flex mt-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
+                                            <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#ca2027"/>
+                                        </svg>                                       
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt--4 mt-lg-0">
+                        <div class="price-table-container">
+                            <table class="price-table">
+                                <thead class="price-table__head fade-in-up">
+                                    <tr class="">
+                                        <th>Category</th>
+                                        <th>With Haircut/Trim</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="price-table__body">
+                                    <tr class="fade-in-up">
+                                        <td>With Haircut/Trim</td>
+                                        <td>$67.60</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>Medium Breeds</td>
+                                        <td>$83.20</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>Large Breeds</td>
+                                        <td>$98.90</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>XL Breeds</td>
+                                        <td>$119</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>XXL Breeds</td>
+                                        <td>$135.25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btn-wrapper mt--1 mt--sm--2">
+                                <a href="./contact.html" class="btn btn--transparent fade-in-up book-appointment-link">
+                                    <span>Book Appointment</span>
+                                    <span class="d-flex mt-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
+                                            <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#ca2027"/>
+                                        </svg>                                       
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt--4">
+                    <p class="mb--1 d-flex justify-content-sm-end">
+                        *Additional $30 fee for mobile grooming
+                    </p>
+                    <div class="col-lg-6">
+                        <div class="price-table-container ">
+                            <table class="price-table">
+                                <thead class="price-table__head fade-in-up">
+                                    <tr class="">
+                                        <th>ADD ON FLEA & TICK SHAMPOO/DIP</th>
+                                        <th>Fee</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="price-table__body">
+                                    <tr class="fade-in-up">
+                                        <td>Small/Medium Breeds</td>
+                                        <td>$67.60</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>Large Breeds</td>
+                                        <td>$20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btn-wrapper mt--1 mt--sm--2">
+                                <a href="./contact.html" class="btn btn--transparent fade-in-up book-appointment-link">
+                                    <span>Book Appointment</span>
+                                    <span class="d-flex mt-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
+                                            <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#ca2027"/>
+                                        </svg>                                       
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt--4 mt-lg-0">
+                        <div class="price-table-container">
+                            <table class="price-table">
+                                <thead class="price-table__head fade-in-up">
+                                    <tr class="">
+                                        <th>ADD ON DESHED</th>
+                                        <th>Fee</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="price-table__body">
+                                    <tr class="fade-in-up">
+                                        <td>Small/Medium Breeds</td>
+                                        <td>$67.60</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>Large Breeds</td>
+                                        <td>$20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btn-wrapper mt--1 mt--sm--2">
+                                <a href="./contact.html" class="btn btn--transparent fade-in-up book-appointment-link">
+                                    <span>Book Appointment</span>
+                                    <span class="d-flex mt-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
+                                            <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#ca2027"/>
+                                        </svg>                                       
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Grooming Rates End -->
+
+
+                <!-- Our Boarding Rates Start -->
+                <div class="row mt--8 mt--lg--10 mt--xxl--14">
+                    <div class="col-sm-10 col-md-8 col-xl-7 col-xxl-6 mx-auto text-center">
+                        <h2 class="section-title fade-in">
+                            Our Boarding Rates For Your Furry Family Member
+                        </h2>
+                        <div class="overflow-wrapper">
+                            <p class="mt--1 fade-in-up">
+                                Your dog is your family – at Dawg Team Apparel, we understand that. As dog lovers ourselves, we take your pup’s care very seriously.
+                            </p>
+                        </div>
+                        <div class="price-table-container mt--4">
+                            <table class="price-table">
+                                <thead class="price-table__head fade-in-up">
+                                    <tr class="">
+                                        <th>Dog Category</th>
+                                        <th>Fee</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="price-table__body">
+                                    <tr class="fade-in-up">
+                                        <td>Small Dogs (20 pounds or less)</td>
+                                        <td>$67.60</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>Medium Dogs (21-45 pounds)</td>
+                                        <td>$83.20</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>Large Dogs (45-70 pounds)</td>
+                                        <td>$98.90</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>XL Large Dogs (70-90 pounds)</td>
+                                        <td>$119</td>
+                                    </tr>
+                                    <tr class="fade-in-up">
+                                        <td>XXL Large Dogs (90 + pounds)</td>
+                                        <td>$135.25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btn-wrapper mt--2">
+                                <a href="./contact.html" class="btn btn--transparent fade-in-up book-appointment-link">
+                                    <span>Book Appointment</span>
+                                    <span class="d-flex mt-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
+                                            <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#ca2027"/>
+                                        </svg>                                       
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Boarding Rates End -->
+
+
+                <!-- Pet Boarding Family Start -->
+                <div class="row mt--8 mt--lg--10 mt--xxl--14">
                     <div class="col-sm-10 col-md-8 col-xl-6 col-xxl-5 mx-auto text-center">
                         <h2 class="section-title fade-in">
                             Pet Boarding Family Member While
@@ -694,7 +939,7 @@
                 </div>
 
                 <div class="row mt--4 mt--lg--8 d-flex justify-content-center">
-                    <div class="col-sm-6 col-lg-4 fade-in">
+                    <div class="col-sm-6 col-lg-5 fade-in">
                         <div class="card">
                             <div class="card__header">
                                 <div class="card-left">
@@ -715,7 +960,7 @@
                                     <li class="list-item fade-in-up">Checking for fleas ticks, and lymph nodes.</li>              
                                 </ul>
                                 <div class="btn-wrapper mt--2">
-                                    <a href="./contact.html" class="btn btn--transparent fade-in-up">
+                                    <a href="./contact.html" class="btn btn--transparent fade-in-up book-appointment-link">
                                         <span>Book Appointment</span>
                                         <span class="d-flex mt-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
@@ -727,7 +972,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 mt--4 mt-sm-0 fade-in">
+                    <div class="col-sm-6 col-lg-5 mt--4 mt-sm-0 ml--xl--2 fade-in">
                         <div class="card">
                             <div class="card__header">
                                 <div class="card-left">
@@ -748,7 +993,7 @@
                                     <li class="list-item fade-in-up">Checking for fleas ticks, and lymph nodes.</li>              
                                 </ul>
                                 <div class="btn-wrapper mt--2">
-                                    <a href="./contact.html" class="btn btn--transparent fade-in-up">
+                                    <a href="./contact.html" class="btn btn--transparent fade-in-up book-appointment-link">
                                         <span>Book Appointment</span>
                                         <span class="d-flex mt-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
@@ -760,40 +1005,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 mt--4 mt-lg-0 fade-in">
-                        <div class="card">
-                            <div class="card__header">
-                                <div class="card-left">
-                                    <h4 class="card__title fade-in">SMALL DOGS</h4>
-                                    <small class="fade-in-up"><em>20 pounds or less</em></small>
-                                </div>
-                                <div class="card-right">
-                                    <h4 class="card__title fade-in">$78</h4>
-                                    <small class="fade-in-up"><em>Per day</em></small>
-                                </div>
-                            </div>
-                            <div class="divider divider--black"></div>
-                            <div class="card__body">
-                                <ul class="card__list list-none">
-                                    <li class="list-item fade-in-up"> Washing with shine-inducing </li>
-                                    <li class="list-item fade-in-up"> Hyper-nourishing shampoo & conditioner </li>
-                                    <li class="list-item fade-in-up"> Haircut, blow-drying, ear cleaning, nail trimming, anal gland expression</li>              
-                                    <li class="list-item fade-in-up">Checking for fleas ticks, and lymph nodes.</li>              
-                                </ul>
-                                <div class="btn-wrapper mt--2">
-                                    <a href="./contact.html" class="btn btn--transparent fade-in-up">
-                                        <span>Book Appointment</span>
-                                        <span class="d-flex mt-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
-                                                <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#ca2027"/>
-                                            </svg>                                       
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mt--4 fade-in">
+                    <!-- <div class="col-sm-6 col-lg-4 mt--4 mt-lg-0 fade-in">
                         <div class="card">
                             <div class="card__header">
                                 <div class="card-left">
@@ -859,7 +1071,41 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-sm-6 col-lg-4 mt--4 fade-in">
+                        <div class="card">
+                            <div class="card__header">
+                                <div class="card-left">
+                                    <h4 class="card__title fade-in">SMALL DOGS</h4>
+                                    <small class="fade-in-up"><em>20 pounds or less</em></small>
+                                </div>
+                                <div class="card-right">
+                                    <h4 class="card__title fade-in">$78</h4>
+                                    <small class="fade-in-up"><em>Per day</em></small>
+                                </div>
+                            </div>
+                            <div class="divider divider--black"></div>
+                            <div class="card__body">
+                                <ul class="card__list list-none">
+                                    <li class="list-item fade-in-up"> Washing with shine-inducing </li>
+                                    <li class="list-item fade-in-up"> Hyper-nourishing shampoo & conditioner </li>
+                                    <li class="list-item fade-in-up"> Haircut, blow-drying, ear cleaning, nail trimming, anal gland expression</li>              
+                                    <li class="list-item fade-in-up">Checking for fleas ticks, and lymph nodes.</li>              
+                                </ul>
+                                <div class="btn-wrapper mt--2">
+                                    <a href="./contact.html" class="btn btn--transparent fade-in-up">
+                                        <span>Book Appointment</span>
+                                        <span class="d-flex mt-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.115" height="18" viewBox="0 0 11.115 18">
+                                                <path data-name="Icon material-navigate-next" d="m15 9-2.115 2.115L19.755 18l-6.87 6.885L15 27l9-9z" transform="translate(-12.885 -9)" fill="#ca2027"/>
+                                            </svg>                                       
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
+                <!-- Pet Boarding Family End -->
             </div>
          </section>
         <!-- Pet Boarding Section End -->
@@ -913,7 +1159,7 @@
                                 <div class="accordion__title-wrapper">
                                     <h4 class="accordion__title fade-in-up">
                                         How do I prepare my dog for their grooming appointment?
-                                     </h4>                  
+                                    </h4>                  
                                 </div>
                                 <div class="accordion__content">
                                     <p class="mt--1">
@@ -936,7 +1182,7 @@
                                 <div class="accordion__title-wrapper">
                                     <h4 class="accordion__title fade-in-up">
                                         How do I prepare my dog for their grooming appointment?
-                                     </h4>                  
+                                    </h4>                  
                                 </div>
                                 <div class="accordion__content">
                                     <p class="mt--1">
@@ -959,7 +1205,7 @@
                                 <div class="accordion__title-wrapper">
                                     <h4 class="accordion__title fade-in-up">
                                         How do I prepare my dog for their grooming appointment?
-                                     </h4>                  
+                                    </h4>                  
                                 </div>
                                 <div class="accordion__content">
                                     <p class="mt--1">
@@ -1083,6 +1329,19 @@
             </div>
          </section>
         <!-- CTA-section End -->
+
+        <!--======= Video Popup Start ========= -->
+        <div class="video__popup-container" id="video-popup-container-v2">
+            <div class="video__popup-wrapper">
+                <div class="video__popup-close" id="video-popup-close" area-label="close" area-control="video-popup-iframe-container">
+                    <span class="">✖</span>
+                </div>          
+                <div class="video__popup-iframe-container" id="video-popup-iframe-container">
+                    <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+                </div>          
+            </div>
+        </div>
+        <!--======= Video Popup End ========= -->
 
     </main>
     <!-- Main End -->
