@@ -28,6 +28,11 @@
                 text-align: center;
             }
         }
+        &--pregnancy{
+            h4, p{
+                color:$clr-black;
+            }
+        }
     }
 }
 
@@ -60,5 +65,73 @@
             background: $clr-white;
             z-index: -1;
         }
+    }
+}
+
+.why-shoose{
+    p{
+        max-width: 60ch;
+        margin-inline:auto;
+    }
+}
+.product-card-wrapper{
+    @include flex-center;
+    position: relative;
+    width: min(90%, rem(886));
+    z-index: 1;
+    &::before{
+        content: '';
+        position: absolute;
+        background: $clr-white;
+       @include full-dimensions;
+        clip-path: circle(50% at 50% 100%);
+        z-index: -1;
+    }
+    img{
+        filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.25));
+    }
+}
+
+
+
+.gallery-section{
+    position: relative;
+    z-index: 1;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3%;
+        background: $clr-primary;
+        z-index: -1;
+
+        @include breakpoint-md{
+            height: 8%;
+        }
+    }
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center; 
+    gap: rem(16); 
+
+    @include breakpoint-sm{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    @include breakpoint-md{
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+.gallery-grid-item-center{
+    @include breakpoint-md{
+        margin-top: -64px;
+    }
+    @include breakpoint-xxl{
+        margin-top: -96px;
     }
 }

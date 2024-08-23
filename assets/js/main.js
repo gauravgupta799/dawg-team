@@ -494,7 +494,7 @@ const fadeIn = gsap.utils.toArray(".fade-in");
 fadeIn.forEach((mainContent, i) => {
     const anim = gsap.fromTo(mainContent,
         { opacity: 0 },
-        { opacity: 1, duration: 1.1, ease: "power4.in" }
+        { opacity: 1, duration: 1,  }
     );
     ScrollTrigger.create({
         trigger: mainContent,
@@ -512,14 +512,14 @@ const fadeInUp = gsap.utils.toArray(".fade-in-up");
 fadeInUp.forEach((item, i) => {
     const anim = gsap.fromTo(item,
         { opacity: 0, y: 60},
-        { opacity: 1, y: 0, duration: 1.05, ease: "power3.out" }
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
     );
     ScrollTrigger.create({
         trigger: item,
         animation: anim,
         toggleActions: "play",
         once: true,
-        duration: 1.05,
+        duration: 1,
         stagger:0.1,
         ease: "power3.out"
     });

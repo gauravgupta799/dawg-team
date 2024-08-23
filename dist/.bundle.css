@@ -713,10 +713,10 @@ button.swiper-pagination-bullet {
   Primary use: 
 --------------------------------------------------*/
 @font-face {
-  font-family: "RocGrotesk-Black";
-  src: url("../assets/fonts/RocGrotesk/RocGrotesk-Black.eot");
-  src: url("../assets/fonts/RocGrotesk/RocGrotesk-Black.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/RocGrotesk/RocGrotesk-Black.woff2") format("woff2"), url("../assets/fonts/RocGrotesk/RocGrotesk-Black.woff") format("woff"), url("../assets/fonts/RocGrotesk/RocGrotesk-Black.ttf") format("truetype"), url("../assets/fonts/RocGrotesk/RocGrotesk-Black.svg#RocGrotesk-Black") format("svg");
-  font-weight: 900;
+  font-family: "RocGrotesk-Bold";
+  src: url("../assets/fonts/RocGrotesk-Bold/RocGroteskCondensedBold.eot");
+  src: url("../assets/fonts/RocGrotesk-Bold/RocGroteskCondensedBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/RocGrotesk-Bold/RocGroteskCondensedBold.woff2") format("woff2"), url("../assets/fonts/RocGrotesk-Bold/RocGroteskCondensedBold.woff") format("woff"), url("../assets/fonts/RocGrotesk-Bold/RocGroteskCondensedBold.ttf") format("truetype"), url("../assets/fonts/RocGrotesk-Bold/RocGroteskCondensedBold.svg#RocGrotesk-Bold") format("svg");
+  font-weight: 700;
 }
 @font-face {
   font-family: "Roboto-Regular";
@@ -800,7 +800,6 @@ html {
 body {
   font-family: "Roboto-Regular", sans-serif;
   color: #000;
-  font-weight: 400;
   line-height: 1.4;
   font-size: 1.125rem;
 }
@@ -880,9 +879,8 @@ span + span {
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
-  font-family: "RocGrotesk-Black", sans-serif;
+  font-family: "RocGrotesk-Bold", sans-serif;
   color: #000;
-  font-weight: 900;
 }
 
 button {
@@ -905,7 +903,7 @@ img, picture, video {
 label {
   color: #1257c6;
   font-size: 1rem;
-  font-family: "RocGrotesk-Black", sans-serif;
+  font-family: "RocGrotesk-Bold", sans-serif;
 }
 
 .header ::-moz-selection, .footer ::-moz-selection {
@@ -921,36 +919,36 @@ label {
 
 h1 {
   font-size: 3rem;
-  line-height: 2.5625rem;
+  line-height: 2.6875rem;
 }
 @media screen and (min-width: 36em) {
   h1 {
     font-size: 3.25rem;
-    line-height: 2.75rem;
+    line-height: 2.875rem;
   }
 }
 @media screen and (min-width: 48em) {
   h1 {
     font-size: 4rem;
-    line-height: 3.375rem;
+    line-height: 3.5rem;
   }
 }
 @media screen and (min-width: 62em) {
   h1 {
     font-size: 4.625rem;
-    line-height: 3.875rem;
+    line-height: 4.0625rem;
   }
 }
 @media screen and (min-width: 75em) {
   h1 {
     font-size: 5.375rem;
-    line-height: 4.5rem;
+    line-height: 4.75rem;
   }
 }
 @media screen and (min-width: 100em) {
   h1 {
     font-size: 7.5rem;
-    line-height: 6.25rem;
+    line-height: 6.625rem;
   }
 }
 
@@ -1130,10 +1128,8 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "RocGrotesk-Black", sans-serif;
+  font-family: "RocGrotesk-Bold", sans-serif;
   color: #000;
-  font-weight: 900;
-  letter-spacing: 0.8px;
 }
 
 p, ul, ol, body {
@@ -1141,7 +1137,6 @@ p, ul, ol, body {
   line-height: 1.5625rem;
   font-family: "Roboto-Regular", sans-serif;
   color: #000;
-  font-weight: 400;
   line-height: 1.4;
 }
 @media screen and (min-width: 36em) {
@@ -1257,6 +1252,10 @@ p, ul, ol, body {
 
 .bg--white {
   background: #fff;
+}
+
+.bg--quaternary {
+  background: #f4ebd9;
 }
 
 .mx-auto {
@@ -11446,7 +11445,7 @@ p, ul, ol, body {
 }
 
 .btn-transprnt span {
-  font-family: "RocGrotesk-Black", sans-serif;
+  font-family: "RocGrotesk-Bold", sans-serif;
 }
 .btn-transprnt:hover svg path {
   fill: #1257c6;
@@ -12287,23 +12286,8 @@ p, ul, ol, body {
   transition: color 0.37s cubic-bezier(0.45, 0.05, 0.55, 0.95);
   color: #000;
 }
-.swiper-testmonials .swiper-slide::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
+.swiper-testmonials .swiper-slide:hover {
   background: #1257c6;
-  border-radius: 12px;
-  z-index: -1;
-  transform: translateY(112%);
-  transition: transform 0.35s cubic-bezier(0.45, 0.05, 0.55, 0.95);
-  transform-origin: bottom;
-}
-.swiper-testmonials .swiper-slide:hover::before {
-  transform: translateY(0);
-  transform-origin: top;
 }
 .swiper-testmonials .swiper-slide:hover .testimonial__content,
 .swiper-testmonials .swiper-slide:hover .testimonial__name {
@@ -12673,6 +12657,9 @@ p, ul, ol, body {
   margin: 0 auto;
   text-align: center;
 }
+.team-values__card--pregnancy h4, .team-values__card--pregnancy p {
+  color: #000;
+}
 
 .journey__figure {
   position: relative;
@@ -12698,6 +12685,81 @@ p, ul, ol, body {
   height: 40%;
   background: #fff;
   z-index: -1;
+}
+
+.why-shoose p {
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+.product-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: min(90%, 55.375rem);
+  z-index: 1;
+}
+.product-card-wrapper::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: circle(50% at 50% 100%);
+          clip-path: circle(50% at 50% 100%);
+  z-index: -1;
+}
+.product-card-wrapper img {
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.25));
+}
+
+.gallery-section {
+  position: relative;
+  z-index: 1;
+}
+.gallery-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3%;
+  background: #1257c6;
+  z-index: -1;
+}
+@media only screen and (min-width: 48em) {
+  .gallery-section::before {
+    height: 8%;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  gap: 1rem;
+}
+@media only screen and (min-width: 36em) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 48em) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .gallery-grid-item-center {
+    margin-top: -64px;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .gallery-grid-item-center {
+    margin-top: -96px;
+  }
 }
 
 .sort-container {
@@ -13105,7 +13167,7 @@ p, ul, ol, body {
   transition: all 0.35s ease;
   font-size: 24px;
   line-height: 1;
-  font-family: "RocGrotesk-Black", sans-serif;
+  font-family: "RocGrotesk-Bold", sans-serif;
   color: #000;
 }
 .product__details-bottom .wgt-option:hover {
@@ -13122,7 +13184,7 @@ p, ul, ol, body {
 .product__details-bottom .btn-wrapper button {
   width: 50%;
   font-size: 24px;
-  font-family: "RocGrotesk-Black", sans-serif;
+  font-family: "RocGrotesk-Bold", sans-serif;
   text-transform: uppercase;
   padding: 0;
   line-height: 2;
@@ -13424,7 +13486,7 @@ input[type=radio]:checked + .wgt-option {
 }
 .pet-boarding .card__body a {
   font-size: 1.5rem;
-  font-family: "RocGrotesk-Black", sans-serif;
+  font-family: "RocGrotesk-Bold", sans-serif;
   line-height: 1.33;
   gap: 1rem;
 }
@@ -13488,7 +13550,7 @@ input[type=radio]:checked + .wgt-option {
 
 .book-appointment-link span:nth-child(1) {
   text-decoration: underline;
-  font-family: "RocGrotesk-Black", sans-serif;
+  font-family: "RocGrotesk-Bold", sans-serif;
   text-decoration-color: #ca2027;
 }
 .book-appointment-link:hover svg path {
@@ -13532,7 +13594,7 @@ input[type=radio]:checked + .wgt-option {
 .price-table__head th {
   font-size: 1.25rem;
   line-height: 1;
-  font-family: "RocGrotesk-Black", sans-serif;
+  font-family: "RocGrotesk-Bold", sans-serif;
   text-transform: uppercase;
 }
 @media only screen and (min-width: 36em) {
@@ -13595,7 +13657,7 @@ input[type=radio]:checked + .wgt-option {
 .cta-item .cta-link .cta-link-text {
   font-size: 1.5rem;
   font-weight: 900;
-  font-family: "RocGrotesk-Black", sans-serif;
+  font-family: "RocGrotesk-Bold", sans-serif;
   line-height: 1.63;
   text-transform: uppercase;
   text-decoration: underline;

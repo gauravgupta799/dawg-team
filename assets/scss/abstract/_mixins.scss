@@ -101,13 +101,11 @@
 @mixin font-heading{
     font-family: $ff-primary;
     color: $clr-black;
-    font-weight: 900;
 }
 
 @mixin font-body{
     font-family:$ff-secondary;
     color:$clr-black;
-    font-weight: 400;
     line-height: 1.4;
 }
 
