@@ -96,26 +96,102 @@
     }
 }
 
-
 .steps-grid{
+    position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: rem(64);
+    z-index: 1;
     @include breakpoint-sm{
         grid-template-columns: repeat(2, 1fr);
         gap: rem(64);
     }
     @include breakpoint-lg{
         grid-template-columns: repeat(4, 1fr);
-        // gap: rem(80);
+        gap: rem(32);
+    }
+    @include breakpoint-xl{
         gap: rem(48);
+    }
+    @include breakpoint-xxl{
+        gap: rem(144);
+    }
+
+    @media only screen and (min-width:em(992)) and (max-width:em(1599.98)){
+        &::before{
+            content:"";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            margin-top: rem(48);
+            background-image: repeating-linear-gradient(
+                to right, 
+                #000 0, 
+                #000 4px, /* Dot size */
+                transparent 4px,
+                transparent 10px /* Space between dots */
+            );
+            z-index: -1;
+        }
+    }
+
+    @include breakpoint-xxl{
+        &::before{
+            content: url("../assets/icons/dotted-line.svg");
+            position: absolute;
+            top: 32px;
+            left: 0;
+            width: 100%;
+            margin-inline: auto;
+            text-align: center;
+        }
     }
 }
 
-.steps{
-    .line-contianer{
+.first,
+.last{
+    position: relative;
+    z-index: 1;
+}
+
+.first{
+    &::before{
+        content: "";
         position: absolute;
+        left: 0;
+        top: 4%;
+        width: 50%;
+        height: 20%;
+        background: $clr-white;
+        z-index: -1;
+        @media (min-width: em(1900)){
+            display: none;
+        }
     }
+  
+}
+
+.last{
+    &::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 4%;
+        width: 50%;
+        height: 20%;
+        background: $clr-white;
+        z-index: -1;
+        @media (min-width: em(1900)){
+            display: none;
+        }
+    }
+}
+
+
+
+.steps{
     &__container{
         position: relative;
     }
@@ -123,7 +199,7 @@
         margin:0 auto;
         text-align:center;
         figure{
-            margin-bottom: 20px;
+            margin-bottom: rem(20);
             position: relative;
             img{
                 margin:0 auto;

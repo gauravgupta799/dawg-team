@@ -126,7 +126,6 @@
 
         li{
             @include relative-hidden;
-            padding:0.8em 1em;
             @include border-radius(4px);
             white-space: nowrap;
             ul{
@@ -190,12 +189,13 @@
         transition-duration: 0.5s;
         text-transform: uppercase;
         width: 100%;
+        padding:0.8em 1em;
 
         @for $i from 1 through $n {
             &:nth-of-type(#{$i}) {
               transition-delay: 0.1s * $i;
             }
-        } 
+        }
     }
 
     &:hover{
@@ -209,7 +209,7 @@
 
         .nav__link{
             span{
-                color:$clr-secondary;
+                background-position: 0 0;
             }
             .caret-down-icon{
                 svg{
@@ -252,7 +252,6 @@
     &.active,
     &:hover{
         background-position: 0 0;
-        // font-weight: 600;
     }
 }
 
